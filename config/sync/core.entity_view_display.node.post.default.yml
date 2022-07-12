@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.post.body
     - field.field.node.post.field_categories
-    - field.field.node.post.field_category_link
     - field.field.node.post.field_exclusive
     - field.field.node.post.field_filter_publish
     - field.field.node.post.field_image_media
@@ -38,18 +37,6 @@ content:
       link: true
     third_party_settings: {  }
     weight: 5
-    region: content
-  field_category_link:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 3
     region: content
   field_exclusive:
     type: entity_reference_label

@@ -7,4 +7,4 @@ features:
   node_user_picture: true
 logo:
   path: 'public://Screenshot 2022-07-08 at 09.40.35.png'
-  use_default: false
+  use_default: true
