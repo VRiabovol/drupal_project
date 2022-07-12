@@ -1,0 +1,29 @@
+uuid: 1434411c-c3ae-48e2-acce-72214f82c6e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exclusive
+    - node.type.post
+    - taxonomy.vocabulary.exclusive
+id: node.post.field_exclusive
+field_name: field_exclusive
+entity_type: node
+bundle: post
+label: EXCLUSIVE
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      exclusive: exclusive
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

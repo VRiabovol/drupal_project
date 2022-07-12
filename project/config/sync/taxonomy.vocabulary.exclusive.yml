@@ -1,0 +1,8 @@
+uuid: f7e19375-f321-4167-9111-6e4940a93b70
+langcode: en
+status: true
+dependencies: {  }
+name: Exclusive
+vid: exclusive
+description: 'Term for field exclusive in post '
+weight: 0

@@ -1,0 +1,10 @@
+uuid: a7d2f320-2f15-4655-948e-9e922ef587f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.marketing_for_region1
+label: 'Region1 marketing'
+targetEntityType: node
+cache: true

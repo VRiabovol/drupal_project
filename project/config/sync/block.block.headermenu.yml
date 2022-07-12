@@ -1,0 +1,25 @@
+uuid: dd9dea97-47cc-4dbd-9f64-f2fde04ca341
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.header-menu
+  module:
+    - system
+  theme:
+    - bartik
+id: headermenu
+theme: bartik
+region: header
+weight: -6
+provider: null
+plugin: 'system_menu_block:header-menu'
+settings:
+  id: 'system_menu_block:header-menu'
+  label: 'Header menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
