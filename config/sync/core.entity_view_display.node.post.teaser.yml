@@ -1,0 +1,68 @@
+uuid: f87e0573-0a3b-464f-a9a1-657e73c08d8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.post.body
+    - field.field.node.post.field_categories
+    - field.field.node.post.field_category_link
+    - field.field.node.post.field_exclusive
+    - field.field.node.post.field_filter_publish
+    - field.field.node.post.field_image_media
+    - field.field.node.post.field_next_article
+    - field.field.node.post.field_previous_article
+    - field.field.node.post.field_tags
+    - field.field.node.post.field_title
+    - field.field.node.post.field_user
+    - image.style.thumbnail
+    - node.type.post
+  module:
+    - media
+    - text
+    - user
+id: node.post.teaser
+targetEntityType: node
+bundle: post
+mode: teaser
+content:
+  field_categories:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_category_link: true
+  field_exclusive: true
+  field_filter_publish: true
+  field_next_article: true
+  field_previous_article: true
+  field_tags: true
+  field_user: true

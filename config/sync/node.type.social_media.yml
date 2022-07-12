@@ -1,0 +1,17 @@
+uuid: 3dcfa91a-5964-4627-9ac2-4488ed21d8af
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Social media'
+type: social_media
+description: 'create content for social media block'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
