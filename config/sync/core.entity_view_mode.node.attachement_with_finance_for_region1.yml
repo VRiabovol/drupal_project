@@ -1,0 +1,10 @@
+uuid: d9f4e671-45b0-456d-9b59-13c8647d439a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.attachement_with_finance_for_region1
+label: ' Region1 attachement finance '
+targetEntityType: node
+cache: true

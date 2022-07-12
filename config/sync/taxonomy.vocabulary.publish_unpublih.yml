@@ -1,0 +1,8 @@
+uuid: f18790ac-1bf8-462c-a8f3-556a1e0b30d7
+langcode: en
+status: true
+dependencies: {  }
+name: Publish/Unpublish
+vid: publish_unpublih
+description: 'Vocabulary for publising filter in views'
+weight: 0

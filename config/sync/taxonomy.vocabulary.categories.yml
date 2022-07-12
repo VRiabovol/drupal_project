@@ -1,0 +1,8 @@
+uuid: 18364150-3eae-4ee3-b97c-6efb993bd7e5
+langcode: en
+status: true
+dependencies: {  }
+name: Categories
+vid: categories
+description: 'Categories for posted news'
+weight: 0

@@ -1,0 +1,29 @@
+uuid: b70996e7-746e-464f-97f2-28aeb461e0c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_filter_publish
+    - node.type.post
+    - taxonomy.vocabulary.publish_unpublih
+id: node.post.field_filter_publish
+field_name: field_filter_publish
+entity_type: node
+bundle: post
+label: 'Filter publish'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      publish_unpublih: publish_unpublih
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

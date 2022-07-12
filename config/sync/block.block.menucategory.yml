@@ -1,0 +1,25 @@
+uuid: cc67c711-3a6c-452a-a486-2901350c7e8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-category
+  module:
+    - system
+  theme:
+    - bartik
+id: menucategory
+theme: bartik
+region: primary_menu
+weight: -8
+provider: null
+plugin: 'system_menu_block:menu-category'
+settings:
+  id: 'system_menu_block:menu-category'
+  label: 'Menu category'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
