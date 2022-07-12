@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.attachement_with_finance_for_region1
     - field.field.node.post.body
     - field.field.node.post.field_categories
-    - field.field.node.post.field_category_link
     - field.field.node.post.field_exclusive
     - field.field.node.post.field_filter_publish
     - field.field.node.post.field_image_media
@@ -18,7 +17,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.post
   module:
-    - link
     - media
     - text
     - user
@@ -27,18 +25,6 @@ targetEntityType: node
 bundle: post
 mode: attachement_with_finance_for_region1
 content:
-  field_category_link:
-    type: link
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 2
-    region: content
   field_exclusive:
     type: entity_reference_label
     label: hidden
