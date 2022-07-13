@@ -1,21 +1,21 @@
-uuid: b8544822-8dcf-4ef8-89d6-99088f2ddc46
+uuid: cfd02cb3-8fa0-47b0-9f1c-85a4767097f7
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.social_media
+    - views.view.region_3
   module:
     - views
   theme:
     - bartik
-id: views_block__social_media_block_1
+id: views_block__region_3_region3_header
 theme: bartik
 region: content
-weight: -7
+weight: -8
 provider: null
-plugin: 'views_block:social_media-block_1'
+plugin: 'views_block:region_3-region3_header'
 settings:
-  id: 'views_block:social_media-block_1'
+  id: 'views_block:region_3-region3_header'
   label: ''
   label_display: visible
   provider: views
