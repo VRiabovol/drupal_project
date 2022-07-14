@@ -1,0 +1,24 @@
+uuid: cfd02cb3-8fa0-47b0-9f1c-85a4767097f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.region_3
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__region_3_region3_header
+theme: bartik
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:region_3-region3_header'
+settings:
+  id: 'views_block:region_3-region3_header'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
