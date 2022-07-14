@@ -1,0 +1,24 @@
+uuid: 96760337-5f47-4c4d-bb00-77ff2dbfd676
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.region6_
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__region6__region6_left_side
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:region6_-region6_left_side'
+settings:
+  id: 'views_block:region6_-region6_left_side'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
