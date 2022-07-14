@@ -1,0 +1,24 @@
+uuid: 6638fdc4-d41e-4b90-9fe1-c28e680ae8c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.region5
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__region5_region5_header
+theme: bartik
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:region5-region5_header'
+settings:
+  id: 'views_block:region5-region5_header'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
