@@ -1,6 +1,6 @@
 uuid: cc67c711-3a6c-452a-a486-2901350c7e8c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-category

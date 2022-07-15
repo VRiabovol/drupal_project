@@ -1,6 +1,6 @@
 uuid: 7869e9e0-3834-4699-a527-129f505c5fec
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.news_slider

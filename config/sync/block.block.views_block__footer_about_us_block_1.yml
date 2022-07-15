@@ -1,6 +1,6 @@
 uuid: ee3e342a-d999-409d-85c6-376f2bcc4f7d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.footer_about_us
