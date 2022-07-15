@@ -3,13 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.social_media.field_image
+    - field.field.node.social_media.field_image_social_media
     - field.field.node.social_media.field_link
-    - image.style.thumbnail
     - node.type.social_media
   module:
-    - image
     - link
+    - media_library
     - path
 id: node.social_media.default
 targetEntityType: node
@@ -22,13 +21,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_image:
-    type: image_image
+  field_image_social_media:
+    type: media_library_widget
     weight: 122
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      media_types: {  }
     third_party_settings: {  }
   field_link:
     type: link_default

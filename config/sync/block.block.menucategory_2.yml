@@ -1,0 +1,25 @@
+uuid: 6cbe6338-64ca-4855-803d-b983d05223b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-category
+  module:
+    - system
+  theme:
+    - bartik
+id: menucategory_2
+theme: bartik
+region: footer_fifth
+weight: -13
+provider: null
+plugin: 'system_menu_block:menu-category'
+settings:
+  id: 'system_menu_block:menu-category'
+  label: 'Menu category'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
