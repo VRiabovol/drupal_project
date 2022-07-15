@@ -1,6 +1,6 @@
 uuid: 54d6e10c-0c00-4aca-9e61-23bb38cd6a08
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
     - bartik

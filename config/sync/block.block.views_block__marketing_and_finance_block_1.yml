@@ -1,6 +1,6 @@
 uuid: 32261805-b110-4548-8bc4-749368217c96
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.marketing_and_finance

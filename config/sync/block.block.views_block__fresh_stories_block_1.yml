@@ -1,6 +1,6 @@
 uuid: e9a7f6c8-eda8-4fab-a07c-fc181d3f2617
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.fresh_stories

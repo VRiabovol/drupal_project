@@ -1,6 +1,6 @@
 uuid: 1158b857-e803-4cab-b28b-91b15c792895
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.popular

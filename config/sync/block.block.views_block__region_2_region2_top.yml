@@ -1,6 +1,6 @@
 uuid: eeec0371-a7d3-4d2b-9308-8226885b46a3
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.region_2
