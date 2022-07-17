@@ -1,0 +1,58 @@
+uuid: 035361f8-7dbd-4bb2-8004-f96ecd5dea9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.post_bottom.field_next_article
+    - field.field.paragraph.post_bottom.field_previous_article
+    - field.field.paragraph.post_bottom.field_tags_bottom_paragraph
+    - field.field.paragraph.post_bottom.field_user
+    - paragraphs.paragraphs_type.post_bottom
+  module:
+    - link
+id: paragraph.post_bottom.default
+targetEntityType: paragraph
+bundle: post_bottom
+mode: default
+content:
+  field_next_article:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_previous_article:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tags_bottom_paragraph:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_user:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

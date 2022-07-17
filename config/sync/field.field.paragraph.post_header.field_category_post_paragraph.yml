@@ -1,0 +1,29 @@
+uuid: fef5f9e6-c113-407b-86a8-fdc2f6fc78d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_category_post_paragraph
+    - paragraphs.paragraphs_type.post_header
+    - taxonomy.vocabulary.categories
+id: paragraph.post_header.field_category_post_paragraph
+field_name: field_category_post_paragraph
+entity_type: paragraph
+bundle: post_header
+label: Category_post_paragraph
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categories: categories
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
