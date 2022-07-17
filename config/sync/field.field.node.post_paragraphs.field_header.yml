@@ -1,0 +1,41 @@
+uuid: f9d4ee45-1b48-4c05-8b10-40e8c7751c52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header
+    - node.type.post_paragraphs
+    - paragraphs.paragraphs_type.post_body
+    - paragraphs.paragraphs_type.post_bottom
+    - paragraphs.paragraphs_type.post_header
+  module:
+    - entity_reference_revisions
+id: node.post_paragraphs.field_header
+field_name: field_header
+entity_type: node
+bundle: post_paragraphs
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      post_header: post_header
+      post_body: post_body
+      post_bottom: post_bottom
+    negate: 0
+    target_bundles_drag_drop:
+      post_body:
+        weight: -6
+        enabled: true
+      post_bottom:
+        weight: -5
+        enabled: true
+      post_header:
+        weight: -7
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,22 @@
+uuid: c99a96d5-6949-4004-9973-6b096f3337d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.post_paragraphs.field_header
+    - node.type.post_paragraphs
+  module:
+    - user
+id: node.post_paragraphs.teaser
+targetEntityType: node
+bundle: post_paragraphs
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_header: true
