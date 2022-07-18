@@ -1,4 +1,4 @@
-uuid: cc67c711-3a6c-452a-a486-2901350c7e8c
+uuid: cb270f50-8eb7-4ce3-b908-1b87260d1ad0
 langcode: en
 status: true
 dependencies:
@@ -8,16 +8,16 @@ dependencies:
     - system
   theme:
     - bartik
-id: menucategory
+id: menucategory_3
 theme: bartik
-region: primary_menu
-weight: -8
+region: featured_bottom_second
+weight: 0
 provider: null
 plugin: 'system_menu_block:menu-category'
 settings:
   id: 'system_menu_block:menu-category'
   label: 'Menu category'
-  label_display: '0'
+  label_display: visible
   provider: system
   level: 1
   depth: 0

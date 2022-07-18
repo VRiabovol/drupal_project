@@ -4,18 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.categories.layout_builder__layout
-    - system.menu.account
-    - system.menu.menu-category
     - taxonomy.vocabulary.categories
-  content:
-    - 'block_content:basic:8e4e8831-6f4f-4085-84b6-73f0bb02a59f'
-    - 'block_content:basic:af029381-ab6f-41f2-a592-d64f9af4a6c6'
   module:
-    - block_content
     - layout_builder
-    - layout_discovery
-    - search
-    - system
     - text
 third_party_settings:
   layout_builder:
@@ -23,94 +14,10 @@ third_party_settings:
     allow_custom: true
     sections:
       -
-        layout_id: layout_threecol_section
+        layout_id: layout_builder_blank
         layout_settings:
-          label: header
-          context_mapping: {  }
-          column_widths: 25-50-25
-        components:
-          ef290fc9-cd0b-4fc5-8337-a6e472ee8e12:
-            uuid: ef290fc9-cd0b-4fc5-8337-a6e472ee8e12
-            region: first
-            configuration:
-              id: search_form_block
-              label: 'Search form'
-              label_display: '0'
-              provider: search
-              context_mapping: {  }
-              page_id: ''
-            weight: 0
-            additional: {  }
-          61cfed98-760f-4cd0-87bb-9c75af68ec5d:
-            uuid: 61cfed98-760f-4cd0-87bb-9c75af68ec5d
-            region: second
-            configuration:
-              id: 'block_content:af029381-ab6f-41f2-a592-d64f9af4a6c6'
-              label: 'Header logo'
-              label_display: '0'
-              provider: block_content
-              status: true
-              info: ''
-              view_mode: full
-              context_mapping: {  }
-            weight: 0
-            additional: {  }
-          cf1f7a67-4393-445e-9021-625426bf0370:
-            uuid: cf1f7a67-4393-445e-9021-625426bf0370
-            region: third
-            configuration:
-              id: 'system_menu_block:account'
-              label: 'User account menu'
-              label_display: '0'
-              provider: system
-              context_mapping: {  }
-              level: 1
-              depth: 0
-              expand_all_items: false
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: 'menu category'
-          context_mapping: {  }
-        components:
-          8f5c691c-769a-4c83-96a8-6b45f5d9ab78:
-            uuid: 8f5c691c-769a-4c83-96a8-6b45f5d9ab78
-            region: content
-            configuration:
-              id: 'system_menu_block:menu-category'
-              label: 'Menu category'
-              label_display: '0'
-              provider: system
-              context_mapping: {  }
-              level: 1
-              depth: 0
-              expand_all_items: false
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: 'body top'
-          context_mapping: {  }
-        components:
-          4efe8e02-ba41-4be7-8ccd-634a8cb52d86:
-            uuid: 4efe8e02-ba41-4be7-8ccd-634a8cb52d86
-            region: content
-            configuration:
-              id: 'block_content:8e4e8831-6f4f-4085-84b6-73f0bb02a59f'
-              label: 'List taxonomy terms for taxxonomy page'
-              label_display: '0'
-              provider: block_content
-              status: true
-              info: ''
-              view_mode: full
-              context_mapping: {  }
-            weight: 0
-            additional: {  }
+          label: ''
+        components: {  }
         third_party_settings: {  }
 id: taxonomy_term.categories.default
 targetEntityType: taxonomy_term
