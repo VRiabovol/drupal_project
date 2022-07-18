@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.post.body
+    - field.field.node.post.comment
     - field.field.node.post.field_categories
     - field.field.node.post.field_exclusive
     - field.field.node.post.field_filter_publish
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.post.field_tags
     - field.field.node.post.field_title
     - field.field.node.post.field_user
+    - field.field.node.post.layout_builder__layout
     - image.style.thumbnail
     - node.type.post
   module:
@@ -58,9 +60,11 @@ content:
     region: content
 hidden:
   body: true
+  comment: true
   field_exclusive: true
   field_filter_publish: true
   field_next_article: true
   field_previous_article: true
   field_tags: true
   field_user: true
+  layout_builder__layout: true
