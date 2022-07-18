@@ -1,0 +1,33 @@
+uuid: 8116644c-56a6-4d8a-bf16-ef914b5a8159
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.comment
+    - node.type.post
+  module:
+    - comment
+id: node.post.comment
+field_name: comment
+entity_type: node
+bundle: post
+label: 'Leave a reply'
+description: 'Comment:'
+required: false
+translatable: true
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 10
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

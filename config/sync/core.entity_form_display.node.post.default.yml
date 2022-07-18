@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.post.body
+    - field.field.node.post.comment
     - field.field.node.post.field_categories
     - field.field.node.post.field_exclusive
     - field.field.node.post.field_filter_publish
@@ -13,8 +14,10 @@ dependencies:
     - field.field.node.post.field_tags
     - field.field.node.post.field_title
     - field.field.node.post.field_user
+    - field.field.node.post.layout_builder__layout
     - node.type.post
   module:
+    - comment
     - link
     - media_library
     - path
@@ -33,6 +36,12 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  comment:
+    type: comment_default
+    weight: 26
+    region: content
+    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -144,3 +153,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_title: true
+  layout_builder__layout: true

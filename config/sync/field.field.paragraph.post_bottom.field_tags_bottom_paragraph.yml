@@ -1,0 +1,42 @@
+uuid: 8c902ed2-fe66-455c-8c4b-5ad55b1521b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tags_bottom_paragraph
+    - paragraphs.paragraphs_type.post_bottom
+    - taxonomy.vocabulary.tags
+  content:
+    - 'taxonomy_term:tags:2cb02b55-724e-4a58-bebb-ba4dcc49221c'
+    - 'taxonomy_term:tags:3170cd47-a111-4e69-89f1-f79fbb7c2445'
+    - 'taxonomy_term:tags:5bd69be8-bcaa-4540-88a1-7adad18049a4'
+    - 'taxonomy_term:tags:72441c71-bdd0-4cf9-aa4d-5292444aaec0'
+id: paragraph.post_bottom.field_tags_bottom_paragraph
+field_name: field_tags_bottom_paragraph
+entity_type: paragraph
+bundle: post_bottom
+label: TAGS_bottom_paragraph
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 72441c71-bdd0-4cf9-aa4d-5292444aaec0
+  -
+    target_uuid: 2cb02b55-724e-4a58-bebb-ba4dcc49221c
+  -
+    target_uuid: 3170cd47-a111-4e69-89f1-f79fbb7c2445
+  -
+    target_uuid: 5bd69be8-bcaa-4540-88a1-7adad18049a4
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: 05696576-3072-4576-8a99-b2d799f891e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.post_header
+  module:
+    - datetime
+id: paragraph.post_header.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: post_header
+label: Date
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime
