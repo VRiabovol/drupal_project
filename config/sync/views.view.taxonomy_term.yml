@@ -354,12 +354,13 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_categories'
-  page_1:
-    id: page_1
-    display_title: Page
+  taxonomy_page:
+    id: taxonomy_page
+    display_title: 'Taxonomy page'
     display_plugin: page
     position: 1
     display_options:
+      title: 'Taxonomy page'
       fields:
         field_image_media:
           id: field_image_media
@@ -577,9 +578,11 @@ display:
         type: views_query
         options: {  }
       defaults:
+        title: false
         style: false
         row: false
         fields: false
+      display_description: ''
       display_extenders: {  }
       path: taxonomy/term/%
     cache_metadata:

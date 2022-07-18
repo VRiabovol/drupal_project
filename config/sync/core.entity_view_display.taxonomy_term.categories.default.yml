@@ -8,6 +8,7 @@ dependencies:
     - system.menu.menu-category
     - taxonomy.vocabulary.categories
   content:
+    - 'block_content:basic:8e4e8831-6f4f-4085-84b6-73f0bb02a59f'
     - 'block_content:basic:af029381-ab6f-41f2-a592-d64f9af4a6c6'
   module:
     - block_content
@@ -95,7 +96,21 @@ third_party_settings:
         layout_settings:
           label: 'body top'
           context_mapping: {  }
-        components: {  }
+        components:
+          4efe8e02-ba41-4be7-8ccd-634a8cb52d86:
+            uuid: 4efe8e02-ba41-4be7-8ccd-634a8cb52d86
+            region: content
+            configuration:
+              id: 'block_content:8e4e8831-6f4f-4085-84b6-73f0bb02a59f'
+              label: 'List taxonomy terms for taxxonomy page'
+              label_display: '0'
+              provider: block_content
+              status: true
+              info: ''
+              view_mode: full
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: taxonomy_term.categories.default
 targetEntityType: taxonomy_term

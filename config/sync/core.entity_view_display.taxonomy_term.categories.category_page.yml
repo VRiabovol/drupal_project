@@ -1,6 +1,6 @@
 uuid: 2da5628a-ffb2-4354-90ee-f11779b1b092
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.category_page
@@ -8,11 +8,34 @@ dependencies:
     - taxonomy.vocabulary.categories
   module:
     - layout_builder
+    - layout_discovery
     - text
 third_party_settings:
   layout_builder:
-    enabled: false
+    enabled: true
     allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          94bfdf71-eb00-4558-94cf-f71f518ea3f2:
+            uuid: 94bfdf71-eb00-4558-94cf-f71f518ea3f2
+            region: content
+            configuration:
+              id: 'field_block:taxonomy_term:categories:description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: taxonomy_term.categories.category_page
 targetEntityType: taxonomy_term
 bundle: categories
