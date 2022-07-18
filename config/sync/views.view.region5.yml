@@ -791,7 +791,7 @@ display:
     display_plugin: block
     position: 3
     display_options:
-      title: 'region5 header'
+      title: 'region5 footer'
       fields:
         field_image_media:
           id: field_image_media
