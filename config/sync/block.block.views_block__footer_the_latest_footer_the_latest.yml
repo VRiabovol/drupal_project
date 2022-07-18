@@ -1,6 +1,6 @@
 uuid: 77cc9f2f-d37c-4aea-8d7d-f4fb50ed6624
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.footer_the_latest

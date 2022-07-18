@@ -1,0 +1,29 @@
+uuid: f6751a2f-ea90-4eb5-8efc-7cc4b586a845
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.categories.layout_builder__layout
+    - taxonomy.vocabulary.categories
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.categories.full
+targetEntityType: taxonomy_term
+bundle: categories
+mode: full
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  layout_builder__layout: true
