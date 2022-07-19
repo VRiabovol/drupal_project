@@ -9,36 +9,14 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/scss/article.scss":
-/*!*******************************!*\
-  !*** ./src/scss/article.scss ***!
-  \*******************************/
+/***/ "./src/Drupal.js":
+/*!***********************!*\
+  !*** ./src/Drupal.js ***!
+  \***********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://newspaper11/./src/scss/article.scss?");
-
-/***/ }),
-
-/***/ "./src/scss/pubdate.scss":
-/*!*******************************!*\
-  !*** ./src/scss/pubdate.scss ***!
-  \*******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://newspaper11/./src/scss/pubdate.scss?");
-
-/***/ }),
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/scroll */ \"./src/js/scroll.js\");\n/* harmony import */ var _js_scroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_scroll__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _scss_article_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/article.scss */ \"./src/scss/article.scss\");\n/* harmony import */ var _scss_pubdate_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/pubdate.scss */ \"./src/scss/pubdate.scss\");\n/*\nscss\n */\n//import './scss/Global.scss';\n//import './scss/Header.scss';\n//import './scss/sidebar.scss';\n//import './scss/FeaturedTop.scss';\n//import './scss/front_views.scss';\n//import './scss/Footer.scss';\n//import './scss/scrollToTop.scss';\n/*\njs\n */\n\n/*\nmodule css\n */\n\n\n\n\n//# sourceURL=webpack://newspaper11/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _js_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/scroll */ \"./src/js/scroll.js\");\n/* harmony import */ var _js_scroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_scroll__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack://newspaper11/./src/Drupal.js?");
 
 /***/ }),
 
@@ -124,7 +102,7 @@ eval("(function ($, Drupal) {\n  // I want some code to run on page load, so I u
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/Drupal.js");
 /******/ 	
 /******/ })()
 ;
