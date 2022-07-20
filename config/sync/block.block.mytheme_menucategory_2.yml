@@ -1,0 +1,25 @@
+uuid: 1bfb41d3-b921-4e7d-8463-a1dc6f6624f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-category
+  module:
+    - system
+  theme:
+    - mytheme
+id: mytheme_menucategory_2
+theme: mytheme
+region: footer_top
+weight: -18
+provider: null
+plugin: 'system_menu_block:menu-category'
+settings:
+  id: 'system_menu_block:menu-category'
+  label: 'Menu category'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

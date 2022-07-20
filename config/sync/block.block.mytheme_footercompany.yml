@@ -1,0 +1,25 @@
+uuid: 40968b80-7805-4147-ac0a-1f0646c102e6
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0bbce2a6-b901-4aa9-b022-05fb0f865e5a'
+  module:
+    - block_content
+  theme:
+    - mytheme
+id: mytheme_footercompany
+theme: mytheme
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:0bbce2a6-b901-4aa9-b022-05fb0f865e5a'
+settings:
+  id: 'block_content:0bbce2a6-b901-4aa9-b022-05fb0f865e5a'
+  label: 'Footer company'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

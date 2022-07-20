@@ -1,0 +1,24 @@
+uuid: be228ba5-f9e6-463f-b899-469586891dd3
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.social_media
+  module:
+    - views
+  theme:
+    - mytheme
+id: mytheme_views_block__social_media_block_1
+theme: mytheme
+region: content
+weight: -7
+provider: null
+plugin: 'views_block:social_media-block_1'
+settings:
+  id: 'views_block:social_media-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

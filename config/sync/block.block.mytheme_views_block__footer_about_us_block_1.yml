@@ -1,0 +1,24 @@
+uuid: 8d26eb38-ce2f-4006-aaa2-4e40755c9b6d
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.footer_about_us
+  module:
+    - views
+  theme:
+    - mytheme
+id: mytheme_views_block__footer_about_us_block_1
+theme: mytheme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'views_block:footer_about_us-block_1'
+settings:
+  id: 'views_block:footer_about_us-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
