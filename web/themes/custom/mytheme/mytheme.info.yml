@@ -1,0 +1,24 @@
+name: mytheme
+type: theme
+description: This is sub theme of bartik
+core_version_requirement: ^8 || ^9 || ^10
+# Defines the base theme
+base theme: bartik
+# Defines libraries group in which we can add css/js.
+libraries:
+  - mytheme/global-styling
+# Regions, quote the names
+screenshot: mytheme.png
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  content: Content
+  footer_top : 'Footer top'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_fifth: 'Footer fifth'
+# must always be in regions
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'

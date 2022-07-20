@@ -1,0 +1,25 @@
+uuid: 4b46d1ed-5067-4ada-988c-42c696406087
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:ec0f31b9-6289-48b4-82df-2b38718ece85'
+  module:
+    - block_content
+  theme:
+    - mytheme
+id: mytheme_region6advertising
+theme: mytheme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:ec0f31b9-6289-48b4-82df-2b38718ece85'
+settings:
+  id: 'block_content:ec0f31b9-6289-48b4-82df-2b38718ece85'
+  label: 'Region6 advertising'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
