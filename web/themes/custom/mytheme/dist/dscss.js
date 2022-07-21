@@ -60,6 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_Global_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/Global.scss */ \"./src/scss/Global.scss\");\n/* harmony import */ var _scss_Header_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/Header.scss */ \"./src/scss/Header.scss\");\n/* harmony import */ var _js_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/scroll */ \"./src/js/scroll.js\");\n/* harmony import */ var _js_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_scroll__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _scss_article_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/article.scss */ \"./src/scss/article.scss\");\n/* harmony import */ var _scss_pubdate_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scss/pubdate.scss */ \"./src/scss/pubdate.scss\");\n/*\nscss\n */\n\n\n//import './scss/sidebar.scss';\n//import './scss/FeaturedTop.scss';\n//import './scss/front_views.scss';\n//import './scss/Footer.scss';\n//import './scss/scrollToTop.scss';\n/*\njs\n */\n\n/*\nmodule css\n */\n\n\n\n\n//# sourceURL=webpack://newspaper11/./src/index.js?");
 
 /***/ }),

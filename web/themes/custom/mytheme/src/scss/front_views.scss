@@ -1,0 +1,752 @@
+/*
+Importing mixin and variabes for scss
+ */
+@import "mixin";
+@import "variables";
+
+
+/*
+Stylyzing Don't miss view on frontpage
+ */
+
+
+/*
+Stylyzing block on top in Don't miss view on frontpage
+ */
+.block-views-blockdont-miss-block-1 {
+  h2 {
+    margin-block: auto;
+    background-color: #f9c100;
+    max-width: 24%;
+    font-size: $f14;
+    @include view-h2;
+
+
+  }
+
+  .layout--twocol-section {
+    flex-wrap: wrap;
+
+  }
+
+  .block-views-blockdont-miss-view-mode1--block-1 {
+    border-top: 2px solid #f9c100;
+    margin-top: -10px;
+
+    .block-field-blocknodearticleuid {
+      display: flex;
+      justify-content: start;
+      a{
+        font-size: $f11;
+        font-weight: bold;
+        color: black;
+      }
+    }
+
+    .content {
+      margin-top: 0;
+
+      .block-field-blocknodearticlecreated {
+        display: flex;
+        justify-content: start;
+
+        span {
+          font-size: $f11;
+        }
+      }
+    }
+
+
+    .block-field-blocknodearticletitle {
+      a {
+        color: #f9c100;
+        text-transform: uppercase;
+        font-size: 21px;
+      }
+    }
+  }
+  .block-field-blocknodearticlebody{
+    color: $ltcol;
+    font-size: $f16;
+  }
+}
+
+
+
+/*
+Stylyzing block on bottom in Don't miss view on frontpage
+ */
+.block-views-blockdont-miss-view-mode2--block-1 {
+  display: flex;
+
+  .block-field-blocknodearticlefield-media-for-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .block-field-blocknodearticletitle {
+    .content {
+      @include reset;
+    }
+
+  }
+
+  .block-field-blocknodearticlecreated {
+
+    .content {
+
+      @include reset;
+
+    }
+
+  }
+  a{
+    display: flex;
+    justify-content: center;
+  }
+  a, .link {
+    color: black;
+    font-size: $f14;
+
+  }
+
+  span {
+    font-size: $f11;
+    color: #767676;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*
+Desktop version for don't miss view
+ */
+@media screen and (min-width: 1024px) {
+  .block-views-blockdont-miss-block-1 .block-views-blockdont-miss-view-mode1--block-1 {
+    margin-top: 0;
+    border: none;
+  }
+
+  .block-views-blockdont-miss-block-1 {
+    .block-views-blockdont-miss-view-mode1--block-1 {
+      .block-field-blocknodearticletitle {
+        a {
+          text-transform: none
+        }
+      }
+    }
+
+
+    .node--view-mode-footer-view {
+      margin-bottom: 10%;
+    }
+
+    .block-views-blockdont-miss-view-mode2--block-1 {
+      .block-field-blocknodearticletitle {
+        a {
+          text-transform: none;
+        }
+
+        @include lit_titlename;
+
+        span {
+          a {
+            text-transform: none
+          }
+        }
+
+        a {
+          @include overflow-text;
+        }
+      }
+    }
+
+    .block-field-blocknodearticlecreated {
+      display: flex;
+    }
+
+    .block-views-blockdont-miss-view-mode2--block-1 {
+      .content {
+        margin-top: 0;
+
+      }
+    }
+
+    .content {
+      .view-id-dont_miss {
+        border-top: 2px solid #f9c100;
+        margin-top: -10px;
+      }
+    }
+
+    h2 {
+      background-color: #f9c100;
+      max-width: 9%;
+      padding-left: 2%;
+      padding-right: 2%;
+      font-size: $f14;
+      color: $black;
+      @include view-h2
+
+    }
+  }
+}
+
+/*
+Stylyzing Lifestyle News view on frontpage
+ */
+.block-views-blocklifestyle-news-block-1 {
+  margin-top: 20%;
+
+  h2 {
+    margin-block: auto;
+    background-color: #3a863d;
+    max-width: 34%;
+    @include view-h2;
+    color: $white;
+    font-size: $f14;
+    height: 40%;
+  }
+
+  /*
+  Stylyzing  big block in Lifestile news
+   */
+  .node--view-mode-big-picture-down-tex {
+    .block-field-blocknodearticletitle {
+      .field--name-title {
+
+        a {
+          color: #3a863d;
+          text-transform: uppercase;
+          font-size: 21px;
+        }
+      }
+
+    }
+
+    .block-field-blocknodearticleuid {
+
+      display: flex;
+      justify-content: start;
+
+      a {
+        font-size: $f11;
+        font-weight: bold;
+        color: black;
+      }
+
+      .content {
+        @include reset
+      }
+
+    }
+
+    .block-field-blocknodearticlecreated {
+      .content {
+        display: flex;
+        justify-content: start;
+
+        span {
+          color: $dd;
+          font-size: $f11;
+        }
+
+        @include reset;
+      }
+
+    }
+
+    .block-field-blocknodearticlebody {
+      color: $dd;
+      font-size: $f16;
+    }
+  }
+
+  /*
+  Create border for Lifestyle news
+   */
+
+  /*
+  Theming  small article block in Lifestyle news
+   */
+  .block-views-blocklifestyle-news-bottom--block-1 {
+    .content{
+      @include reset;
+    }
+    span {
+      color: $dd;
+      font-size: $f11;
+
+      a {
+        @include lit_titlename;
+      }
+
+    }
+
+
+  }
+}
+
+/*
+Desktop version of Lifestyle news view
+ */
+@media screen and (min-width: 1024px) {
+  .block-views-blocklifestyle-news-block-1 {
+     .block-views-blocklifestyle-news-bottom--block-1{
+       img{
+         width: 100px;
+         height: 67px;
+       }
+     }
+    .node--view-mode-big-picture-down-tex .block-field-blocknodearticlecreated .content{
+      display:block;
+      span{
+        margin-left: 2%;
+      }
+    }
+    .node--view-mode-big-picture-down-tex {
+
+      .block-field-blocknodearticleuid {
+        display: block;
+        float: left
+      }
+    }
+
+    margin-top: 10%;
+
+
+
+    h2 {
+      width: 13%;
+    }
+
+    .view-lifestyle-news {
+      border-top: 2px solid #3a863d;
+      margin-top: -10px;
+
+
+    }
+
+
+    .col-1 {
+      .block-field-blocknodearticlefield-media-for-content {
+
+        //width: 80%;
+      }
+
+      .block-field-blocknodearticlebody {
+        //width: 80%;
+      }
+
+      .block-field-blocknodearticletitle {
+        //width: 80%;
+
+        .field--name-title {
+          a {
+            text-transform: none
+          }
+
+        }
+      }
+    }
+
+    .col-2 {
+      .block-field-blocknodearticlefield-media-for-content {
+        //width: 80%;
+      }
+
+      .block-field-blocknodearticlebody {
+        //width: 80%;
+      }
+
+      .block-field-blocknodearticletitle {
+        //width: 80%;
+
+        .field--name-title {
+          a {
+            text-transform: none
+          }
+
+        }
+      }
+    }
+    .view-lifestyle-news-bottom-{
+      .views-view-grid.horizontal .views-row{
+        margin: 0;
+        padding-bottom: 0;
+        border: none;
+      }
+      //padding-right: 15%;
+      .layout__region--second{
+        //margin-right:20% ;
+        a{
+          @include overflow-text-l3;
+        }
+      }
+      .block-field-blocknodearticlefield-media-for-content{
+        img{
+          max-width: none;
+          @include lit-img;
+          margin-right:0;
+          padding-right:0;
+        }
+      }
+
+    }
+  }
+}
+
+/*
+ Stylyzing House design view of fontpage
+*/
+
+.block-views-blockhouse-design-block-1 {
+
+  h2 {
+    background-color: #5d7987;
+    color: $title-view-color;
+    font-size: $f14;
+    @include view-h2;
+    max-width: 30%;
+  }
+
+  /*
+  Add border
+   */
+  .view-id-house_design {
+    border-top: 2px solid #5d7987;
+    margin-top: -10px;
+  }
+
+  .block-field-blocknodearticlefield-media-for-content {
+    float: left;
+    width: 40%;
+
+    img {
+      width: 110px;
+      height: 80px;
+    }
+  }
+
+  .block-field-blocknodearticletitle {
+    .content {
+      padding-top: 20px
+    }
+
+    a {
+      @include lit_titlename;
+      @include overflow-text;
+    }
+  }
+
+  .block-field-blocknodearticlecreated {
+
+    .content {
+      margin: 0;
+    }
+
+    span {
+      @include date;
+    }
+  }
+}
+
+/*
+Desktop version for house design view
+ */
+@media screen and (min-width: 1024px) {
+  .block-views-blockhouse-design-block-1 {
+    margin-top: 10%;
+    h2 {
+      background-color: #5d7987;
+      color: $title-view-color;
+      font-size: $f14;
+      @include view-h2;
+      max-width: 12%;
+    }
+
+    .view-id-house_design {
+      border-top: 2px solid #5d7987;
+      margin-top: -10px;
+    }
+
+    .block-field-blocknodearticlefield-media-for-content {
+      float: none;
+      width: 100%;
+
+
+      img {
+        @include medi-img;
+
+      }
+    }
+
+    .block-field-blocknodearticletitle {
+      .content {
+        padding-top: 0;
+        max-width: 85%;
+        text-align: center;
+      }
+
+      a {
+        @include lit_titlename;
+        @include overflow-text;
+      }
+
+    }
+    .block-field-blocknodearticlecreated{
+      .content{
+        span{
+          display: none;
+        }
+      }
+    }
+
+    .col-3 {
+      .block-field-blocknodearticlefield-media-for-content{
+        margin-left: 10%;
+      }
+
+      .block-field-blocknodearticletitle {
+        margin-left: 10%;
+      }
+    }
+
+  }
+
+}
+
+/*
+Theming Perfomance training on frontpage
+ */
+.block-views-blockperfomance-training-block-1 {
+  .block-field-blocknodearticleuid {
+    display: none;
+  }
+
+  .view-display-id-block_1 {
+    border-top: 2px solid #222222;
+    margin-top: -10px;
+  }
+
+  h2 {
+    @include view-h2;
+    background-color: $cperft;
+    color: $white;
+    width: 48%;
+    font-size: $f14;
+    text-transform: uppercase;
+
+  }
+
+  .layout--twocol-section {
+    display: block;
+  }
+
+  img {
+    @include lit-img
+  }
+
+  .block-field-blocknodearticlebody {
+    display: none;
+  }
+
+  .block-field-blocknodearticlefield-media-for-content {
+    margin-right: 5%;
+    float: left;
+  }
+
+  .block-field-blocknodearticletitle {
+    a {
+      @include lit_titlename;
+      @include overflow-text;
+      padding-top: 5%;
+    }
+
+  }
+
+  .block-field-blocknodearticlecreated {
+    @include date;
+    margin-top: -3%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .block-views-blockperfomance-training-block-1 {
+    margin-top: 10%;
+    h2 {
+      width: 19%;
+    }
+
+    img {
+      @include medi-img
+    }
+
+    .block-field-blocknodearticleuid {
+      display: block;
+
+      a {
+        @include lit_titlename;
+      }
+    }
+
+    .block-field-blocknodearticlebody {
+      display: block;
+    }
+
+    .block-field-blocknodearticlecreated {
+      @include date;
+      margin-top: 1%;
+    }
+
+    .block-field-blocknodearticlebody {
+      color: $ltcol;
+      @include overflow-text-l3;
+
+    }
+
+    .block-field-blocknodearticletitle {
+      a {
+        font-size: $f21;
+        font-weight: normal;
+        padding-top: 2%;
+      }
+
+    }
+
+  }
+}
+
+/*
+Stylyzing Make it modern view on sidebar for mobile
+ */
+.sidebar .block {
+  background-color: $white;
+  border: none;
+}
+
+.block-views-blockmake-it-modern-sidebar-view-block-1 {
+  h2 {
+    background-color: $black;
+    @include Ftitle;
+    text-transform: uppercase;
+    width: 39%;
+    padding: 2%;
+  }
+
+  .view-id-make_it_modern_sidebar_view {
+    border-top: 2px black solid;
+    margin-top: -11px;
+  }
+  .block{
+    padding: 0;
+  }
+  .block-field-blocknodearticletitle{
+    text-align: center;
+    margin: 5%;
+    a{
+      @include lit_titlename
+    }
+  }
+
+
+}
+/*
+Stylyzing Make it modern view on sidebar for mobile
+ */
+@media screen and (min-width: 1024px) {
+  .block-views-blockmake-it-modern-sidebar-view-block-1 {
+    max-width: none;
+
+    img {
+      width: 200px;
+      height: 80px;
+    }
+
+    width: 300px;
+
+    h2 {
+      width: 43%;
+    }
+
+    .block-field-blocknodearticlefield-media-for-content {
+      margin-bottom: 0;
+    }
+
+    .block-field-blocknodearticletitle {
+      @include reset;
+      text-align: left;
+      @include overflow-text-l3;
+
+      a {
+        font-size: 12px;
+        width: 300px;
+        margin-top: 0;
+        padding-top: -10%;
+      }
+    }
+  }
+}
+
+    /*
+Theming Latest article for mobile
+ */
+    .block-views-blocklatest-article-block-1 {
+      h2 {
+        background-color: $black;
+        color: $white;
+        width: 32%;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 2%;
+      }
+
+      .view-display-id-block_1 {
+        border-top: solid 2px $black;
+        margin-top: -10px;
+
+      }
+
+      .block-field-blocknodearticletitle {
+
+        font-size: 21px;
+
+        a {
+          color: black;
+        }
+
+      }
+
+      .block-field-blocknodearticlecreated {
+        .content {
+          @include reset;
+          margin-bottom: 20px;
+        }
+      }
+
+      /*
+    Theming Latest article for mobile
+     */
+    }
+
+    @media screen and (min-width: 1024px) {
+      .block-views-blocklatest-article-block-1 {
+        img {
+          width: 453px;
+          height: 255px;
+
+        }
+
+        h2 {
+          width: 13%;
+          padding: 5px 18px;
+        }
+
+        .views-view-grid.horizontal .views-row {
+          border: none;
+        }
+      }
+
+    }
+
+

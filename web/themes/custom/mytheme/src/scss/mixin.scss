@@ -1,0 +1,60 @@
+// Mixin
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin Ftitle {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+@mixin date {
+  color: #767676;
+  font-size: 13px;
+}
+
+@mixin lit_titlename {
+  text-decoration: none;
+  color: $titlename;
+  font-size: $f14;
+  font-weight: bold;
+
+}
+@mixin overflow-text{
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 2;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
+@mixin lit-img{
+  width: 100px;
+  height: 67px;
+}
+@mixin medi-img {
+  width: 250px;
+  height: 180px;
+}
+@mixin view-h2{
+  padding: 5px 2%;
+}
+@mixin overflow-text-l3{
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -ms-line-clamp: 3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  display: -webkit-box;
+  display: box;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+}
