@@ -1,122 +1,19 @@
-@import "variables";
-/*
-Inporting scss variables
-*/
-@import "mixin";
+.header {
+  height: 125px;
+  background-color: white;
 
-/*
-Importing scss mixin
-*/
-
-.block-block-contentd7006e55-3d70-43a8-9549-2c936a844eb5 {
-  display: none;
-}
-
-.block-block-content18bb9bd8-4f5a-461c-8cf6-dff0ac135d01 {
-  display: none;
-}
-
-.region-header {
-  background-color: $header;
-  display: flex;
-
-  .block-system-branding-block {
-
-
-    .site-branding__logo {
-
-
-      img {
-        max-width: 100%;
-      }
+  &__inner {
+    .clearfix.region.region-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: black;
     }
   }
-}
-
-.site-branding.block-system-branding-block .site-branding__logo {
-  margin: 0 !important;
-}
-
-/*
-Break basic class for site-branding logo
-*/
-.region-header .block:not(.site-branding) {
-  margin: 9% 0 10% 10%;
-  padding: 1% 1% 1% 2%;
-
-}
-
-.region-header .block-menu {
-  width: 15%;
-}
-
-.menu--main {
-  background-color: $black;
-
-}
-
-body:not(:target) .region-primary-menu .menu-toggle {
-  background-color: $black;
-  color: $white;
-}
-
-.region-primary-menu .menu a {
-  background-color: $black;
-  color: $white;
-  text-align: center;
-}
-
-/*
-Desktop BETA version
- */
-@media screen and (min-width: 1024px) {
-
-  header{
-    background-image: none !important;
-    background-color: $white !important;
-  }
-  .region-primary-menu .menu a {
-    background-color: $headerm;
-    color: $header;
-    text-align: center;
-    @include lit_titlename
-  }
-  .menu--main {
-    background-color: $headerm;
-
-    menu {
-      a {
-        color: $black;
-      }
+  .clearfix.menu{
+    .menu-item a{
+      color: black;
+      font-weight: bold;
     }
-
-  }
-  .block-block-contentd7006e55-3d70-43a8-9549-2c936a844eb5 {
-    display: block;
-    position: absolute;
-    width: 100%;
-  }
-
-  .block-block-content18bb9bd8-4f5a-461c-8cf6-dff0ac135d01 {
-    display: block;
-  }
-  .region-header {
-
-    background-color: $headerm;
-
-    .block-system-branding-block {
-      visibility: hidden;
-    }
-
-    .menu--search- {
-      display: none;
-    }
-
-    .block-block-content18bb9bd8-4f5a-461c-8cf6-dff0ac135d01 {
-      img {
-        margin-left: 20%;
-      }
-    }
-
   }
 }

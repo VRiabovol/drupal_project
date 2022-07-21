@@ -1,3 +1,31 @@
+
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/Global.scss ***!
+  \***************************************************************************************************************/
+* {
+  font-family: roboto, sans-serif; }
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/Header.scss ***!
+  \***************************************************************************************************************/
+.header {
+  height: 125px;
+  background-color: white; }
+  .header__inner .clearfix.region.region-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black; }
+  .header .clearfix.menu .menu-item a {
+    color: black;
+    font-weight: bold; }
+
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/article.scss ***!
   \****************************************************************************************************************/
