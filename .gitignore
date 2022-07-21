@@ -13,6 +13,8 @@
 /web/profiles/contrib/
 /web/libraries/
 /web/themes/custom/*/node_modules
+/node_modules
+/web/themes/custom/mytheme/dist/dscss.js
 
 # Ignore sensitive information
 /web/sites/*/settings.php
