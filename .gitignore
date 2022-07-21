@@ -15,6 +15,7 @@
 /web/themes/custom/*/node_modules
 /node_modules
 /web/themes/custom/mytheme/dist/dscss.js
+web/themes/custom/mytheme/dist/style.css
 
 # Ignore sensitive information
 /web/sites/*/settings.php
