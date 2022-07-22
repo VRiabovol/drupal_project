@@ -10,7 +10,7 @@ _core:
   default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
 id: mytheme_messages
 theme: mytheme
-region: content
+region: header
 weight: -11
 provider: null
 plugin: system_messages_block

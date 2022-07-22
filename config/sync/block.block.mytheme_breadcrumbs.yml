@@ -10,7 +10,7 @@ _core:
   default_config_hash: y0bXRvKYQQKkf_RVxA3aOPGpIfKKsDOzzrWYCgjxJ9Y
 id: mytheme_breadcrumbs
 theme: mytheme
-region: primary_menu
+region: header
 weight: -7
 provider: null
 plugin: system_breadcrumb_block

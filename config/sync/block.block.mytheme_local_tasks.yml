@@ -1,6 +1,6 @@
 uuid: c1715590-4a21-4a2c-86f0-295b368f4724
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - mytheme
@@ -8,7 +8,7 @@ _core:
   default_config_hash: Qf2BoIzd9py5AYXZj8fJzCYDyVk1-AWXcu-AqQeDZKA
 id: mytheme_local_tasks
 theme: mytheme
-region: content
+region: header
 weight: -8
 provider: null
 plugin: local_tasks_block
