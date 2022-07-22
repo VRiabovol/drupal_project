@@ -11,14 +11,21 @@ libraries:
 screenshot: mytheme.png
 regions:
   header: Header
-  primary_menu: 'Primary menu'
-  content: Content
+  menu_category: 'Menu category'
+  region1: 'Region 1'
+  social_media: 'Social media'
+  region2: 'Region 2'
+  region3: 'Region 3'
+  region4: 'Region 4'
+  region5: 'Region 5'
+  region6: 'Region 6'
+  region7: 'Region 7'
   footer_top : 'Footer top'
   footer_first: 'Footer first'
   footer_second: 'Footer second'
   footer_third: 'Footer third'
   footer_fourth: 'Footer fourth'
-  footer_fifth: 'Footer fifth'
+  footer_bottom: 'Footer bottom'
 # must always be in regions
   page_top: 'Page top'
   page_bottom: 'Page bottom'
