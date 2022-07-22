@@ -1,5 +1,4 @@
 .header {
-  height: 125px;
   .header__inner{
     display: flex;
     flex-direction: column;
@@ -32,6 +31,11 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      .menu-item {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 17px;
+        letter-spacing: -0.5px;
+      }
     }
   }
 }
