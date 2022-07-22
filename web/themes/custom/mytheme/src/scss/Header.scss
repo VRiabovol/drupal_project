@@ -1,14 +1,17 @@
-
-
 .header {
   height: 125px;
-  background-color: white;
-
+  .header__inner{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
   &__inner {
     .clearfix.region.region-header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      align-content: center;
       color: black;
     }
   }
@@ -16,10 +19,22 @@
     width: 100%;
   }
   .clearfix.menu{
+    display: flex;
     .menu-item a{
       color: black;
       font-weight: bold;
     }
   }
 }
+.menu-category {
+  .menu-category__inner {
+    .clearfix.menu {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+
 
