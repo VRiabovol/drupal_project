@@ -10,7 +10,7 @@ dependencies:
     - mytheme
 id: mytheme_region6advertising
 theme: mytheme
-region: content
+region: header
 weight: 0
 provider: null
 plugin: 'block_content:ec0f31b9-6289-48b4-82df-2b38718ece85'

@@ -10,7 +10,7 @@ dependencies:
     - mytheme
 id: mytheme_views_block__region5_region5_header
 theme: mytheme
-region: content
+region: header
 weight: 0
 provider: null
 plugin: 'views_block:region5-region5_header'

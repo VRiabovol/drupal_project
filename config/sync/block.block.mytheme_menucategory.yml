@@ -1,6 +1,6 @@
 uuid: e8ee60c1-30cd-422c-8d7f-76388bc1b38d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-category
@@ -10,7 +10,7 @@ dependencies:
     - mytheme
 id: mytheme_menucategory
 theme: mytheme
-region: content
+region: header
 weight: -9
 provider: null
 plugin: 'system_menu_block:menu-category'

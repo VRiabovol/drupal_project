@@ -12,7 +12,7 @@ _core:
   default_config_hash: pnCK21YFjH7iB4XDeokSq3N3XSr6qX8BsqMs9nmip6E
 id: mytheme_footer
 theme: mytheme
-region: primary_menu
+region: header
 weight: -8
 provider: null
 plugin: 'system_menu_block:footer'
