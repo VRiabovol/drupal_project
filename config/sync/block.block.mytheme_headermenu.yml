@@ -11,7 +11,7 @@ dependencies:
 id: mytheme_headermenu
 theme: mytheme
 region: header
-weight: -6
+weight: -4
 provider: null
 plugin: 'system_menu_block:header-menu'
 settings:

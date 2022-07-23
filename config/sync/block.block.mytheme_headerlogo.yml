@@ -11,13 +11,13 @@ dependencies:
 id: mytheme_headerlogo
 theme: mytheme
 region: header
-weight: 0
+weight: -19
 provider: null
 plugin: 'block_content:af029381-ab6f-41f2-a592-d64f9af4a6c6'
 settings:
   id: 'block_content:af029381-ab6f-41f2-a592-d64f9af4a6c6'
   label: 'Header logo'
-  label_display: visible
+  label_display: '0'
   provider: block_content
   status: true
   info: ''
