@@ -1,21 +1,14 @@
-//colors
-$white: #ffffff;
-$title-view-color: #ffffff;
-$grey-dark: #767676;
-$grey: #EAEAEA;
-$link: #1AA4CE;
-$ltcol: #767676;
-$header: #000;
-$black: #000;
-$dd: #767676;
-$titlename:#111111;
-$headerm:#ffff;
-$cperft:#222222;
-$qout:#4db2ec;
+// Variables for mixins.
+$breakpoints: (
+  'xs': 320px,
+  'sm': 768px,
+  'md': 1024px,
+  'lg': 1240px,
+  'xl': 1600px
+) !default;
 
-//fonts
-$f16: 16px;
-$f11: 11px;
-$f18: 18px;
-$f14: 14px;
-$f21: 21px;
+// Fonts.
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap');
+$title: 'PT Serif', serif;
+$category_date: 'Work Sans', sans-serif;
