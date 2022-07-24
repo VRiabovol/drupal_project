@@ -2,10 +2,6 @@ uuid: 927cd3bf-9872-482c-a275-71464f60b3b3
 langcode: en
 status: false
 dependencies:
-  config:
-    - views.view.marketing_and_finance
-  module:
-    - views
   theme:
     - mytheme
 id: mytheme_views_block__marketing_and_finance_block_1
