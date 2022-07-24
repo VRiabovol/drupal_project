@@ -1,0 +1,14 @@
+uuid: b3ab89c2-ea72-4316-85b3-b50cc211298b
+langcode: en
+status: true
+dependencies: {  }
+name: region1_marketing_and_finance
+label: 'Region1 marketing and finance (545 x 600)'
+effects:
+  65e77380-1067-49a1-87ba-3bc444bf7e49:
+    uuid: 65e77380-1067-49a1-87ba-3bc444bf7e49
+    id: image_resize
+    weight: 2
+    data:
+      width: 545
+      height: 600

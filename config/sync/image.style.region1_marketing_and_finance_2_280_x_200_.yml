@@ -1,0 +1,14 @@
+uuid: ca3b3b4a-4fa7-4d1b-9289-c8dddb96f7a8
+langcode: en
+status: true
+dependencies: {  }
+name: region1_marketing_and_finance_2_280_x_200_
+label: 'Region1 marketing and finance 2 (260 x 180)'
+effects:
+  d659c9d2-8b7f-4115-875f-03c75d48004d:
+    uuid: d659c9d2-8b7f-4115-875f-03c75d48004d
+    id: image_resize
+    weight: 1
+    data:
+      width: 260
+      height: 180
