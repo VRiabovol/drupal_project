@@ -14,7 +14,7 @@ dependencies:
     - 'taxonomy_term:categories:7e3c1dc0-d19d-4d78-ad11-f14e9b206254'
     - 'taxonomy_term:categories:e02e61ab-33a8-4bc9-a05f-281eee4d1558'
     - 'taxonomy_term:publish_unpublih:0bcb69de-74e7-4d7e-8830-a778378388ff'
-    - 'taxonomy_term:tags:5bd69be8-bcaa-4540-88a1-7adad18049a4'
+    - 'taxonomy_term:publish_unpublih:e7edddd1-3234-4b07-96e4-c05c1b25166c'
   module:
     - media
     - node
@@ -188,9 +188,9 @@ display:
       style:
         type: default
         options:
-          row_class: ''
+          grouping: {  }
+          row_class: marketing
           default_row_class: true
-          uses_fields: false
       row:
         type: fields
         options:
@@ -535,7 +535,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            - 14
+            - 16
           group: 1
           exposed: false
           expose:
@@ -576,9 +576,11 @@ display:
         groups:
           1: AND
       defaults:
+        css_class: false
         fields: false
         filters: false
         filter_groups: false
+      css_class: 'region1 marketing'
       display_description: ''
       display_extenders: {  }
       block_description: marketing
@@ -593,6 +595,115 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_categories'
+        - 'config:field.storage.node.field_image_media'
+  region1_block_finance:
+    id: region1_block_finance
+    display_title: 'region1 block finance'
+    display_plugin: block
+    position: 3
+    display_options:
+      title: 'block finance'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_image_media:
+          id: field_image_media
+          table: node__field_image_media
+          field: field_image_media
+          plugin_id: field
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      defaults:
+        title: false
+        style: false
+        row: false
+        fields: false
+      display_description: ''
+      display_extenders: {  }
+      block_description: 'region1 block finance'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
         - 'config:field.storage.node.field_image_media'
   region1_finance:
     id: region1_finance
@@ -895,9 +1006,9 @@ display:
       style:
         type: default
         options:
-          row_class: ''
+          grouping: {  }
+          row_class: finance
           default_row_class: true
-          uses_fields: false
       row:
         type: fields
         options:
@@ -906,11 +1017,13 @@ display:
           separator: ''
           hide_empty: false
       defaults:
+        css_class: false
         style: false
         row: false
         fields: false
         filters: false
         filter_groups: false
+      css_class: 'region1 finance'
       display_description: ''
       display_extenders: {  }
       displays:

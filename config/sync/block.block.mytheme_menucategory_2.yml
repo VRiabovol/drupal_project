@@ -1,6 +1,6 @@
 uuid: 1bfb41d3-b921-4e7d-8463-a1dc6f6624f6
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.menu-category
