@@ -1,6 +1,6 @@
-uuid: 58935f90-c387-40ec-bf67-f69e66a9e736
+uuid: c7dc7d17-7388-41c6-9700-8fa701bd655e
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.popular
@@ -8,14 +8,14 @@ dependencies:
     - views
   theme:
     - mytheme
-id: mytheme_views_block__popular_block_1
+id: views_block__popular_region1_popular
 theme: mytheme
-region: header
-weight: 5
+region: region1
+weight: 0
 provider: null
-plugin: 'views_block:popular-block_1'
+plugin: 'views_block:popular-region1_popular'
 settings:
-  id: 'views_block:popular-block_1'
+  id: 'views_block:popular-region1_popular'
   label: ''
   label_display: visible
   provider: views
