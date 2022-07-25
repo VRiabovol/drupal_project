@@ -16,7 +16,7 @@ dependencies:
     - field.field.node.post.field_title
     - field.field.node.post.field_user
     - field.field.node.post.layout_builder__layout
-    - image.style.thumbnail
+    - image.style.region1_marketing_and_finance_2_280_x_200_
     - node.type.post
   module:
     - media
@@ -39,8 +39,8 @@ content:
     type: media_thumbnail
     label: hidden
     settings:
-      image_link: ''
-      image_style: thumbnail
+      image_link: content
+      image_style: region1_marketing_and_finance_2_280_x_200_
       image_loading:
         attribute: lazy
     third_party_settings: {  }
