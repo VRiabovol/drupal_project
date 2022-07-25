@@ -11,13 +11,13 @@ dependencies:
 id: mytheme_useraccountmenu
 theme: mytheme
 region: header
-weight: 0
+weight: -17
 provider: null
 plugin: 'system_menu_block:account'
 settings:
   id: 'system_menu_block:account'
   label: 'User account menu'
-  label_display: visible
+  label_display: '0'
   provider: system
   level: 1
   depth: 0
