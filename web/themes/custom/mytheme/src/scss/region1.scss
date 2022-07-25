@@ -1,6 +1,4 @@
-@import "variables";
-@import "mixin";
-// News slider (320px).
+// News slider
 .view-id-news_slider {
   @include bp-down('xs') {
     background-color: rgba(243, 240, 237, 0.73);
