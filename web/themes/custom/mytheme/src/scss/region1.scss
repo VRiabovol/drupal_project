@@ -1,3 +1,5 @@
+@import "mixin";
+@import "variables";
 // News slider (320px).
 .view-id-news_slider {
   @include bp-down('xs') {
@@ -75,14 +77,15 @@
  }
 }
 // Marketing finance.
-.view-marketing-and-finance {
+.block-views-blockmarketing-and-finance-marketing {
   @include bp-down('xs') {
-    .view-content {
+    .view-display-id-marketing {
+      position: relative;
       .marketing.views-row {
         .views-field-field-image-media a {
           border-bottom: none;
         }
-        .views-field-title {
+        .views-field.views-field-title {
           position: absolute;
           top: 260px;
           padding: 0 15px;
@@ -96,7 +99,7 @@
             color: #8e929c;
           }
         }
-        .views-field-field-categories {
+        .views-field.views-field-field-categories {
           position: absolute;
           top: 235px;
           padding: 0 15px;
@@ -117,7 +120,7 @@
             background-color: black;
           }
         }
-        .views-field-body {
+        .views-field.views-field-body {
           position: absolute;
           top: 360px;
           padding: 0 15px;
