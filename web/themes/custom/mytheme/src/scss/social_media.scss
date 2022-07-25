@@ -1,3 +1,49 @@
 @import "mixin";
 @import "variables";
 // Social media (320px)
+.block-views-blocksocial-media-block-1 {
+  border: 1px solid #918c8c;
+  border-left: none;
+  border-right: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px 25px;
+  @include bp-down('xs') {
+    .social-title {
+      font-family: $category_date;
+      font-size: 16px;
+      padding: 22px;
+    }
+    .social-body {
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .views-row.clearfix.row-1 {
+      .views-col.col-1 {
+        margin-top: 10px;
+        margin-left: 55px;
+        float: left;
+        min-width: 0;
+        a {
+          border-bottom: none;
+        }
+      }
+      .views-col.col-2 {
+        margin-top: 10px;
+        float: left;
+        min-width: 0;
+        a {
+          border-bottom: none;
+        }
+      }
+      .views-col.col-3 {
+        margin-top: 10px;
+        float: left;
+        min-width: 0;
+        a {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
