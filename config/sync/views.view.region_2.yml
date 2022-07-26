@@ -6,8 +6,8 @@ dependencies:
     - field.storage.node.field_categories
     - field.storage.node.field_exclusive
     - field.storage.node.field_image_media
-    - image.style.large
-    - image.style.thumbnail
+    - image.style.region2_bottom_96_x_96_
+    - image.style.region2_top_320_x_380_
     - node.type.post
   module:
     - media
@@ -81,8 +81,8 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_link: ''
-            image_style: large
+            image_link: content
+            image_style: region2_top_320_x_380_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -345,7 +345,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -408,10 +408,10 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
-            text: ''
+            text: '<span class="region2-exclusive"> {{ field_exclusive }} </span> <span class="region2-title"> {{ title }} </span> '
             make_link: false
             path: ''
             absolute: false
@@ -440,7 +440,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -473,8 +473,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"region2-exclusive\">\r\n  <div class=\"region2-exclusive-title\">\r\n      <span class=\"region2-exclusive-span\"> {{ field_exclusive }} </span> \r\n      <span class=\"region2-title-span\"> {{ title }} </span>\r\n  <div class=\"region2-exclusive-category\">\r\n      <span class=\"region2-category-span\"> {{ field_categories }} </span>\r\n  </div>\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -537,7 +537,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: "<div class=\"region2-exclusive\">\r\n  <div class=\"region2-exclusive-title\">\r\n      <span class=\"region2-exclusive\"> {{ field_exclusive }} </span> \r\n      <span class=\"region2-title\"> {{ title }} </span>\r\n  <div class=\"region2-exclusive-category\">\r\n      <span class=\"region2-category-item\"> {{ field_categories }} </span>\r\n  </div>\r\n</div>\r\n<div class=\"region2-exclusive-image\">\r\n  {{ field_image_media }}\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -578,7 +578,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: ''
-            image_style: thumbnail
+            image_style: region2_bottom_96_x_96_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -620,7 +620,7 @@ display:
           columns: 4
           automatic_width: true
           alignment: vertical
-          row_class_custom: ''
+          row_class_custom: region2-bottom
           row_class_default: true
           col_class_custom: ''
           col_class_default: true
@@ -679,7 +679,7 @@ display:
           columns: 4
           automatic_width: true
           alignment: horizontal
-          row_class_custom: ''
+          row_class_custom: region2-top
           row_class_default: true
           col_class_custom: ''
           col_class_default: true
@@ -691,11 +691,27 @@ display:
           separator: ''
           hide_empty: false
       defaults:
+        css_class: false
         style: false
         row: false
         sorts: false
+        header: false
+      css_class: region2-top
       display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: '<span class="region2-title"> Breaking </span>'
+          tokenize: false
       display_extenders: {  }
+      block_description: 'region2 top'
     cache_metadata:
       max-age: -1
       contexts:

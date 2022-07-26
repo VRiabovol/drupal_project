@@ -1,0 +1,14 @@
+uuid: 1218316c-7c41-4b7a-a9b9-e5a5806e4e90
+langcode: en
+status: true
+dependencies: {  }
+name: region2_bottom_96_x_96_
+label: 'Region2 bottom (96 x 96)'
+effects:
+  1dbc16ac-917d-4afa-b5a4-421ed577f50d:
+    uuid: 1dbc16ac-917d-4afa-b5a4-421ed577f50d
+    id: image_resize
+    weight: 1
+    data:
+      width: 96
+      height: 96
