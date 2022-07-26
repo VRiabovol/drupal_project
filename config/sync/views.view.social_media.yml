@@ -25,75 +25,8 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Social media'
+      title: 'SOCIAL MEDIA'
       fields:
-        field_link:
-          id: field_link
-          table: node__field_link
-          field: field_link
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: uri
-          type: link
-          settings:
-            trim_length: 80
-            url_only: false
-            url_plain: false
-            rel: '0'
-            target: '0'
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_image_social_media:
           id: field_image_social_media
           table: node__field_image_social_media
@@ -103,10 +36,10 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ field_link }} {{ field_image_social_media }}'
             make_link: false
             path: ''
             absolute: false
@@ -160,6 +93,73 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        field_link:
+          id: field_link
+          table: node__field_link
+          field: field_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "\r\n<a href=\"{{ field_link__uri }}\">{{ field_image_social_media }}</a>"
+            make_link: false
+            path: '{{ field_link }}'
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: 80
+            url_only: false
+            url_plain: false
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: some
         options:
@@ -202,6 +202,19 @@ display:
           granularity: second
       arguments: {  }
       filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            social_media: social_media
+          group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         status:
           id: status
           table: node_field_data
@@ -215,18 +228,10 @@ display:
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            social_media: social_media
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: grid
       row:
@@ -234,7 +239,7 @@ display:
         options:
           default_field_elements: true
           inline:
-            field_image: field_image
+            field_image_social_media: field_image_social_media
             field_link: field_link
           separator: ''
           hide_empty: false
@@ -248,31 +253,16 @@ display:
           query_tags: {  }
       relationships: {  }
       header:
-        area:
-          id: area
+        area_text_custom_1:
+          id: area_text_custom_1
           table: views
-          field: area
+          field: area_text_custom
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: text
+          plugin_id: text_custom
           empty: false
-          content:
-            value: 'JOIN OR SOCIAL MEDIA'
-            format: basic_html
-          tokenize: false
-        area_1:
-          id: area_1
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: 'For even more exclusive content!'
-            format: basic_html
+          content: "<span class=\"social-title\"> JOIN OUR SOCIAL MEDIA </span> <br>\r\n<span class=\"social-body\"> For even more exclusive content! </span>"
           tokenize: false
       footer: {  }
       display_extenders: {  }
