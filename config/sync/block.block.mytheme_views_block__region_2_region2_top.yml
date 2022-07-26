@@ -1,6 +1,6 @@
 uuid: 19b90ba9-5cda-4631-8188-f36a8a6caf8f
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.region_2
@@ -10,8 +10,8 @@ dependencies:
     - mytheme
 id: mytheme_views_block__region_2_region2_top
 theme: mytheme
-region: header
-weight: -1
+region: region2
+weight: -19
 provider: null
 plugin: 'views_block:region_2-region2_top'
 settings:
