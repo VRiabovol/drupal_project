@@ -1,9 +1,9 @@
 /*
 scss
  */
-import "./scss/Global.scss";
 import "./scss/Header.scss";
 import "./scss/region1.scss";
+import "./scss/region2.scss";
 // import "./scss/sidebar.scss";
 // import "./scss/FeaturedTop.scss";
 // import "./scss/front_views.scss";
