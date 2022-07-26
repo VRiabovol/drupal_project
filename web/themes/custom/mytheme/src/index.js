@@ -1,7 +1,6 @@
 /*
 scss
  */
-import "./scss/Global.scss";
 import "./scss/Header.scss";
 import "./scss/region1.scss";
 import "./scss/social_media.scss";
