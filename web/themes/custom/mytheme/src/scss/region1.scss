@@ -2,7 +2,7 @@
 // News slider (320px).
 .view-id-news_slider {
   @include bp-down('xs') {
-    background-color: rgba(243, 240, 237, 0.73);
+    background-color: #f1f1f1;
     .vertical.cols-4.clearfix {
       display: flex;
       flex-direction: column;

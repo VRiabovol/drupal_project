@@ -408,9 +408,9 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: '<span class="region2-exclusive"> {{ field_exclusive }} </span> <span class="region2-title"> {{ title }} </span> '
             make_link: false
             path: ''
@@ -473,8 +473,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"region2-exclusive\">\r\n  <div class=\"region2-exclusive-title\">\r\n      <span class=\"region2-exclusive-span\"> {{ field_exclusive }} </span> \r\n      <span class=\"region2-title-span\"> {{ title }} </span>\r\n  <div class=\"region2-exclusive-category\">\r\n      <span class=\"region2-category-span\"> {{ field_categories }} </span>\r\n  </div>\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -537,7 +537,7 @@ display:
           exclude: false
           alter:
             alter_text: false
-            text: ''
+            text: "<div class=\"region2-exclusive\">\r\n  <div class=\"region2-exclusive-title\">\r\n      <span class=\"region2-exclusive\"> {{ field_exclusive }} </span> \r\n      <span class=\"region2-title\"> {{ title }} </span>\r\n  <div class=\"region2-exclusive-category\">\r\n      <span class=\"region2-category-item\"> {{ field_categories }} </span>\r\n  </div>\r\n</div>\r\n<div class=\"region2-exclusive-image\">\r\n  {{ field_image_media }}\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
