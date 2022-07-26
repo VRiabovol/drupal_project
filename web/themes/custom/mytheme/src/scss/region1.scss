@@ -1,5 +1,4 @@
-@import "mixin";
-@import "variables";
+@import "Global";
 // News slider (320px).
 .view-id-news_slider {
   @include bp-down('xs') {

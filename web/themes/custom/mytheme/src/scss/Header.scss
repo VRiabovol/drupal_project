@@ -1,5 +1,4 @@
-@import "mixin";
-@import "variables";
+@import "Global";
 // Header (320px).
 .header {
   @include bp-down('xs') {
