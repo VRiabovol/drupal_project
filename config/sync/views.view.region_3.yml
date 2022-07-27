@@ -419,9 +419,9 @@ display:
           columns: 3
           automatic_width: true
           alignment: horizontal
-          row_class_custom: ''
+          row_class_custom: region3-body-row
           row_class_default: true
-          col_class_custom: ''
+          col_class_custom: region3-body-column
           col_class_default: true
       row:
         type: fields
@@ -665,9 +665,9 @@ display:
           columns: 3
           automatic_width: true
           alignment: horizontal
-          row_class_custom: ''
+          row_class_custom: region3-footer-row
           row_class_default: true
-          col_class_custom: ''
+          col_class_custom: region3-footer-column
           col_class_default: true
       row:
         type: fields
@@ -767,7 +767,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: 'VIEW ALL '
+            text: 'VIEW ALL   →'
             make_link: true
             path: /taxonomy/term/3
             absolute: false
@@ -881,7 +881,10 @@ display:
           1: AND
       style:
         type: default
-        options: {  }
+        options:
+          grouping: {  }
+          row_class: politics-header
+          default_row_class: true
       row:
         type: fields
         options:

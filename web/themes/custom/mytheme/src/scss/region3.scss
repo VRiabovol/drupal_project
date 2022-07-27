@@ -1,0 +1,38 @@
+@import "Global";
+// Politics (320px)
+.region.region-region3 {
+  @include bp-down('xs') {
+    .view-id-region_3.view-display-id-region3_header {
+      background-color: pink;
+      .politics-header.views-row {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 4px solid red;
+        background-color: white;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        .views-field.views-field-nothing {
+          font-family: $category_date;
+          font-size: 32px;
+          line-height: 1;
+          font-weight: 700;
+          letter-spacing: -1px;
+        }
+        .views-field.views-field-nothing-1 {
+          a {
+            color: red;
+            border-bottom: none;
+            font-family: $category_date;
+            font-size: 13px;
+            line-height: 1.2;
+            font-weight: 600;
+            text-transform: uppercase;
+            position: relative;
+            top: 8px;
+          }
+        }
+      }
+    }
+
+  }
+}
