@@ -35,3 +35,4 @@ web/themes/custom/mytheme/dist/style.css
 /.env
 /.editorconfig
 /.gitattributes
+/.run
