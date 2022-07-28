@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_exclusive
     - field.storage.node.field_image_media
     - image.style.large
-    - image.style.thumbnail
+    - image.style.region5_footer_100_x_70_
     - node.type.post
     - taxonomy.vocabulary.categories
   content:
@@ -846,7 +846,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: thumbnail
+            image_style: region5_footer_100_x_70_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -868,7 +868,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -935,8 +935,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"region2-footer-exclusive-title\">\r\n  <span class=\"region5-footer-exclusive-span\">{{ field_exclusive }}</span>\r\n   <span class=\"region5-footer-title-span\">{{ title }}</span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1120,9 +1120,9 @@ display:
           columns: 4
           automatic_width: true
           alignment: horizontal
-          row_class_custom: ''
+          row_class_custom: region5-footer
           row_class_default: true
-          col_class_custom: ''
+          col_class_custom: region5-footer
           col_class_default: true
       row:
         type: fields
@@ -1132,10 +1132,19 @@ display:
         pager: false
         style: false
         row: false
+        relationships: false
         fields: false
         sorts: false
         filters: false
         filter_groups: false
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
       display_description: ''
       display_extenders: {  }
       block_description: 'region5 footer'
