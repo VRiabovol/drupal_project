@@ -18,6 +18,7 @@
 /web/themes/custom/mytheme/dist/style.css
 /web/sites/default/settings.local.php
 /web/sites/default/services.local.yml
+
 # Ignore sensitive information
 /web/sites/*/settings.php
 /web/sites/*/settings.local.php

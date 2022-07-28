@@ -1,0 +1,24 @@
+uuid: 86a5bb17-a9d1-4267-a999-73287a614fd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.region_3
+  module:
+    - views
+  theme:
+    - mytheme
+id: views_block__region_3_region3_header_2
+theme: mytheme
+region: region3
+weight: 0
+provider: null
+plugin: 'views_block:region_3-region3_header'
+settings:
+  id: 'views_block:region_3-region3_header'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
