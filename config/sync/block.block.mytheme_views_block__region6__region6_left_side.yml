@@ -1,6 +1,6 @@
 uuid: 63c10ffd-7ed0-45e4-be98-84cf0551bdfc
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.region6_
@@ -10,14 +10,14 @@ dependencies:
     - mytheme
 id: mytheme_views_block__region6__region6_left_side
 theme: mytheme
-region: header
-weight: 6
+region: region6
+weight: -21
 provider: null
 plugin: 'views_block:region6_-region6_left_side'
 settings:
   id: 'views_block:region6_-region6_left_side'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: ''
   items_per_page: none
