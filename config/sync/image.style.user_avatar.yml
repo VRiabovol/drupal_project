@@ -1,0 +1,14 @@
+uuid: e88fc9ae-bf9a-47b1-a3ad-6b57a18bdae7
+langcode: en
+status: true
+dependencies: {  }
+name: user_avatar
+label: 'user avatar (25 x 25)'
+effects:
+  6099b7b8-8c81-4291-aa2a-bc1101dbd338:
+    uuid: 6099b7b8-8c81-4291-aa2a-bc1101dbd338
+    id: image_resize
+    weight: 1
+    data:
+      width: 25
+      height: 25
