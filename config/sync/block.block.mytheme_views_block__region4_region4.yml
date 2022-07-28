@@ -1,6 +1,6 @@
 uuid: e3922791-ed9b-421c-8f27-f15032776b68
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.region4
@@ -10,14 +10,14 @@ dependencies:
     - mytheme
 id: mytheme_views_block__region4_region4
 theme: mytheme
-region: header
-weight: 2
+region: region4
+weight: -19
 provider: null
 plugin: 'views_block:region4-region4'
 settings:
   id: 'views_block:region4-region4'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: ''
   items_per_page: none

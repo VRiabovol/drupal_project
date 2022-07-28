@@ -1,0 +1,39 @@
+@import "Global";
+// Celebrity (320px).
+.block-views-blockregion4-region4 {
+  @include bp-down('xs') {
+    background-color: yellowgreen;
+    .region4-header {
+      position: relative;
+      padding-bottom: 60px;
+      .region4-lifestyle {
+        position: absolute;
+        top: 0;
+        font-size: 53px;
+        color: #01010112;
+      }
+      .region4-celebrity {
+        position: absolute;
+        top: 0;
+        left: 60px;
+        margin-top: 30px;
+        font-size: 32px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -1;
+        font-family: $category_date;
+      }
+    }
+    .view-content {
+      .views-field-field-image-media {
+        margin-top: 20px;
+        a {
+          border-bottom: none;
+        }
+        img {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
