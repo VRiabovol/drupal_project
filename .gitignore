@@ -15,7 +15,8 @@
 /web/themes/custom/*/node_modules
 /node_modules
 /web/themes/custom/mytheme/dist/dscss.js
-web/themes/custom/mytheme/dist/style.css
+/web/themes/custom/mytheme/dist/style.css
+/web/sites/default/services.local.yml
 
 # Ignore sensitive information
 /web/sites/*/settings.php
@@ -35,3 +36,4 @@ web/themes/custom/mytheme/dist/style.css
 /.env
 /.editorconfig
 /.gitattributes
+/.run
