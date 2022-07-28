@@ -1,0 +1,24 @@
+uuid: 7cf56309-ff1a-4513-b164-9151920c0d87
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.region5
+  module:
+    - views
+  theme:
+    - mytheme
+id: views_block__region5_region5_header_2
+theme: mytheme
+region: region5
+weight: 0
+provider: null
+plugin: 'views_block:region5-region5_header'
+settings:
+  id: 'views_block:region5-region5_header'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
