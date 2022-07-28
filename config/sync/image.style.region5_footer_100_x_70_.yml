@@ -1,0 +1,14 @@
+uuid: 9e16e06a-fec9-4876-badf-ff6eecc9f9dc
+langcode: en
+status: true
+dependencies: {  }
+name: region5_footer_100_x_70_
+label: 'region5 footer (100 x 70)'
+effects:
+  8dab57d2-048e-4510-a60b-13d4cf1bfa16:
+    uuid: 8dab57d2-048e-4510-a60b-13d4cf1bfa16
+    id: image_resize
+    weight: 1
+    data:
+      width: 100
+      height: 70

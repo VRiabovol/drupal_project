@@ -1,0 +1,24 @@
+uuid: aeb6dd5a-ef95-465f-805d-00ea2622b4df
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.region5
+  module:
+    - views
+  theme:
+    - mytheme
+id: views_block__region5_region5_footer
+theme: mytheme
+region: region5
+weight: 0
+provider: null
+plugin: 'views_block:region5-region5_footer'
+settings:
+  id: 'views_block:region5-region5_footer'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }
