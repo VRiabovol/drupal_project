@@ -1,0 +1,14 @@
+uuid: fca9f17d-d6be-40eb-b4ec-23c2e6857ed4
+langcode: en
+status: true
+dependencies: {  }
+name: region4_top_240_x_165_
+label: 'region4 top (240 x 165)'
+effects:
+  85fb6089-4ba2-4797-8767-d73497b89fb0:
+    uuid: 85fb6089-4ba2-4797-8767-d73497b89fb0
+    id: image_resize
+    weight: 1
+    data:
+      width: 240
+      height: 165
