@@ -8,6 +8,7 @@ import "./scss/region3.scss";
 import "./scss/region4.scss";
 import "./scss/region5.scss";
 import "./scss/region6.scss";
+import "./scss/region7.scss";
 import "./scss/social_media.scss";
 // import "./scss/sidebar.scss";
 // import "./scss/FeaturedTop.scss";

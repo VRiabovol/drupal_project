@@ -1,0 +1,14 @@
+uuid: 373a6f66-3c61-4d38-8b05-a84ab365c9b2
+langcode: en
+status: true
+dependencies: {  }
+name: region7_top_recent_posts_515_x_360_
+label: 'region7 top recent posts (515 x 360)'
+effects:
+  f4f84bba-4030-4051-ba57-40a2b3884551:
+    uuid: f4f84bba-4030-4051-ba57-40a2b3884551
+    id: image_resize
+    weight: 1
+    data:
+      width: 515
+      height: 360

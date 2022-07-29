@@ -11,7 +11,7 @@ dependencies:
 id: views_block__region5_region5_footer
 theme: mytheme
 region: region5
-weight: 0
+weight: -20
 provider: null
 plugin: 'views_block:region5-region5_footer'
 settings:
