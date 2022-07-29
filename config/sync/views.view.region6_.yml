@@ -8,7 +8,8 @@ dependencies:
     - field.storage.node.field_exclusive
     - field.storage.node.field_image_media
     - image.style.large
-    - image.style.medium
+    - image.style.region6_left_side_550_x_600_
+    - image.style.region6_right_side
     - node.type.post
     - taxonomy.vocabulary.exclusive
   content:
@@ -509,7 +510,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: medium
+            image_style: region6_right_side
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -594,7 +595,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -659,8 +660,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"region6-right-side\">\r\n  <span class=\"exclusive\">{{ field_exclusive }}</span>\r\n  <span class=\"title\">{{ title }}</span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -689,7 +690,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -843,9 +844,9 @@ display:
           columns: 2
           automatic_width: true
           alignment: horizontal
-          row_class_custom: ''
+          row_class_custom: region6-right-side-row
           row_class_default: true
-          col_class_custom: ''
+          col_class_custom: region6-right-side-column
           col_class_default: true
       row:
         type: fields
@@ -939,7 +940,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: large
+            image_style: region6_left_side_550_x_600_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -1056,7 +1057,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1270,7 +1271,7 @@ display:
         type: default
         options:
           grouping: {  }
-          row_class: ''
+          row_class: region6-left
           default_row_class: true
       row:
         type: fields
@@ -1284,8 +1285,22 @@ display:
         sorts: false
         filters: false
         filter_groups: false
+        header: false
       display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: '<span class="region6-header"> Exclusive content </span>'
+          tokenize: false
       display_extenders: {  }
+      block_description: 'region6 left side'
     cache_metadata:
       max-age: -1
       contexts:
