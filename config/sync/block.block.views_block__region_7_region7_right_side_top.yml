@@ -1,21 +1,21 @@
-uuid: 7cf56309-ff1a-4513-b164-9151920c0d87
+uuid: c7795224-b8d1-4aed-9b52-be7558725d5a
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.region5
+    - views.view.region_7
   module:
     - views
   theme:
     - mytheme
-id: views_block__region5_region5_header_2
+id: views_block__region_7_region7_right_side_top
 theme: mytheme
-region: region5
+region: region7
 weight: -21
 provider: null
-plugin: 'views_block:region5-region5_header'
+plugin: 'views_block:region_7-region7_right_side_top'
 settings:
-  id: 'views_block:region5-region5_header'
+  id: 'views_block:region_7-region7_right_side_top'
   label: ''
   label_display: '0'
   provider: views

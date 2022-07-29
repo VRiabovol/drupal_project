@@ -1,0 +1,14 @@
+uuid: f4031a8a-99ff-47ea-b32e-7aa0d5b31390
+langcode: en
+status: true
+dependencies: {  }
+name: region7_left_side_bottom_330_x_230_
+label: 'region7 left side bottom (330 X 230)'
+effects:
+  3cf51ef1-eb90-40c2-811b-b786ace27964:
+    uuid: 3cf51ef1-eb90-40c2-811b-b786ace27964
+    id: image_resize
+    weight: 1
+    data:
+      width: 330
+      height: 230

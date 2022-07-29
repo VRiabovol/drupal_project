@@ -1,6 +1,6 @@
-uuid: 21580495-5119-4592-ace9-4c730bcb1106
+uuid: 079e2279-069c-434b-a36b-5b01e62d98c8
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.region_7
@@ -8,16 +8,16 @@ dependencies:
     - views
   theme:
     - mytheme
-id: mytheme_views_block__region_7_region7
+id: views_block__region_7_region7_2
 theme: mytheme
-region: header
-weight: 8
+region: region7
+weight: -22
 provider: null
 plugin: 'views_block:region_7-region7'
 settings:
   id: 'views_block:region_7-region7'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: ''
   items_per_page: none
