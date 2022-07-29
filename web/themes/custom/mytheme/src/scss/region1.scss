@@ -78,6 +78,7 @@
 // Marketing finance.
 .block-views-blockmarketing-and-finance-marketing-and-finance {
   @include bp-down('xs') {
+    // Marketing.
     .view-id-marketing_and_finance {
       position: relative;
       .marketing.views-row {
@@ -129,6 +130,7 @@
           color: white;
         }
       }
+      // Finance.
       .finance.views-row {
         .views-field-field-image-media {
           padding: 15px 0 0 15px;
