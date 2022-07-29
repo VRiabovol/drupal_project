@@ -9,8 +9,8 @@ dependencies:
     - field.storage.node.field_image_media
     - field.storage.user.user_picture
     - image.style.large
-    - image.style.medium
     - image.style.region7_left_side_bottom_330_x_230_
+    - image.style.region7_right_side_top_marketing_310_x_420_
     - image.style.region7_top_recent_posts_515_x_360_
     - image.style.user_avatar
     - node.type.post
@@ -1163,11 +1163,11 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: div
+          element_class: region7-top-title
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -1487,8 +1487,8 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
-          element_class: ''
+          element_type: div
+          element_class: region7-top-body
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -2144,7 +2144,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: medium
+            image_style: region7_right_side_top_marketing_310_x_420_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -2357,7 +2357,7 @@ display:
       pager:
         type: some
         options:
-          offset: 0
+          offset: 1
           items_per_page: 1
       sorts:
         created:
@@ -2372,8 +2372,8 @@ display:
           plugin_id: date
           order: ASC
           expose:
-            label: ''
-            field_identifier: ''
+            label: 'Authored on'
+            field_identifier: created
           exposed: false
           granularity: second
       filters:

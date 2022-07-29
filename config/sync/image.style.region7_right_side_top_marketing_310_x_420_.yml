@@ -1,0 +1,14 @@
+uuid: 7566ec34-db2c-4882-8985-7001065d59bd
+langcode: en
+status: true
+dependencies: {  }
+name: region7_right_side_top_marketing_310_x_420_
+label: 'region7 right side top marketing (310 x 420)'
+effects:
+  e186a88e-b360-46c2-8acb-bff19e030a28:
+    uuid: e186a88e-b360-46c2-8acb-bff19e030a28
+    id: image_resize
+    weight: 1
+    data:
+      width: 310
+      height: 420
