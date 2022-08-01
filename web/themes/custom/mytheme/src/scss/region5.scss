@@ -2,7 +2,6 @@
 // Food & travel (320px).
 // Header
 .block-views-blockregion5-region5-header {
-  @include bp-down('xs') {
     margin-top: 100px;
     .region5-header-column {
       display: flex;
@@ -83,11 +82,9 @@
         }
       }
     }
-  }
 }
 // Footer.
 .block-views-blockregion5-region5-footer {
-  @include bp-down('xs') {
     margin-top: 10px;
     border-top: 3px solid rgba(187, 186, 186, 0.19);
     .view-display-id-region5_footer {
@@ -134,5 +131,4 @@
         border-bottom: none;
       }
     }
-  }
 }

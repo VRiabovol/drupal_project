@@ -1,4 +1,4 @@
-uuid: 0ae8fa56-7799-4bbf-8e06-4b94e6c0a437
+uuid: 1cab1242-08bb-4146-ab98-b4e5085f1ef5
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ dependencies:
     - block_content
   theme:
     - mytheme
-id: mytheme_headerlogo
+id: headerlogo_2
 theme: mytheme
 region: header
-weight: -19
+weight: 0
 provider: null
 plugin: 'block_content:af029381-ab6f-41f2-a592-d64f9af4a6c6'
 settings:

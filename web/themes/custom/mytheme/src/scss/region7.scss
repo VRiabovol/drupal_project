@@ -4,7 +4,6 @@
   display: none;
 }
 .block-views.block-views-blockregion-7-region7 {
-  @include bp-down('xs') {
     // Header.
     .region7-header {
       position: relative;
@@ -164,12 +163,10 @@
         }
       }
     }
-  }
 }
 // Marketing.
 .view-display-id-region7_right_side_top {
   padding-top: 45px;
-  @include bp-down('xs') {
     .region7-right-side-top {
       position: relative;
       z-index: 1;
@@ -227,11 +224,9 @@
         }
       }
     }
-  }
 }
 // Right side bottom.
 .block-views-blockregion-7-region7-right-side-bottom {
-  @include bp-down('xs') {
     .views-field-title {
       a {
         border-bottom: none;
@@ -277,5 +272,4 @@
         }
       }
     }
-  }
 }

@@ -1,22 +1,22 @@
-uuid: e8ee60c1-30cd-422c-8d7f-76388bc1b38d
+uuid: df74004d-be8d-4aaf-87ae-c5f9d83ed3f3
 langcode: en
-status: false
+status: true
 dependencies:
   config:
-    - system.menu.menu-category
+    - system.menu.account
   module:
     - system
   theme:
     - mytheme
-id: mytheme_menucategory
+id: useraccountmenu_2
 theme: mytheme
 region: header
-weight: -13
+weight: 0
 provider: null
-plugin: 'system_menu_block:menu-category'
+plugin: 'system_menu_block:account'
 settings:
-  id: 'system_menu_block:menu-category'
-  label: 'Menu category'
+  id: 'system_menu_block:account'
+  label: 'User account menu'
   label_display: '0'
   provider: system
   level: 1

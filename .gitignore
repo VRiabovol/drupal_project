@@ -16,6 +16,7 @@
 /node_modules
 /web/themes/custom/mytheme/dist/dscss.js
 /web/themes/custom/mytheme/dist/style.css
+web/themes/custom/mytheme/dist/javascript.js
 /web/sites/default/settings.local.php
 /web/sites/default/services.local.yml
 

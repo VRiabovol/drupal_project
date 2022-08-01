@@ -1,4 +1,4 @@
-uuid: 4bf6187f-debb-42ef-b896-08f986b4e54a
+uuid: 6f8fc5a6-d58d-4282-9d46-6fc30b6f3b1f
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: region7title
 theme: mytheme
 region: region7
-weight: -23
+weight: -15
 provider: null
 plugin: 'block_content:9cfb13c6-f050-49c8-96ae-11c07cde51ec'
 settings:

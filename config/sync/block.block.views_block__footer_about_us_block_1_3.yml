@@ -1,6 +1,6 @@
-uuid: b046b88c-5925-4a84-b2b6-c21310ffe96c
+uuid: c9e9f383-cd56-4931-b9d7-362f7b0e653f
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.footer_about_us
@@ -8,7 +8,7 @@ dependencies:
     - views
   theme:
     - mytheme
-id: mytheme_views_block__footer_about_us_block_1_2
+id: views_block__footer_about_us_block_1_3
 theme: mytheme
 region: footer_first
 weight: 0
@@ -17,7 +17,7 @@ plugin: 'views_block:footer_about_us-block_1'
 settings:
   id: 'views_block:footer_about_us-block_1'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: ''
   items_per_page: none

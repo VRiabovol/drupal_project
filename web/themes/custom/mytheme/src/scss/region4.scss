@@ -1,7 +1,6 @@
 @import "Global";
 // Celebrity (320px).
 .block-views-blockregion4-region4 {
-  @include bp-down('xs') {
     // Header.
     .region4-header {
       position: relative;
@@ -122,5 +121,4 @@
         }
       }
     }
-  }
 }

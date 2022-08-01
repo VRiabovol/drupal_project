@@ -1,7 +1,7 @@
 @import "Global";
 // Politics (320px)
 .region.region-region3 {
-  @include bp-down('xs') {
+
     // Header.
     .view-id-region_3.view-display-id-region3_header {
       .politics-header.views-row {
@@ -110,5 +110,4 @@
         font-family: $category_date;
       }
     }
-  }
 }

@@ -1,18 +1,53 @@
- .footer-body {
-    &__inner {
+@import "Global";
+// Footer.
+// Footer top.
+.footer {
+  background-color: rgba(206, 206, 206, 0.84);
+  margin: -10px;
+    // Logo.
+    .news-week-h1-footer {
       display: flex;
+      justify-content: center;
+      .logo-text-wrap {
+        display: flex;
+        .logo-text-title {
+          color: rgba(0, 0, 0, 0.91);
+          font-style: italic;
+          letter-spacing: -2px;
+          font-size: 33px;
+          font-family: $category_date;
+        }
+        .logo-text-tagline {
+          color: black;
+          font-family: $category_date;
+          font-size: 10px;
+          font-style: italic;
+          line-height: 20px;
+          font-weight: 500;
+        }
+      }
     }
-   .region.region-footer-first {
-     width: 25%;
-   }
-   .region.region-footer-second {
-     width: 25%;
-   }
-   .region.region-footer-third {
-     width: 25%;
-   }
-   .region.region-footer-fourth {
-     width: 25%;
-   }
-  }
-
+    // Menu category.
+    .footer-top {
+      border-bottom: 3px solid black;
+    }
+    .region-footer-top {
+      .clearfix.menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .menu-item a {
+          margin-right: 2px;
+          text-decoration: none;
+          font-family: $category_date;
+          font-size: 13px;
+          font-weight: bolder;
+          color: black;
+          border-bottom: none;
+        }
+        .menu-item a:hover {
+          color: red;
+        }
+      }
+    }
+}

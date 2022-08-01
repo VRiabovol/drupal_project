@@ -1,4 +1,4 @@
-uuid: 079e2279-069c-434b-a36b-5b01e62d98c8
+uuid: 642f1381-a598-4149-a34f-5e6552ba1a50
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: views_block__region_7_region7_2
 theme: mytheme
 region: region7
-weight: -22
+weight: -14
 provider: null
 plugin: 'views_block:region_7-region7'
 settings:
