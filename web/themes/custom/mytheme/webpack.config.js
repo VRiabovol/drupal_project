@@ -19,6 +19,7 @@ module.exports = {
     ]
   },
   plugins: [
+    // eslint-disable-next-line new-cap
     new miniCss({
       filename: "style.css"
     })
