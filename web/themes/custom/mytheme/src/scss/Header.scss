@@ -12,29 +12,26 @@
   }
   .menu-burger {
     padding-top: 10%;
-    .menu-close-button.active,
-    .menu-close-button.active::after,
-    .menu-close-button.active::before {
-      position: relative;
-      left: 85%;
-      position: absolute;
-      width: 20px;
-      height: 3px;
-      background-color: white;
-    }
     .menu-close-button.active {
-      background-color: transparent;
+      position: relative;
+      top: 5%;
+      left: 80%;
+
+      &::after,
+      &::before {
+        position: absolute;
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        content: '';
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
     }
-    .menu-close-button.active::after {
-      content: '';
-      top: 0;
-      transform: rotate(45deg);
-    }
-    .menu-close-button.active::before {
-      content: '';
-      top: 0;
-      transform: rotate(-45deg);
-    }
+
     .block-menu.navigation.menu--account {
       display: flex;
       justify-content: space-around;
@@ -98,32 +95,23 @@
     justify-content: space-around;
     padding-top: 10%;
   }
-  .search-close-button,
-  .search-close-button::after,
-  .search-close-button::before {
-
-    position: relative;
-    top: 5%;
-    left: 80%;
-    position: absolute;
-    width: 20px;
-    height: 3px;
-    background-color: white;
-  }
   .search-close-button {
-    background-color: transparent;
+    position: relative;
+    top: 40px;
+    left: 80%;
+    &::after,
+    &::before {
+      position: absolute;
+      width: 20px;
+      height: 3px;
+      background-color: white;
+      content: '';
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
   }
-  .search-close-button::after {
-    content: '';
-    top: 0;
-    transform: rotate(45deg);
-  }
-  .search-close-button::before {
-    content: '';
-    top: 0;
-    transform: rotate(-45deg);
-  }
-
 }
 .header {
   @include bp-down('sm') {
@@ -148,27 +136,52 @@
         left: 90%;
       }
       // Burger lines.
-      .burger-lines,
-      .burger-lines::after,
-      .burger-lines::before {
-        position: absolute;
-        width: 20px;
-        height: 2px;
-        border-radius: 5px;
-        background-color: rgba(0, 0, 0, 0.91);
-      }
       .burger-lines {
+        position: relative;
         top: 50%;
         left: 50%;
+        width: 20px;
+        height: 3px;
+        display: block;
+        background-color: black;
+        &::after,
+        &::before {
+          position: absolute;
+          width: 20px;
+          height: 3px;
+          background-color: rgba(0, 0, 0, 0.91);
+          border-radius: 5px;
+          content: '';
+        }
+        &::after {
+          content: '';
+          top: 6px;
+        }
+        &::before {
+          content: '';
+          top: -6px;
+        }
       }
-      .burger-lines::before {
-        content: '';
-        top: -6px;
-      }
-      .burger-lines::after {
-        content: '';
-        top: 6px;
-      }
+      //.burger-lines::after,
+      //.burger-lines::before {
+      //  position: absolute;
+      //  width: 20px;
+      //  height: 2px;
+      //  border-radius: 5px;
+      //  background-color: rgba(0, 0, 0, 0.91);
+      //}
+      //.burger-lines {
+      //  top: 50%;
+      //  left: 50%;
+      //}
+      //.burger-lines::before {
+      //  content: '';
+      //  top: -6px;
+      //}
+      //.burger-lines::after {
+      //  content: '';
+      //  top: 6px;
+      //}
     }
     // Logo.
     .news-week-h1 {
