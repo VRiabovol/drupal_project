@@ -1,4 +1,4 @@
-uuid: f7fb8a8a-c79a-495f-b717-fdfaf3389159
+uuid: 8639f688-c5a8-4d3e-9cb2-c0a59e9d3fe5
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ dependencies:
     - system
   theme:
     - mytheme
-id: mytheme_menucategory_3
+id: menucategory_5
 theme: mytheme
-region: menu_category
-weight: -19
+region: footer_top
+weight: 0
 provider: null
 plugin: 'system_menu_block:menu-category'
 settings:

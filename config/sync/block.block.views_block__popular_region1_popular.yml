@@ -1,4 +1,4 @@
-uuid: c7dc7d17-7388-41c6-9700-8fa701bd655e
+uuid: 1972bc62-4382-4c80-ae74-5e292c154424
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: views_block__popular_region1_popular
 theme: mytheme
 region: region1
-weight: 0
+weight: -6
 provider: null
 plugin: 'views_block:popular-region1_popular'
 settings:

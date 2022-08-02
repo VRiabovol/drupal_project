@@ -1,4 +1,4 @@
-uuid: 4b46d1ed-5067-4ada-988c-42c696406087
+uuid: 3afbd13a-a3b6-4db1-bea2-6f96aeb2f03c
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,10 @@ dependencies:
     - block_content
   theme:
     - mytheme
-id: mytheme_region6advertising
+id: region6advertising_2
 theme: mytheme
 region: region6
-weight: -21
+weight: 0
 provider: null
 plugin: 'block_content:ec0f31b9-6289-48b4-82df-2b38718ece85'
 settings:

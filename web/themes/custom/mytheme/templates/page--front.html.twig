@@ -21,7 +21,7 @@
  * - front_page: The URL of the front page. Use this instead of base_path when
  *   linking to the front page. This includes the language domain or prefix.
  *
- * Page content (in order of occurrence in the default page.html.twig):
+ * Page content (in order of occurrence in the default page--front.html.twig):
  * - node: Fully loaded node, if there is an automatically-loaded node
  *   associated with the page and the node ID is the second argument in the
  *   page's path (e.g. node/12345 and node/12345/revisions, but not
@@ -50,104 +50,144 @@
  * @see html.html.twig
  */
 #}
+<div class="burger-menu">
+  <nav class="menu-burger">
+    <div>
+      <span class="menu-close-button active"></span>
+    </div>
+    {{ page.header.useraccountmenu_2 }}
+    {{ page.menu_category }}
+  </nav>
+<div class="search">
+  <div class="search-form">
+    <span class="search-close-button"></span>
+    {{ page.header.searchform }}
+  </div>
+</div>
+</div>
 <div id="page-wrapper">
   <div id="page">
     <header class="header" role="banner">
       <div class="container">
         <div class="header__inner">
-            {{ page.header }}
-        </div>
-        <div class="menu-category">
-            {{ page.menu_category }}
+          <div class="news-week">
+            <div class="header-burger-button">
+              <a href="#" class="burger-button">
+                <span class="burger-lines"></span>
+              </a>
+            </div>
+            <a href="http://bootcamp.docker.localhost:8000/homepage_layout_builder">
+              <h1 class="news-week-h1">
+                <span class="logo-text-wrap">
+                  <span class="logo-text-title">NewsWeek</span>
+                  <span class="logo-text-tagline">PRO</span>
+                </span>
+              </h1>
+            </a>
+            <div class="header-search-button">
+            </div>
+          </div>
         </div>
       </div>
     </header>
     <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
       <div id="main" class="layout-main clearfix">
         <main id="content" class="column main-content" role="main">
-            {% if page.region1 %}
-              <div class="region1">
-                <div class="container">
-                  <div class="region1__inner">
-                    {{ page.region1 }}
-                  </div>
+          <section class="section">
+            <a id="main-content" tabindex="-1"></a>
+          </section>
+        </main>
+          {% if page.region1 %}
+            <div class="region1">
+              <div class="container">
+                <div class="region1__inner">
+                  {{ page.region1 }}
                 </div>
               </div>
-            {% endif %}
-            {% if page.social_media %}
-              <div class="social-media">
-                <div class="container">
-                  <div class="social-media__inner">
-                    {{ page.social_media }}
-                  </div>
+            </div>
+          {% endif %}
+          {% if page.social_media %}
+            <div class="social-media">
+              <div class="container">
+                <div class="social-media__inner">
+                  {{ page.social_media }}
                 </div>
               </div>
-            {% endif %}
-            {% if page.region2 %}
-              <div class="region2">
-                <div class="container">
-                  <div class="region2__inner">
-                    {{ page.region2 }}
-                  </div>
+            </div>
+          {% endif %}
+          {% if page.region2 %}
+            <div class="region2">
+              <div class="container">
+                <div class="region2__inner">
+                  {{ page.region2 }}
                 </div>
               </div>
-            {% endif %}
-            {% if page.region3 %}
-              <div class="region3">
-                <div class="container">
-                  <div class="region3__inner">
-                    {{ page.region3 }}
-                  </div>
+            </div>
+          {% endif %}
+          {% if page.region3 %}
+            <div class="region3">
+              <div class="container">
+                <div class="region3__inner">
+                  {{ page.region3 }}
                 </div>
               </div>
-            {% endif %}
-            {% if page.region4 %}
-              <div class="region4">
-                <div class="container">
-                  <div class="region4__inner">
-                    {{ page.region4 }}
-                  </div>
+            </div>
+          {% endif %}
+          {% if page.region4 %}
+            <div class="region4">
+              <div class="container">
+                <div class="region4__inner">
+                  {{ page.region4 }}
                 </div>
               </div>
-            {% endif %}
-            {% if page.region5 %}
-              <div class="region5">
-                <div class="container">
-                  <div class="region5__inner">
-                    {{ page.region5 }}
-                  </div>
+            </div>
+          {% endif %}
+          {% if page.region5 %}
+            <div class="region5">
+              <div class="container">
+                <div class="region5__inner">
+                  {{ page.region5 }}
                 </div>
               </div>
-            {% endif %}
-            {% if page.region6 %}
-              <div class="region6">
-                <div class="container">
-                  <div class="region6__inner">
-                    {{ page.region6 }}
-                  </div>
+            </div>
+          {% endif %}
+          {% if page.region6 %}
+            <div class="region6">
+              <div class="container">
+                <div class="region6__inner">
+                  {{ page.region6 }}
                 </div>
               </div>
-            {% endif %}
-            {% if page.region7 %}
-              <div class="region7">
-                <div class="container">
-                  <div class="region7__inner">
-                    {{ page.region7 }}
-                  </div>
+            </div>
+          {% endif %}
+          {% if page.region7 %}
+            <div class="region7">
+              <div class="container">
+                <div class="region7__inner">
+                  {{ page.region7 }}
                 </div>
               </div>
-            {% endif %}
+            </div>
+          {% endif %}
       </div>
     </div>
   </div>
 </div>
-<footer class="site-footer">
+<footer class="footer">
   {% if page.footer_top %}
     <div class="footer-top">
-      <div class="container">
-        <div class="footer-top__inner">
-          {{ page.footer_top }}
-        </div>
+      <div class="neews-week-footer">
+        <a href="http://bootcamp.docker.localhost:8000/homepage_layout_builder">
+          <h1 class="news-week-h1-footer">
+                <span class="logo-text-wrap">
+                  <span class="logo-text-title">NewsWeek</span>
+                  <span class="logo-text-tagline">PRO</span>
+                </span>
+          </h1>
+        </a>
+      </div>
+      <div class="footer-top__inner">
+        {{ page.footer_top }}
       </div>
     </div>
   {% endif %}
@@ -173,6 +213,3 @@
     </div>
   {% endif %}
 </footer>
-</div>
-
-</div>

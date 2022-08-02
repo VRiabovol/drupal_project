@@ -1,7 +1,7 @@
 @import "Global";
 // News slider (320px).
 .view-id-news_slider {
-  @include bp-down('xs') {
+  @include bp-down('sm') {
     background-color: #f1f1f1;
     .vertical.cols-4.clearfix {
       display: flex;
@@ -33,7 +33,6 @@
   }
 }
 // Fresh stories (320px).
-@include bp-down('xs') {
  .block-views-blockfresh-stories-block-1 {
    h2 {
      font-family: $title;
@@ -74,10 +73,8 @@
      }
    }
  }
-}
 // Marketing finance.
 .block-views-blockmarketing-and-finance-marketing-and-finance {
-  @include bp-down('xs') {
     // Marketing.
     .view-id-marketing_and_finance {
       position: relative;
@@ -174,11 +171,9 @@
         }
       }
     }
-  }
 }
 // Popular (320px)
 .region1-popular {
-  @include bp-down('xs') {
     h2 {
       font-family: $title;
     }
@@ -231,7 +226,6 @@
         font-family: $category_date;
       }
     }
-  }
 }
 
 

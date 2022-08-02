@@ -2,7 +2,6 @@
 // Breaking (320px)
 .block-views-blockregion-2-region2-top {
   background-color: #f1f1f1;
-  @include bp-down('xs') {
     .view-header {
       .region2-title {
         position: relative;
@@ -66,12 +65,10 @@
         }
       }
     }
-  }
 }
 // Exclusive (320px)
 .view-display-id-region2_bottom {
   background-color: #f1f1f1;
-  @include bp-down('xs') {
     .views-field-field-categories {
       display: flex;
       .views-field-field-image-media {
@@ -130,5 +127,4 @@
         }
       }
     }
-  }
 }

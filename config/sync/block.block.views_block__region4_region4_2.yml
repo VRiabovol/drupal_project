@@ -1,21 +1,21 @@
-uuid: 19b90ba9-5cda-4631-8188-f36a8a6caf8f
+uuid: b5784865-63ce-4506-a81b-7697a068e3ff
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.region_2
+    - views.view.region4
   module:
     - views
   theme:
     - mytheme
-id: mytheme_views_block__region_2_region2_top
+id: views_block__region4_region4_2
 theme: mytheme
-region: region2
-weight: -19
+region: region4
+weight: 0
 provider: null
-plugin: 'views_block:region_2-region2_top'
+plugin: 'views_block:region4-region4'
 settings:
-  id: 'views_block:region_2-region2_top'
+  id: 'views_block:region4-region4'
   label: ''
   label_display: '0'
   provider: views

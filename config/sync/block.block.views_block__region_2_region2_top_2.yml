@@ -1,21 +1,21 @@
-uuid: be228ba5-f9e6-463f-b899-469586891dd3
+uuid: eeb9e0dd-819f-4c76-80f0-ee37d5eb6de6
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.social_media
+    - views.view.region_2
   module:
     - views
   theme:
     - mytheme
-id: mytheme_views_block__social_media_block_1
+id: views_block__region_2_region2_top_2
 theme: mytheme
-region: social_media
-weight: -19
+region: region2
+weight: 0
 provider: null
-plugin: 'views_block:social_media-block_1'
+plugin: 'views_block:region_2-region2_top'
 settings:
-  id: 'views_block:social_media-block_1'
+  id: 'views_block:region_2-region2_top'
   label: ''
   label_display: '0'
   provider: views

@@ -18,7 +18,7 @@ import "./scss/Footer.scss";
 /*
 js
  */
-import "./js/scroll";
+import "./js/menu";
 /*
 module css
  */

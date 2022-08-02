@@ -1,29 +1,24 @@
-uuid: 9f706577-e257-476c-817c-7d291e3ac67d
+uuid: 8d281611-d8bf-44b2-afb6-1f25de769e3e
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.marketing_and_finance
   module:
-    - system
     - views
   theme:
     - mytheme
 id: views_block__marketing_and_finance_marketing_and_finance
 theme: mytheme
 region: region1
-weight: 0
+weight: -7
 provider: null
 plugin: 'views_block:marketing_and_finance-marketing_and_finance'
 settings:
   id: 'views_block:marketing_and_finance-marketing_and_finance'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: ''
   items_per_page: none
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: '<front>'
+visibility: {  }

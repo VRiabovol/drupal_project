@@ -1,4 +1,4 @@
-uuid: aeb6dd5a-ef95-465f-805d-00ea2622b4df
+uuid: 1dec1c9d-ebcf-461d-b037-e76a14347249
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ dependencies:
 id: views_block__region5_region5_footer
 theme: mytheme
 region: region5
-weight: -20
+weight: -11
 provider: null
 plugin: 'views_block:region5-region5_footer'
 settings:

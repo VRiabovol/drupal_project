@@ -1,6 +1,6 @@
-uuid: 93177630-5569-42ce-acf2-3acbef128c7a
+uuid: 7bc74467-388e-49ab-8237-d2a40f29607b
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.footer_the_latest
@@ -8,7 +8,7 @@ dependencies:
     - views
   theme:
     - mytheme
-id: mytheme_views_block__footer_the_latest_footer_the_latest
+id: views_block__footer_the_latest_footer_the_latest_2
 theme: mytheme
 region: footer_third
 weight: 0
@@ -17,7 +17,7 @@ plugin: 'views_block:footer_the_latest-footer_the_latest'
 settings:
   id: 'views_block:footer_the_latest-footer_the_latest'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: ''
   items_per_page: none

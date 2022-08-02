@@ -1,21 +1,21 @@
-uuid: e3922791-ed9b-421c-8f27-f15032776b68
+uuid: 3af2b30b-0ad0-4c1d-8698-775500deee58
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.region4
+    - views.view.news_slider
   module:
     - views
   theme:
     - mytheme
-id: mytheme_views_block__region4_region4
+id: views_block__news_slider_block_1_2
 theme: mytheme
-region: region4
-weight: -19
+region: region1
+weight: -9
 provider: null
-plugin: 'views_block:region4-region4'
+plugin: 'views_block:news_slider-block_1'
 settings:
-  id: 'views_block:region4-region4'
+  id: 'views_block:news_slider-block_1'
   label: ''
   label_display: '0'
   provider: views
