@@ -101,11 +101,16 @@
     </header>
     <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
       <div id="main" class="layout-main clearfix">
-        <main id="content" class="column main-content" role="main">
-          <section class="section">
-            <a id="main-content" tabindex="-1"></a>
-          </section>
         </main>
+        {% if page.news_slider %}
+          <div class="region-news-slider">
+            <div class="container">
+              <div class="news-slider__inner">
+                {{ page.news_slider }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
           {% if page.region1 %}
             <div class="region1">
               <div class="container">

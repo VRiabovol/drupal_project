@@ -25,4 +25,32 @@
         .append(searchButton);
     }
   };
+  Drupal.behaviors.news_slider = {
+    attach: function attach(context) {
+      // const $bu = once("news_slider", ".pager-news-slider", context);
+      const $buttonPrevious = $(
+        '<div class="previous-button">\n' +
+          "                  <span>←</span>\n" +
+          "                </div>"
+      );
+      const $buttonNext = $(
+        '<div class="next-button">\n' +
+          "                  <span>→</span>\n" +
+          "                </div>"
+      );
+      once("news_slider", ".pager-news-slider", context).forEach(function() {
+        $(".view-content", ".pager-news-slider")
+          .prepend($buttonPrevious)
+          .append($buttonNext);
+        $(".previous-button", ".pager-news-slider").click(function() {
+          const previous = $("a[rel~='prev']", ".pager-news-slider");
+          previous[0].click();
+        });
+        $(".next-button").click(function() {
+          const next = $("a[rel~='next']", ".pager-news-slider");
+          next[0].click();
+        });
+      });
+    }
+  };
 })(jQuery, Drupal, once);

@@ -12,6 +12,7 @@ screenshot: mytheme.png
 regions:
   header: Header
   menu_category: 'Menu category'
+  news_slider: 'News slider'
   region1: 'Region 1'
   social_media: 'Social media'
   region2: 'Region 2'
