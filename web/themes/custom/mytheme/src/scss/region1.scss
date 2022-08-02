@@ -1,8 +1,8 @@
 @import "Global";
 // News slider (320px).
 .view-id-news_slider {
-  @include bp-down('sm') {
     background-color: #f1f1f1;
+    padding-top: 25px;
     .vertical.cols-4.clearfix {
       display: flex;
       flex-direction: column;
@@ -30,7 +30,6 @@
         }
       }
     }
-  }
 }
 // Fresh stories (320px).
  .block-views-blockfresh-stories-block-1 {
