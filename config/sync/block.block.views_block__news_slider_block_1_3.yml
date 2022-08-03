@@ -1,6 +1,6 @@
-uuid: 3af2b30b-0ad0-4c1d-8698-775500deee58
+uuid: 9f16dca2-4845-4ab3-abf2-bf3580ec8a8f
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.news_slider
@@ -8,10 +8,10 @@ dependencies:
     - views
   theme:
     - mytheme
-id: views_block__news_slider_block_1_2
+id: views_block__news_slider_block_1_3
 theme: mytheme
-region: region1
-weight: -9
+region: news_slider
+weight: 0
 provider: null
 plugin: 'views_block:news_slider-block_1'
 settings:
