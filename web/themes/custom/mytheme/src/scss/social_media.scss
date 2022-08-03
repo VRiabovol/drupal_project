@@ -1,5 +1,5 @@
 @import "Global";
-// Social media (320px)
+// Social media.
 .block-views-blocksocial-media-block-1 {
   border: 1px solid #918c8c;
   border-left: none;
@@ -7,6 +7,46 @@
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 10px 25px;
+  @include bp-between('xs', 'sm') {
+    .view-id-social_media {
+      .view-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .views-view-grid.horizontal.cols-4.clearfix {
+        padding-left: 130px;
+        .views-row.clearfix.row-1 {
+          border-bottom: none;
+        }
+      }
+
+    }
+  }
+  @include bp-up('sm') {
+    .view-id-social_media {
+      display: flex;
+      flex-direction: row;
+      .view-header {
+        width: 75%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .view-content {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        .views-row {
+          border-bottom: none;
+          .views-col {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
 
     .social-title {
       font-family: $category_date;
@@ -21,7 +61,6 @@
       .views-col.col-1 {
         margin-top: 10px;
         margin-left: 55px;
-        float: left;
         min-width: 0;
         a {
           border-bottom: none;
@@ -29,7 +68,6 @@
       }
       .views-col.col-2 {
         margin-top: 10px;
-        float: left;
         min-width: 0;
         a {
           border-bottom: none;
@@ -37,7 +75,6 @@
       }
       .views-col.col-3 {
         margin-top: 10px;
-        float: left;
         min-width: 0;
         a {
           border-bottom: none;
