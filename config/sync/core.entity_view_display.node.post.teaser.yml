@@ -35,6 +35,14 @@ content:
     third_party_settings: {  }
     weight: 3
     region: content
+  field_exclusive:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_image_media:
     type: media_thumbnail
     label: hidden
@@ -61,7 +69,6 @@ content:
 hidden:
   body: true
   comment: true
-  field_exclusive: true
   field_filter_publish: true
   field_next_article: true
   field_previous_article: true

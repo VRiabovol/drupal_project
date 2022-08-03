@@ -11,7 +11,7 @@ dependencies:
 id: views_block__region_2_region2_top_2
 theme: mytheme
 region: region2
-weight: 0
+weight: -18
 provider: null
 plugin: 'views_block:region_2-region2_top'
 settings:
