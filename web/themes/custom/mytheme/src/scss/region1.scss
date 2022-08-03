@@ -129,6 +129,7 @@
           padding: 0 15px;
           @include bp-between('xs', 'sm') {
             top: 205px;
+            max-width: 80%;
           }
           @include bp-up('sm') {
             top: 315px;
@@ -183,6 +184,7 @@
           color: white;
           @include bp-between('xs', 'sm') {
             position: absolute;
+            max-width: 70%;
             font-size: 15px;
             top: 280px;
           }

@@ -1,0 +1,14 @@
+uuid: eebefaac-7a41-4372-8a5e-adad82887e39
+langcode: en
+status: true
+dependencies: {  }
+name: region4_330_x_230_
+label: 'region4 (330 x 230)'
+effects:
+  2607f859-6921-4822-9410-3f46b6b3ef08:
+    uuid: 2607f859-6921-4822-9410-3f46b6b3ef08
+    id: image_resize
+    weight: 1
+    data:
+      width: 330
+      height: 230
