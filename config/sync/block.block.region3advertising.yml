@@ -11,7 +11,7 @@ dependencies:
 id: region3advertising
 theme: mytheme
 region: region3
-weight: 0
+weight: -17
 provider: null
 plugin: 'block_content:096dee74-970f-42e8-8460-fcb405ddfdb7'
 settings:
