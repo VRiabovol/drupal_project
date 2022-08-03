@@ -1,5 +1,20 @@
 @import "Global";
-// Politics (320px)
+// Politics desktop.
+@include bp-up('sm') {
+  .region.region-region3 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .block-views-blockregion-3-region3-header{
+    width: 75%;
+    .region3-body-row.views-row.clearfix {
+      padding-left: 8px;
+    }
+  }
+  .block-block-content096dee74-970f-42e8-8460-fcb405ddfdb7 {
+  }
+}
+// Politics other.
 .region.region-region3 {
     // Header.
     .view-id-region_3.view-display-id-region3_header {
@@ -75,6 +90,11 @@
       }
     }
     // Footer.
+  .views-view-grid.horizontal.cols-3.clearfix {
+    .region3-footer-row {
+      border-bottom: none;
+    }
+  }
     .view-display-id-region3_footer{
       .views-field-title {
         padding-top: 15px;
