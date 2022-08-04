@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_image_media
     - field.storage.user.user_picture
     - image.style.media_library
+    - image.style.region4_330_x_230_
     - image.style.region4_top_240_x_165_
     - image.style.user_avatar_25_x_25_
     - node.type.post
@@ -497,7 +498,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -541,7 +542,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: region4_top_240_x_165_
+            image_style: region4_330_x_230_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -626,9 +627,9 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: "<span class=\"region4-top-exclusive\">{{ field_exclusive }}</span>\r\n<span class=\"region4-top-title\">{{ title }}</span>"
             make_link: false
             path: ''
@@ -825,7 +826,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"region4-top-created\">\r\n  <span class=\"picture\">{{ user_picture }} </span>\r\n  <span class=\"authored-by\">{{ uid }}</span>\r\n  <span class=\"date\">- {{ created }}</span>\r\n</div>"
+            text: "{{ field_image_media }}\r\n<span>\r\n  <span class =\"exclusive\">{{ field_exclusive }}</span>\r\n  <span class=\"title\">{{ title }}</span>\r\n</span>\r\n<div class=\"region4-top-created\">\r\n  <span class=\"picture\">{{ user_picture }} </span>\r\n  <span class=\"authored-by\">{{ uid }}</span>\r\n  <span class=\"date\">- {{ created }}</span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1049,7 +1050,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: "<div class=\"region4-header\">\r\n  <span class=\"region4-lifestyle\">LIFESTYLE</span>\r\n  <span class=\"region4-celebrity\">Celebrity</span>\r\n</div>"
+          content: "<div class=\"region4-header\">\r\n  <span class=\"lifestyle\">LIFESTYLE</span>\r\n  <span class=\"celebrity\">Celebrity</span>\r\n</div>"
           tokenize: false
       display_extenders: {  }
       block_description: 'region4 top'

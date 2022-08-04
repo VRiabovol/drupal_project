@@ -39,6 +39,9 @@
         position: absolute;
         top: 230px;
         padding: 27px;
+        @include bp-between('xs', 'sm') {
+          max-width: 49%;
+        }
         a {
           border-bottom: none;
           text-decoration: none;
