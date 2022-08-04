@@ -8,7 +8,6 @@ dependencies:
     - field.storage.user.user_picture
     - image.style.large
     - image.style.region5_footer_100_x_70_
-    - image.style.thumbnail
     - image.style.user_avatar
     - node.type.post
     - taxonomy.vocabulary.categories
@@ -1372,7 +1371,7 @@ display:
         type: grid
         options:
           grouping: {  }
-          columns: 2
+          columns: 1
           automatic_width: true
           alignment: horizontal
           row_class_custom: region5-header-row
