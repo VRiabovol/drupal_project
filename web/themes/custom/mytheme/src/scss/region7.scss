@@ -1,5 +1,11 @@
 @import "Global";
+// Resent post desktop.
 // Recent post (320px).
+@include bp-up('sm') {
+  .region.region-region7 {
+    display: flex;
+  }
+}
 .block-views.block-views-blockregion-7-region7 {
     // Header.
     .region7-header {
