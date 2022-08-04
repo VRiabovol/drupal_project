@@ -1,6 +1,9 @@
 @import "Global";
 // Food & travel (320px).
 // Header
+.region5-header-row.views-row.clearfix.row-1 {
+  border-bottom: none;
+}
 .block-views-blockregion5-region5-header {
     margin-top: 100px;
   .region5-header-row {
@@ -34,6 +37,9 @@
     }
   }
   // Body.
+  .region5-body-row.views-row.clearfix.row-1 {
+    border-bottom: none;
+  }
   .views-field-field-image-media a {
     border-bottom: none;
   }
@@ -87,12 +93,21 @@
   }
 }
 // Footer.
+.region5-footer.views-row.clearfix.row-1 {
+  border-bottom: none;
+}
+.region5-footer.views-row.clearfix.row-2 {
+  border-bottom: none;
+}
 .block-views-blockregion5-region5-footer {
     margin-top: 10px;
     border-top: 3px solid rgba(187, 186, 186, 0.19);
     .view-display-id-region5_footer {
-      padding-top: 10px;
+      padding-top: 5px;
     }
+  .region2-footer-exclusive-title {
+    padding-left: 10px;
+  }
     .region5-footer.views-col {
       position: relative;
       margin-top: 20px;
@@ -116,6 +131,9 @@
       }
       .region5-footer-title-span {
         a {
+          @include bp-between('news_slider_from', 'news_slider_till') {
+            font-size: 10px;
+          }
           border-bottom: none;
           text-decoration: none;
           font-family: $title;
@@ -135,3 +153,6 @@
       }
     }
 }
+// Footer 768px.
+
+
