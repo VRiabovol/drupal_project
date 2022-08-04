@@ -11,7 +11,7 @@ dependencies:
 id: region6advertising_2
 theme: mytheme
 region: region6
-weight: -18
+weight: -19
 provider: null
 plugin: 'block_content:ec0f31b9-6289-48b4-82df-2b38718ece85'
 settings:

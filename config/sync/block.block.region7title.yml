@@ -11,7 +11,7 @@ dependencies:
 id: region7title
 theme: mytheme
 region: region7
-weight: -15
+weight: -16
 provider: null
 plugin: 'block_content:9cfb13c6-f050-49c8-96ae-11c07cde51ec'
 settings:

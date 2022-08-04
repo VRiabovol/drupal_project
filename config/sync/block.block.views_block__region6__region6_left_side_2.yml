@@ -11,7 +11,7 @@ dependencies:
 id: views_block__region6__region6_left_side_2
 theme: mytheme
 region: region6
-weight: -17
+weight: -18
 provider: null
 plugin: 'views_block:region6_-region6_left_side'
 settings:

@@ -11,7 +11,7 @@ dependencies:
 id: views_block__region_7_region7_right_side_top
 theme: mytheme
 region: region7
-weight: -13
+weight: -18
 provider: null
 plugin: 'views_block:region_7-region7_right_side_top'
 settings:

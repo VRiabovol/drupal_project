@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_exclusive
     - field.storage.node.field_image_media
     - field.storage.user.user_picture
-    - image.style.large
     - image.style.region7_left_side_bottom_330_x_230_
     - image.style.region7_right_side_top_marketing_310_x_420_
     - image.style.region7_top_recent_posts_515_x_360_
@@ -97,7 +96,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: large
+            image_style: region7_right_side_top_marketing_310_x_420_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -432,18 +431,7 @@ display:
           query_tags: {  }
       relationships: {  }
       use_ajax: true
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"region7-header\">\r\n  <span class=\"latest\">LATEST</span>\r\n  <span class=\"recent-post\">Recent posts</span>\r\n</div>"
-          tokenize: false
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -1005,7 +993,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1071,7 +1059,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1265,9 +1253,9 @@ display:
           entity_field: uid
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: "  <div class=\"category-avatar-author\">\r\n    <span class=\"category\">{{ field_categories }}</span>\r\n    <span class=\"avatar\">{{ user_picture }}</span>\r\n    <span class=\"author\">{{ uid }} -</span>\r\n  </div>"
             make_link: false
             path: ''
@@ -1330,7 +1318,7 @@ display:
           entity_field: created
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1397,8 +1385,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{{ field_image_media }}\r\n<div class=\"region4-top-title\">\r\n  <span class=\"title\">{{ title }}</span>\r\n</div>\r\n<div class=\"region4-top-created\">\r\n  <span class=\"category\">{{ field_categories }}</span>\r\n  <span class=\"avatar-date\">\r\n    <span class=\"picture\">{{ user_picture }} </span>\r\n    <span class=\"authored-by\">{{ uid }}</span>\r\n    <span class=\"date\">- {{ created }}</span>\r\n  </span>\r\n</div>\r\n <span class=\"body\">{{ body }} </span>"
             make_link: false
             path: ''
             absolute: false
