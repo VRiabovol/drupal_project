@@ -1,0 +1,14 @@
+uuid: 3dfa55e1-bf3b-4608-9578-b4e3b2e20dea
+langcode: en
+status: true
+dependencies: {  }
+name: footer_social_media_30_x_30_
+label: 'footer social media (30 x 30)'
+effects:
+  87820083-0001-4bad-af47-ad3dedd0e1a0:
+    uuid: 87820083-0001-4bad-af47-ad3dedd0e1a0
+    id: image_resize
+    weight: 1
+    data:
+      width: 40
+      height: 40

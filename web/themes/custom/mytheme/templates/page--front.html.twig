@@ -195,18 +195,20 @@
 <footer class="footer">
   {% if page.footer_top %}
     <div class="footer-top">
-      <div class="neews-week-footer">
-        <a href="http://bootcamp.docker.localhost:8000/homepage_layout_builder">
-          <h1 class="news-week-h1-footer">
+      <div class="container">
+        <div class="footer-top__inner">
+          <div class="neews-week-footer">
+            <a href="http://bootcamp.docker.localhost:8000/homepage_layout_builder">
+              <h1 class="news-week-h1-footer">
                 <span class="logo-text-wrap">
                   <span class="logo-text-title">NewsWeek</span>
                   <span class="logo-text-tagline">PRO</span>
                 </span>
-          </h1>
-        </a>
-      </div>
-      <div class="footer-top__inner">
-        {{ page.footer_top }}
+              </h1>
+            </a>
+          </div>
+          {{ page.footer_top }}
+        </div>
       </div>
     </div>
   {% endif %}

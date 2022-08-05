@@ -13,7 +13,7 @@ import "./scss/social_media.scss";
 // import "./scss/sidebar.scss";
 // import "./scss/FeaturedTop.scss";
 // import "./scss/front_views.scss";
-import "./scss/Footer.scss";
+import "./scss/footer.scss";
 // import "./scss/scrollToTop.scss";
 /*
 js
