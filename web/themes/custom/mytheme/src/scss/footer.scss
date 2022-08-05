@@ -2,8 +2,21 @@
 // Footer.
 // Footer top.
 .footer {
+  @include bp-up('sm') {
+    .footer-top__inner {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .neews-week-footer {
+        width: 25%;
+      }
+      .region.region-footer-top {
+        width: 75%;
+      }
+      }
+    }
   background-color: rgba(206, 206, 206, 0.84);
-  margin: -10px;
+  //margin: -10px;
     // Logo.
     .news-week-h1-footer {
       display: flex;
@@ -28,7 +41,7 @@
       }
     }
     // Menu category.
-    .footer-top {
+    .footer-top__inner {
       border-bottom: 3px solid black;
     }
     .region-footer-top {
