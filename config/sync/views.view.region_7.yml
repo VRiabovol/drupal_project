@@ -8,7 +8,6 @@ dependencies:
     - field.storage.node.field_exclusive
     - field.storage.node.field_image_media
     - field.storage.user.user_picture
-    - image.style.large
     - image.style.region7_left_side_bottom_330_x_230_
     - image.style.region7_right_side_top_marketing_310_x_420_
     - image.style.region7_top_recent_posts_515_x_360_
@@ -97,7 +96,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: large
+            image_style: region7_right_side_top_marketing_310_x_420_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -173,16 +172,18 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_categories:
-          id: field_categories
-          table: node__field_categories
-          field: field_categories
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: uid
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -236,71 +237,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: media_thumbnail
-          settings:
-            link: 1
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         created:
           id: created
           table: node_field_data
@@ -314,8 +250,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"region7-right-side-top-author-data\">\r\n  <span class=\"author\">{{ uid }} -</span>\r\n  <span class=\"data\">{{ created }}</span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -402,7 +338,7 @@ display:
           entity_type: node
           entity_field: created
           plugin_id: date
-          order: DESC
+          order: ASC
           expose:
             label: ''
             field_identifier: ''
@@ -445,7 +381,7 @@ display:
           plugin_id: taxonomy_index_tid
           operator: or
           value:
-            - 9
+            - 7
           group: 1
           exposed: false
           expose:
@@ -495,18 +431,7 @@ display:
           query_tags: {  }
       relationships: {  }
       use_ajax: true
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"region7-header\">\r\n  <span class=\"latest\">LATEST</span>\r\n  <span class=\"recent-post\">Recent posts</span>\r\n</div>"
-          tokenize: false
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -518,7 +443,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_categories'
         - 'config:field.storage.node.field_image_media'
   attachment_1:
     id: attachment_1
@@ -1069,7 +993,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1135,7 +1059,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1329,9 +1253,9 @@ display:
           entity_field: uid
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
-            alter_text: true
+            alter_text: false
             text: "  <div class=\"category-avatar-author\">\r\n    <span class=\"category\">{{ field_categories }}</span>\r\n    <span class=\"avatar\">{{ user_picture }}</span>\r\n    <span class=\"author\">{{ uid }} -</span>\r\n  </div>"
             make_link: false
             path: ''
@@ -1394,7 +1318,7 @@ display:
           entity_field: created
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1461,8 +1385,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{{ field_image_media }}\r\n<div class=\"region4-top-title\">\r\n  <span class=\"title\">{{ title }}</span>\r\n</div>\r\n<div class=\"region4-top-created\">\r\n  <span class=\"category\">{{ field_categories }}</span>\r\n  <span class=\"avatar-date\">\r\n    <span class=\"picture\">{{ user_picture }} </span>\r\n    <span class=\"authored-by\">{{ uid }}</span>\r\n    <span class=\"date\">- {{ created }}</span>\r\n  </span>\r\n</div>\r\n <span class=\"body\">{{ body }} </span>"
             make_link: false
             path: ''
             absolute: false
@@ -2089,6 +2013,7 @@ display:
     display_plugin: block
     position: 5
     display_options:
+      enabled: false
       title: 'region7 right side top'
       fields:
         field_image_media:
@@ -2515,6 +2440,55 @@ display:
       block_description: 'region7 right side top'
       allow:
         items_per_page: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_image_media'
+  region7_right_side_top_attachment:
+    id: region7_right_side_top_attachment
+    display_title: 'region7 right side top'
+    display_plugin: attachment
+    position: 5
+    display_options:
+      title: 'region7 right side top'
+      pager:
+        type: some
+        options:
+          offset: 1
+          items_per_page: 1
+      style:
+        type: default
+        options: {  }
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        title: false
+        style: false
+        row: false
+        header: false
+      display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"region7-right-side-top\">\r\n  <span class=\"header\">Marketing</span>\r\n</div>"
+          tokenize: false
+      display_extenders: {  }
+      displays:
+        region7_right_side_bottom: region7_right_side_bottom
     cache_metadata:
       max-age: -1
       contexts:
