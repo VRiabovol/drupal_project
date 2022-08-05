@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_image_social_media
     - field.storage.node.field_link
+    - image.style.footer_social_media_30_x_30_
     - node.type.social_media
   module:
     - link
@@ -36,7 +37,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -80,7 +81,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: ''
-            image_style: ''
+            image_style: footer_social_media_30_x_30_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -104,8 +105,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '<a href="{{ field_link__uri }}">{{ field_image_social_media }}</a>'
             make_link: false
             path: ''
             absolute: false
@@ -241,31 +242,27 @@ display:
           query_tags: {  }
       relationships: {  }
       header:
-        area:
-          id: area
+        area_text_custom:
+          id: area_text_custom
           table: views
-          field: area
+          field: area_text_custom
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: text
+          plugin_id: text_custom
           empty: false
-          content:
-            value: 'About us'
-            format: basic_html
+          content: "  <div class=\"footer-second-header\">\r\n    <span class=\"header\">About us</span>\r\n  </div>"
           tokenize: false
-        area_1:
-          id: area_1
+        area_text_custom_1:
+          id: area_text_custom_1
           table: views
-          field: area
+          field: area_text_custom
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: text
+          plugin_id: text_custom
           empty: false
-          content:
-            value: 'Each template in our ever growing studio library can be added and moved around within any page effortlessly with one click.'
-            format: basic_html
+          content: "  <div class=\"footer-second-body\">\r\n    <span class=\"body\">Each template in our ever growing studio library can be added and moved around within any page effortlessly with one click.</span>\r\n  </div>"
           tokenize: false
       footer: {  }
       display_extenders: {  }
@@ -281,11 +278,13 @@ display:
         - 'config:field.storage.node.field_link'
   block_1:
     id: block_1
-    display_title: Block
+    display_title: 'Footer about us'
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
+      block_description: 'footer about us'
     cache_metadata:
       max-age: -1
       contexts:
