@@ -27,30 +27,29 @@
   };
   Drupal.behaviors.news_slider = {
     attach: function attach(context) {
-      // const $bu = once("news_slider", ".pager-news-slider", context);
       const $buttonPrevious = $(
-        '<div class="previous-button">\n' +
-          "                  <span>←</span>\n" +
-          "                </div>"
+        `<div<div class="previous-button"><span>←</span></div></div>`
       );
       const $buttonNext = $(
-        '<div class="next-button">\n' +
-          "                  <span>→</span>\n" +
-          "                </div>"
+        '<div<div class="next-button"><span>→</span></div></div>'
       );
-      once("news_slider", ".pager-news-slider", context).forEach(function() {
-        $(".view-content", ".pager-news-slider")
-          .prepend($buttonPrevious)
-          .append($buttonNext);
-        $(".previous-button", ".pager-news-slider").click(function() {
-          const previous = $("a[rel~='prev']", ".pager-news-slider");
-          previous[0].click();
+      $(".pager-news-slider .view-content", context)
+        .once("news_slider")
+        .each(function() {
+          $(".pager-news-slider")
+            .prepend($buttonNext)
+            .prepend($buttonPrevious);
+          $buttonPrevious.click(function() {
+            $(".pager-news-slider .pager .pager__item--previous>a").trigger(
+              "click"
+            );
+          });
+          $buttonNext.click(function() {
+            $(".pager-news-slider .pager .pager__item--next>a").trigger(
+              "click"
+            );
+          });
         });
-        $(".next-button").click(function() {
-          const next = $("a[rel~='next']", ".pager-news-slider");
-          next[0].click();
-        });
-      });
     }
   };
 })(jQuery, Drupal, once);
