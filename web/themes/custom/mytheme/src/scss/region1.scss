@@ -1,5 +1,10 @@
 @import "Global";
 // News slider (320px).
+@include bp-up('sm') {
+  .header {
+    margin-top: -21px;
+  }
+}
 .news-slider__inner {
   background-color: #f1f1f1;
   display: flex;
@@ -68,9 +73,6 @@
     }
 }
 .region.region-news-slider {
-  pager-news-slider {
-    margin: 75px;
-  }
   .next-button {
     float: right;
     margin-top: 15px;

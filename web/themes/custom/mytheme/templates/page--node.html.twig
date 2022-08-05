@@ -50,54 +50,111 @@
  * @see html.html.twig
  */
 #}
+<div class="region4-top-created">
+  <span class="picture">{{ user_picture }} </span>
+  <span class="authored-by">{{ uid }}</span>
+  <span class="date">- {{ created }}</span>
+</div>
+<div class="burger-menu">
+  <nav class="menu-burger">
+    <div>
+      <span class="menu-close-button active"></span>
+    </div>
+    {{ page.header.useraccountmenu_2 }}
+    {{ page.menu_category }}
+  </nav>
+  <div class="search">
+    <div class="search-form">
+      <span class="search-close-button"></span>
+      {{ page.header.searchform }}
+    </div>
+  </div>
+</div>
 <div id="page-wrapper">
   <div id="page">
-    <header id="header" class="header" role="banner">
-      <div class="section layout-container clearfix">
-        {{ page.secondary_menu }}
-        {{ page.header }}
-        {{ page.primary_menu }}
+    <header class="header" role="banner">
+      <div class="container">
+        <div class="header__inner">
+          <div class="news-week">
+            <div class="search-desktop">
+              {{ page.header.searchform }}
+            </div>
+            <div class="header-burger-button">
+              <a href="#" class="burger-button">
+                <span class="burger-lines"></span>
+              </a>
+            </div>
+            <a href="http://bootcamp.docker.localhost:8000/homepage_layout_builder">
+              <h1 class="news-week-h1">
+                <span class="logo-text-wrap">
+                  <span class="logo-text-title">NewsWeek</span>
+                  <span class="logo-text-tagline">PRO</span>
+                </span>
+              </h1>
+            </a>
+            <div class="user-menu-desktop">
+              {{ page.header.useraccountmenu_2 }}
+            </div>
+            <div class="header-search-button">
+            </div>
+          </div>
+        </div>
+        <div class="menu-desktop">
+          {{ page.menu_category }}
+        </div>
       </div>
     </header>
-    {% if page.highlighted %}
-      <div class="highlighted">
-        <aside class="layout-container section clearfix" role="complementary">
-          {{ page.highlighted }}
-        </aside>
-      </div>
-    {% endif %}
-    {% if page.featured_top %}
-      <div class="featured-top">
-        <aside class="featured-top__inner section layout-container clearfix" role="complementary">
-          {{ page.featured_top }}
-        </aside>
-      </div>
-    {% endif %}
     <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
       <div id="main" class="layout-main clearfix">
-        {{ page.breadcrumb }}
         <main id="content" class="column main-content" role="main">
           <section class="section">
             <a id="main-content" tabindex="-1"></a>
             {{ page.content }}
           </section>
         </main>
-    <footer class="site-footer">
-      <div class="layout-container">
-        {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-          <div class="site-footer__top clearfix">
-            {{ page.footer_first }}
-            {{ page.footer_second }}
-            {{ page.footer_third }}
-            {{ page.footer_fourth }}
-          </div>
-        {% endif %}
-        {% if page.footer_fifth %}
-          <div class="site-footer__bottom">
-            {{ page.footer_fifth }}
-          </div>
-        {% endif %}
       </div>
+    </div>
+    <footer class="footer">
+      {% if page.footer_top %}
+        <div class="footer-top">
+          <div class="container">
+            <div class="footer-top__inner">
+              <div class="neews-week-footer">
+                <a href="http://bootcamp.docker.localhost:8000/homepage_layout_builder">
+                  <h1 class="news-week-h1-footer">
+                <span class="logo-text-wrap">
+                  <span class="logo-text-title">NewsWeek</span>
+                  <span class="logo-text-tagline">PRO</span>
+                </span>
+                  </h1>
+                </a>
+              </div>
+              {{ page.footer_top }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+        <div class="footer-body">
+          <div class="container">
+            <div class="footer-body__inner">
+              {{ page.footer_first }}
+              {{ page.footer_second }}
+              {{ page.footer_third }}
+              {{ page.footer_fourth }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if page.footer_bottom %}
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer-bottom__inner">
+              {{ page.footer_bottom }}
+            </div>
+          </div>
+        </div>
+      {% endif %}
     </footer>
   </div>
 </div>
