@@ -120,7 +120,15 @@
       .marketing.views-row {
         .views-field-field-image-media {
           a {
+            padding-left: 5px;
             border-bottom: none;
+            height: 590px;
+            display: block;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
           }
         }
         .views-field.views-field-title {
@@ -198,9 +206,14 @@
       // Finance.
       .finance.views-row {
         .views-field-field-image-media {
-          padding: 15px 0 0 15px;
+          padding-left: 15px;
           a {
             border-bottom: none;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
           }
         }
         .views-field-field-categories{
