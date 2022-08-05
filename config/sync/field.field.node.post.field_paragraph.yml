@@ -1,17 +1,19 @@
-uuid: f9d4ee45-1b48-4c05-8b10-40e8c7751c52
+uuid: 4b88dacb-937e-4c46-acb3-c8b474e9f5e4
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_header
-    - node.type.post_paragraphs
+    - field.storage.node.field_paragraph
+    - node.type.post
+    - paragraphs.paragraphs_type.picture
+    - paragraphs.paragraphs_type.text
   module:
     - entity_reference_revisions
-id: node.post_paragraphs.field_header
-field_name: field_header
+id: node.post.field_paragraph
+field_name: field_paragraph
 entity_type: node
-bundle: post_paragraphs
-label: Header
+bundle: post
+label: paragraph
 description: ''
 required: false
 translatable: false
@@ -20,16 +22,15 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: {  }
+    target_bundles:
+      picture: picture
+      text: text
     negate: 0
     target_bundles_drag_drop:
-      post_body:
-        weight: -6
+      picture:
+        weight: 3
         enabled: true
-      post_bottom:
-        weight: -5
-        enabled: true
-      post_header:
-        weight: -7
+      text:
+        weight: 4
         enabled: true
 field_type: entity_reference_revisions

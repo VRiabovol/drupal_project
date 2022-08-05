@@ -1,0 +1,23 @@
+uuid: e318f8ac-df68-4111-941d-5e725185c3d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_position
+    - paragraphs.paragraphs_type.picture
+  module:
+    - options
+id: paragraph.picture.field_position
+field_name: field_position
+entity_type: paragraph
+bundle: picture
+label: position
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: not_specified
+default_value_callback: ''
+settings: {  }
+field_type: list_string
