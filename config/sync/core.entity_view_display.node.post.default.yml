@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.post.body
     - field.field.node.post.comment
     - field.field.node.post.field_categories
@@ -18,6 +19,7 @@ dependencies:
     - field.field.node.post.field_user
     - node.type.post
   module:
+    - comment
     - entity_reference_revisions
     - layout_builder
     - text
@@ -37,6 +39,15 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  comment:
+    type: comment_default
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_image_media:
     type: entity_reference_entity_view
@@ -69,7 +80,6 @@ content:
     weight: 0
     region: content
 hidden:
-  comment: true
   field_categories: true
   field_exclusive: true
   field_filter_publish: true

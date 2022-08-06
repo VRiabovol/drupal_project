@@ -110,6 +110,21 @@
           <section class="section">
             <a id="main-content" tabindex="-1"></a>
             {{ page.content }}
+            {% if page.node_page %}
+              <div class="node-page-region">
+                <div class="container">
+                  <div class="node-page__inner">
+                    <div class="right-side">
+                      {{ page.node_page.views_block__popular_region1_popular_2 }}
+                      {{ page.node_page.region3advertising_2 }}
+                    </div>
+                    <div class="bottom">
+                      {{ page.node_page.views_block__more_like_this_content_page_ }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
           </section>
         </main>
       </div>

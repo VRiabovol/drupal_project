@@ -79,25 +79,41 @@
 %}
 {{ attach_library('bartik/classy.node') }}
 <article{{ attributes.addClass(classes) }}>
-  <header>
-    {{ title_prefix }}
-      {% if label and not page %}
-      <h2{{ title_attributes.addClass('node__title') }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% endif %}
-    {{ title_suffix }}
-    {% if display_submitted %}
-      <div class="node__meta">
-        {{ author_picture }}
-        <span{{ author_attributes }}>
-          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        </span>
-        {{ metadata }}
-      </div>
-    {% endif %}
-  </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    {{ content }}
+    <div class="node-header">
+      <div class="image">
+        {{ content.field_image_media }}
+      </div>
+      <div class="category">
+        {{ content.field_categories }}
+      </div>
+      <div class="title">
+        <!-- don't display this field -->
+        <span>
+          {{ content.field_title }}
+        </span>
+
+      </div>
+      <div class="author-date">
+        <span class="author">By: {{ author_name }} |</span>
+        <span class="date">Date: {{ date }}</span>
+      </div>
+    </div>
+    <div class="node-body">
+      <div class="body">
+        {{ content.field_paragraph }}
+      </div>
+      <div class="next-previous-post">
+        <div class="previous">
+          {{ content.field_next_article }}
+        </div>
+        <div class="next">
+          {{ content.field_previous_article }}
+        </div>
+      </div>
+      <div class="comment">
+        {{ content.comment }}
+      </div>
+    </div>
   </div>
 </article>

@@ -5,9 +5,12 @@ dependencies:
   config:
     - field.storage.node.field_exclusive
     - field.storage.node.field_image_media
-    - image.style.medium
+    - field.storage.user.user_picture
+    - image.style.page_content_more_like_this_250_x_180_
+    - image.style.user_avatar_25_x_25_
     - node.type.post
   module:
+    - image
     - media
     - node
     - user
@@ -36,7 +39,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -80,7 +83,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: medium
+            image_style: page_content_more_like_this_250_x_180_
             image_loading:
               attribute: lazy
           group_column: target_id
@@ -102,7 +105,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -165,7 +168,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -197,7 +200,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -219,6 +222,72 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        user_picture:
+          id: user_picture
+          table: user__user_picture
+          field: user_picture
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_link: content
+            image_style: user_avatar_25_x_25_
+            image_loading:
+              attribute: lazy
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         uid:
           id: uid
           table: node_field_revision
@@ -230,7 +299,7 @@ display:
           entity_field: uid
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -297,8 +366,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div class=\"node-page-region-image\">\r\n        {{ field_image_media }}\r\n</div>\r\n<div class=\"node-page-region-top-title\">\r\n  <span class=\"exclusive\">{{ field_exclusive }}</span>\r\n  <span class=\"title\">{{ title }}</span>\r\n</div>\r\n<div class=\"node-page-region-top-created\">\r\n  <span class=\"category\">{{ field_categories }}</span>\r\n  <span class=\"avatar-date\">\r\n    <span class=\"picture\">{{ user_picture }} </span>\r\n    <span class=\"authored-by\">{{ uid }}</span>\r\n    <span class=\"date\">- {{ created }}</span>\r\n  </span>\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -430,20 +499,29 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships: {  }
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: User
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+          required: false
       header:
-        area:
-          id: area
+        area_text_custom:
+          id: area_text_custom
           table: views
-          field: area
+          field: area_text_custom
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: text
+          plugin_id: text_custom
           empty: false
-          content:
-            value: 'More like this'
-            format: basic_html
+          content: "<div class=\"more-like-this\">\r\n  <span class=\"header\">More like this</span>\r\n</div>"
           tokenize: false
       footer: {  }
       display_extenders: {  }
@@ -457,6 +535,7 @@ display:
       tags:
         - 'config:field.storage.node.field_exclusive'
         - 'config:field.storage.node.field_image_media'
+        - 'config:field.storage.user.user_picture'
   more_like_this_content_page:
     id: more_like_this_content_page
     display_title: 'More like this content page'
@@ -476,3 +555,4 @@ display:
       tags:
         - 'config:field.storage.node.field_exclusive'
         - 'config:field.storage.node.field_image_media'
+        - 'config:field.storage.user.user_picture'
