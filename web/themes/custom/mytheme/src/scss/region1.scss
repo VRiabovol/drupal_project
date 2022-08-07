@@ -142,6 +142,9 @@
       .marketing.views-row {
         .views-field-field-image-media {
           a {
+            @include bp-down('sm') {
+              padding-left: 0;
+            }
             padding-left: 5px;
             border-bottom: none;
             height: 590px;
@@ -228,6 +231,10 @@
       // Finance.
       .finance.views-row {
         .views-field-field-image-media {
+          @include bp-down('sm') {
+            padding-left: 0;
+            margin-top: 10px;
+          }
           padding-left: 15px;
           a {
             border-bottom: none;

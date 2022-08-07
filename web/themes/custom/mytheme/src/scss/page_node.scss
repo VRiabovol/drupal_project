@@ -3,11 +3,15 @@
 .node-header {
   position: relative;
   .image {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .field__item {
+      height: 800px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
+
   }
   .category {
     position: absolute;
@@ -39,10 +43,13 @@
     line-height: 1.3;
     letter-spacing: -0.5px;
     font-family: $category_date;
+    a {
+      border-bottom: none;
+      color: black;
+    }
     .date {
       padding-left: 3px;
     }
-
   }
 }
 // Body.
@@ -117,7 +124,7 @@
   .node-page__inner {
     .right-side {
       position: absolute;
-      top: 23%;
+      top: 20.5%;
       right: 0;
       width: 25%;
     }

@@ -33,7 +33,7 @@
       const $buttonNext = $(
         '<div<div class="next-button"><span>→</span></div></div>'
       );
-      $(".pager-news-slider .view-content", context)
+      $(".pager-news-slider .view-content")
         .once("news_slider")
         .each(function() {
           $(".pager-news-slider")

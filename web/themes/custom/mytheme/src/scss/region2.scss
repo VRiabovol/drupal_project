@@ -29,9 +29,13 @@
       position: relative;
       .views-field-field-image-media-1 {
         img {
-          height: 380px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         a {
+          height: 380px;
+          display: block;
           border-bottom: none;
         }
       }
