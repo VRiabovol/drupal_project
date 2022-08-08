@@ -1,0 +1,15 @@
+uuid: e3d7875d-ffaa-45c0-953c-49f8b681217b
+langcode: en
+status: true
+dependencies: {  }
+name: taxonomy_page_bottom_385_x_270_
+label: 'Taxonomy page bottom (385 x 270)'
+effects:
+  117fc3a4-c02d-486c-b618-8b6c2db50b70:
+    uuid: 117fc3a4-c02d-486c-b618-8b6c2db50b70
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 385
+      height: 270
+      anchor: center-center

@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:ec0f31b9-6289-48b4-82df-2b38718ece85'
   module:
     - block_content
+    - system
   theme:
     - mytheme
 id: region6advertising_2
@@ -22,4 +23,8 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
