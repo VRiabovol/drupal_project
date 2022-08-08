@@ -1,0 +1,14 @@
+uuid: f9bc0835-0d72-4a24-b925-b0741c264480
+langcode: en
+status: true
+dependencies: {  }
+name: page_content_more_like_this_250_x_180_
+label: 'Page content more like this (250 x 180)'
+effects:
+  5ca49cf0-938e-4a03-94d5-15d5e4efdf33:
+    uuid: 5ca49cf0-938e-4a03-94d5-15d5e4efdf33
+    id: image_resize
+    weight: 1
+    data:
+      width: 250
+      height: 180

@@ -39,6 +39,11 @@
   // Body.
   .region5-body-row.views-row.clearfix.row-1 {
     border-bottom: none;
+    @include bp-up('sm') {
+      .region5-body-column {
+        padding-left: 32px;
+      }
+    }
   }
   .views-field-field-image-media a {
     border-bottom: none;

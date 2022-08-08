@@ -5,10 +5,11 @@ dependencies: {  }
 name: region4_top_240_x_165_
 label: 'region4 top (240 x 165)'
 effects:
-  85fb6089-4ba2-4797-8767-d73497b89fb0:
-    uuid: 85fb6089-4ba2-4797-8767-d73497b89fb0
-    id: image_resize
-    weight: 1
+  23ec8050-dc51-4cfb-970e-516fcb3d944b:
+    uuid: 23ec8050-dc51-4cfb-970e-516fcb3d944b
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 240
       height: 165
+      anchor: center-center

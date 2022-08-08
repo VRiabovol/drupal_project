@@ -5,10 +5,11 @@ dependencies: {  }
 name: region4_330_x_230_
 label: 'region4 (330 x 230)'
 effects:
-  2607f859-6921-4822-9410-3f46b6b3ef08:
-    uuid: 2607f859-6921-4822-9410-3f46b6b3ef08
-    id: image_resize
-    weight: 1
+  ce3327bb-ca79-4325-be14-86ce17c9b993:
+    uuid: ce3327bb-ca79-4325-be14-86ce17c9b993
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 330
       height: 230
+      anchor: center-center

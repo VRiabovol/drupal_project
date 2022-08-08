@@ -11,11 +11,12 @@ dependencies:
     - field.field.node.post.field_filter_publish
     - field.field.node.post.field_image_media
     - field.field.node.post.field_next_article
+    - field.field.node.post.field_paragraph
     - field.field.node.post.field_previous_article
     - field.field.node.post.field_tags
+    - field.field.node.post.field_test
     - field.field.node.post.field_title
     - field.field.node.post.field_user
-    - field.field.node.post.layout_builder__layout
     - image.style.region1_marketing_and_finance
     - node.type.post
   module:
@@ -64,7 +65,8 @@ hidden:
   field_exclusive: true
   field_filter_publish: true
   field_next_article: true
+  field_paragraph: true
   field_previous_article: true
   field_tags: true
+  field_test: true
   field_user: true
-  layout_builder__layout: true

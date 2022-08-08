@@ -1,5 +1,10 @@
 @import "Global";
 // News slider (320px).
+@include bp-up('sm') {
+  .header {
+    margin-top: -21px;
+  }
+}
 .news-slider__inner {
   background-color: #f1f1f1;
   display: flex;
@@ -20,6 +25,7 @@
     width: 15%;
     background-color: rgba(157, 157, 157, 0.7);
     border-radius: 50%;
+    cursor: pointer;
   }
   .next-button {
     display: flex;
@@ -29,10 +35,8 @@
     height: 50%;
     background-color: rgba(157, 157, 157, 0.7);
     border-radius: 50%;
+    cursor: pointer;
   }
-}
-.region.region-news-slider {
-  padding-top: 95px;
 }
 .view-id-news_slider {
     background-color: #f1f1f1;
@@ -68,9 +72,6 @@
     }
 }
 .region.region-news-slider {
-  pager-news-slider {
-    margin: 75px;
-  }
   .next-button {
     float: right;
     margin-top: 15px;
@@ -138,6 +139,9 @@
       .marketing.views-row {
         .views-field-field-image-media {
           a {
+            @include bp-down('sm') {
+              padding-left: 0;
+            }
             padding-left: 5px;
             border-bottom: none;
             height: 590px;
@@ -224,6 +228,10 @@
       // Finance.
       .finance.views-row {
         .views-field-field-image-media {
+          @include bp-down('sm') {
+            padding-left: 0;
+            margin-top: 10px;
+          }
           padding-left: 15px;
           a {
             border-bottom: none;

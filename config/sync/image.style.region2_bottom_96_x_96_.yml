@@ -5,10 +5,11 @@ dependencies: {  }
 name: region2_bottom_96_x_96_
 label: 'Region2 bottom (96 x 96)'
 effects:
-  1dbc16ac-917d-4afa-b5a4-421ed577f50d:
-    uuid: 1dbc16ac-917d-4afa-b5a4-421ed577f50d
-    id: image_resize
-    weight: 1
+  f1feb2d7-526e-4b56-a16e-53555d15871c:
+    uuid: f1feb2d7-526e-4b56-a16e-53555d15871c
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 96
       height: 96
+      anchor: center-center

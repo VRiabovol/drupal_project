@@ -1,0 +1,23 @@
+uuid: 3a3108e9-78f4-4cad-ad52-64073aa0d26f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test
+    - node.type.post
+  module:
+    - entity_reference_revisions
+id: node.post.field_test
+field_name: field_test
+entity_type: node
+bundle: post
+label: test
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings: {  }
+field_type: entity_reference_revisions

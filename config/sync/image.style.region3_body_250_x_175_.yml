@@ -1,0 +1,15 @@
+uuid: 4fffc75c-1430-4679-8051-05b2bdb43ab2
+langcode: en
+status: true
+dependencies: {  }
+name: region3_body_250_x_175_
+label: 'region3 body (250 x 175)'
+effects:
+  49349f74-11b8-4797-ae0f-b0e84fccb0d0:
+    uuid: 49349f74-11b8-4797-ae0f-b0e84fccb0d0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 175
+      anchor: center-center

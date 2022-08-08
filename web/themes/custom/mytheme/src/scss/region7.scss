@@ -236,15 +236,14 @@
       border-bottom: none;
       @include bp-down('sm') {
         img {
-          width: 745px;
-          height: 500px;
+          width: 100%;
         }
       }
     }
     .region7-right-side-top-author-data {
       position: absolute;
       @include bp-down('sm') {
-        top: 450px;
+        top: 650px;
       }
       top: 375px;
       left: 15px;
@@ -266,7 +265,7 @@
         position: absolute;
         left: 15px;
         @include bp-down('sm') {
-          top: 346px;
+          top: 546px;
         }
         top: 225px;
         border-bottom: none;

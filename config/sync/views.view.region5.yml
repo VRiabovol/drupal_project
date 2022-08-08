@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_exclusive
     - field.storage.node.field_image_media
     - field.storage.user.user_picture
-    - image.style.large
+    - image.style.region5_body_250_x_175_
     - image.style.region5_footer_100_x_70_
     - image.style.user_avatar
     - node.type.post
@@ -362,7 +362,7 @@ display:
           type: media_thumbnail
           settings:
             image_link: content
-            image_style: large
+            image_style: region5_body_250_x_175_
             image_loading:
               attribute: lazy
           group_column: target_id
