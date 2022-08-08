@@ -5,10 +5,11 @@ dependencies: {  }
 name: region6_left_side_550_x_600_
 label: 'region6 left side (550 x 600)'
 effects:
-  9964b8ed-2a78-4946-afc7-d94edef2fe3d:
-    uuid: 9964b8ed-2a78-4946-afc7-d94edef2fe3d
-    id: image_resize
-    weight: 1
+  d22f1db7-8d61-43ad-b6ea-0a8d8e13709f:
+    uuid: d22f1db7-8d61-43ad-b6ea-0a8d8e13709f
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 550
-      height: 600
+      height: 750
+      anchor: center-top

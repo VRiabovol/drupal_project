@@ -12,11 +12,4 @@ effects:
     data:
       width: 320
       height: 380
-      anchor: center-center
-  e65ab36e-53e0-47cd-ba4d-3581371c8fb3:
-    uuid: e65ab36e-53e0-47cd-ba4d-3581371c8fb3
-    id: image_resize
-    weight: -10
-    data:
-      width: 320
-      height: 380
+      anchor: center-top

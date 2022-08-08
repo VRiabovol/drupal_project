@@ -9,3 +9,4 @@ global-styling:
     - core/drupal
     - core/jquery
     - core/once
+    - core/jquery.once

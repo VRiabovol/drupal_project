@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 name: region7_left_side_bottom_330_x_230_
-label: 'region7 left side bottom (330 X 230)'
+label: 'region7 left side bottom (250 X 175)'
 effects:
-  3cf51ef1-eb90-40c2-811b-b786ace27964:
-    uuid: 3cf51ef1-eb90-40c2-811b-b786ace27964
-    id: image_resize
+  f14e88eb-f4ec-4f2e-8ed8-d224158a057f:
+    uuid: f14e88eb-f4ec-4f2e-8ed8-d224158a057f
+    id: image_scale_and_crop
     weight: 1
     data:
-      width: 330
-      height: 230
+      width: 250
+      height: 175
+      anchor: center-center

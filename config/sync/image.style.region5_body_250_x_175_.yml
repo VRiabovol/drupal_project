@@ -1,0 +1,15 @@
+uuid: ca5499f4-d1b9-4732-b1ac-97eb56f82088
+langcode: en
+status: true
+dependencies: {  }
+name: region5_body_250_x_175_
+label: 'region5 body (200 x 125)'
+effects:
+  f5b12cbf-28ed-4a77-a122-cdde70be5308:
+    uuid: f5b12cbf-28ed-4a77-a122-cdde70be5308
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 175
+      anchor: center-center

@@ -50,27 +50,22 @@
  * @see html.html.twig
  */
 #}
-<div class="region4-top-created">
-  <span class="picture">{{ user_picture }} </span>
-  <span class="authored-by">{{ uid }}</span>
-  <span class="date">- {{ created }}</span>
-</div>
-<div class="burger-menu">
-  <nav class="menu-burger">
-    <div>
-      <span class="menu-close-button active"></span>
-    </div>
-    {{ page.header.useraccountmenu_2 }}
-    {{ page.menu_category }}
-  </nav>
-  <div class="search">
-    <div class="search-form">
-      <span class="search-close-button"></span>
-      {{ page.header.searchform }}
+<div id="page-wrapper">
+  <div class="burger-menu">
+    <nav class="menu-burger">
+      <div>
+        <span class="menu-close-button active"></span>
+      </div>
+      {{ page.header.useraccountmenu_2 }}
+      {{ page.menu_category }}
+    </nav>
+    <div class="search">
+      <div class="search-form">
+        <span class="search-close-button"></span>
+        {{ page.header.searchform }}
+      </div>
     </div>
   </div>
-</div>
-<div id="page-wrapper">
   <div id="page">
     <header class="header" role="banner">
       <div class="container">

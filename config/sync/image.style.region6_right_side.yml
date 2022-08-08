@@ -3,12 +3,13 @@ langcode: en
 status: true
 dependencies: {  }
 name: region6_right_side
-label: 'Region6 right side (380 x 200)'
+label: 'Region6 right side (500 x 400)'
 effects:
-  67f41d2a-ca3b-4f5b-838e-c8c88a818f90:
-    uuid: 67f41d2a-ca3b-4f5b-838e-c8c88a818f90
-    id: image_resize
-    weight: 1
+  5a03972c-9eb1-4480-b689-19e6439cd468:
+    uuid: 5a03972c-9eb1-4480-b689-19e6439cd468
+    id: image_scale_and_crop
+    weight: 2
     data:
-      width: 380
-      height: 200
+      width: 500
+      height: 400
+      anchor: center-top

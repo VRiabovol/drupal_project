@@ -5,9 +5,9 @@ dependencies: {  }
 name: region7_right_side_top_marketing_310_x_420_
 label: 'region7 right side top marketing (310 x 420)'
 effects:
-  cda4636b-d1f7-42d1-883b-fc001eef651a:
-    uuid: cda4636b-d1f7-42d1-883b-fc001eef651a
-    id: image_crop
+  065620a0-c030-4b7a-9ea3-8c0c63250c7d:
+    uuid: 065620a0-c030-4b7a-9ea3-8c0c63250c7d
+    id: image_scale_and_crop
     weight: 2
     data:
       width: 310

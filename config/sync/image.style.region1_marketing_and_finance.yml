@@ -5,10 +5,11 @@ dependencies: {  }
 name: region1_marketing_and_finance
 label: 'Region1 marketing and finance (545 x 600)'
 effects:
-  65e77380-1067-49a1-87ba-3bc444bf7e49:
-    uuid: 65e77380-1067-49a1-87ba-3bc444bf7e49
-    id: image_resize
+  cf887594-95ff-472a-aafe-f7285424aa4c:
+    uuid: cf887594-95ff-472a-aafe-f7285424aa4c
+    id: image_scale_and_crop
     weight: 2
     data:
-      width: 545
+      width: 600
       height: 600
+      anchor: right-top

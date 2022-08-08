@@ -5,10 +5,11 @@ dependencies: {  }
 name: region1_marketing_and_finance_2_280_x_200_
 label: 'Region1 marketing and finance 2 (260 x 180)'
 effects:
-  d659c9d2-8b7f-4115-875f-03c75d48004d:
-    uuid: d659c9d2-8b7f-4115-875f-03c75d48004d
-    id: image_resize
-    weight: 1
+  40d41390-7f0f-4b72-8b91-d0b0cab0f5c8:
+    uuid: 40d41390-7f0f-4b72-8b91-d0b0cab0f5c8
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 260
       height: 180
+      anchor: center-center
