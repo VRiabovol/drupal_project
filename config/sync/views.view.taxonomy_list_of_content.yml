@@ -326,6 +326,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: taxonomy_list_of_content
       header: {  }
       footer: {  }
       display_extenders: {  }

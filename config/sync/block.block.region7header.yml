@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:f2993c51-0462-4c93-9bc3-5fb5abc0d39b'
   module:
     - block_content
+    - system
   theme:
     - mytheme
 id: region7header
@@ -22,4 +23,8 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
