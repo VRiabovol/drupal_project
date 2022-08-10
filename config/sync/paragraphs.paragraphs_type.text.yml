@@ -1,10 +1,14 @@
 uuid: d6e3595c-f6c2-415b-a015-6db0f90a2e2a
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - paragraphs_behavior
 id: text
 label: text
 icon_uuid: null
 icon_default: null
 description: 'text for content type page'
-behavior_plugins: {  }
+behavior_plugins:
+  dummy_paragraph_title:
+    enabled: true
