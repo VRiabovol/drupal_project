@@ -12,6 +12,7 @@ import "./scss/region7.scss";
 import "./scss/page_node.scss";
 import "./scss/taxonomy_page.scss";
 import "./scss/social_media.scss";
+import "./scss/paragraps_behaviors.scss";
 // import "./scss/sidebar.scss";
 // import "./scss/FeaturedTop.scss";
 // import "./scss/front_views.scss";

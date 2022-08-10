@@ -86,17 +86,8 @@
     margin-left: 15px;
 
     .field--name-field-paragraph {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
       p {
         font-size: 23px;
-      }
-
-      img {
-        width: 1000px;
-        object-fit: cover;
       }
     }
   }
@@ -163,7 +154,7 @@
   .node-page__inner {
     .right-side {
       position: absolute;
-      top: 20.5%;
+      top: 920px;
       right: 0;
       width: 25%;
     }
@@ -270,7 +261,6 @@
       }
     }
   }
-
 }
 
 

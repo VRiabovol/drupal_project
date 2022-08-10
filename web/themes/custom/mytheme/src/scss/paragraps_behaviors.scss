@@ -1,0 +1,46 @@
+@import "Global.scss";
+// Position.
+.image-position--left {
+  float: left;
+  width: 50%;
+  padding-right: 5px;
+}
+.image-position--right {
+  float: right;
+  width: 50%;
+  padding-left: 3px;
+}
+// Size.
+.image-size--4-12 {
+  .field__item {
+    width: 200px;
+    height: 100px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.image-size--6-12 {
+  .field__item {
+    width: 300px;
+    height: 200px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.image-size--8-12 {
+  .field__item {
+    width: 400px;
+    height: 300px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
