@@ -8,7 +8,7 @@ use GuzzleHttp\Client;
 /**
  * Provides an example block.
  *
- * @BlockBase(
+ * @Block(
  *   id = "weather",
  *   admin_label = @Translation("weather"),
  *   category = @Translation("weather")
@@ -71,7 +71,7 @@ class WeatherBlock extends BlockBase {
   /**
    * Returns local ip.
    *
-   * @todo get local ip, realize to get write ip address.
+   * @todo return local ip, realize to get global ip address.
    */
   public function getIp() {
     // $client_ip = \Drupal::request()->getClientIp();
