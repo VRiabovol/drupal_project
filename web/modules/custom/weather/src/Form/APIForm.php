@@ -4,11 +4,18 @@ namespace Drupal\weather\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use GuzzleHttp\Client;
 
 /**
  * Provides API key form.
  */
 class APIForm extends FormBase {
+  /**
+   * For GuzzleHttp object.
+   *
+   * @var object
+   */
+  protected $client;
 
   /**
    * Rewrite method from interface.
@@ -55,14 +62,16 @@ class APIForm extends FormBase {
     elseif ($this->haveDigitValidation($form_state)) {
       $form_state->setErrorByName('name', $this->t('City and country should not have any digits.'));
     }
+    elseif ($this->keyNameValidation($form_state)) {
+      $form_state->setErrorByName('key_verification', $this->t('Wrong API key.'));
+    }
   }
 
   /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->messenger()->addStatus($this->t('Your API key is @number',
-      ['@number' => $form_state->getValue('API key')]));
+    $this->messenger()->addStatus($this->t('Your API key API key successfully added.'));
   }
 
   /**
@@ -77,6 +86,25 @@ class APIForm extends FormBase {
       }
     }
     return $result;
+  }
+
+  /**
+   * Validation for API key and name verification on https://www.weatherapi.com.
+   */
+  public function keyNameValidation($form_state) {
+
+    $key = $form_state->getValue('key');
+    $name = $form_state->getValue('name');
+    $this->client = new Client();
+    $url = "http://api.weatherapi.com/v1/current.json?key=$key&q=$name&aqi=no";
+    $response = $this->client->get($url, ['http_errors' => FALSE]);
+    $code = $response->getStatusCode();
+    if ($code == 200) {
+      return FALSE;
+    }
+    else {
+      return TRUE;
+    }
   }
 
 }
