@@ -48,7 +48,7 @@ class WeatherBlock extends BlockBase {
   }
 
   /**
-   * Create request to API, decode from JSON to string.
+   * Create request to API, decode from JSON to array.
    */
   public function getWeather() {
 
