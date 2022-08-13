@@ -19,3 +19,13 @@ function weather_theme() {
     ],
   ];
 }
+
+/**
+ * Example of adding variables with preprocess.
+ */
+function weather_preprocess_weather(&$variables) {
+
+  $variable_name = 'example of preprocess';
+  $variables['preprocess_example'] = $variable_name;
+
+}
