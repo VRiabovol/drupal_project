@@ -18,6 +18,13 @@ class APIForm extends FormBase {
   protected $client;
 
   /**
+   * Construct GuzzleHttp\Client object.
+   */
+  public function __construct() {
+    $this->client = new Client();
+  }
+
+  /**
    * Rewrite method from interface.
    *
    * {@inheritdoc}
@@ -95,7 +102,6 @@ class APIForm extends FormBase {
 
     $key = $form_state->getValue('key');
     $name = $form_state->getValue('name');
-    $this->client = new Client();
     $url = "http://api.weatherapi.com/v1/current.json?key=$key&q=$name&aqi=no";
     $response = $this->client->get($url, ['http_errors' => FALSE]);
     $code = $response->getStatusCode();
