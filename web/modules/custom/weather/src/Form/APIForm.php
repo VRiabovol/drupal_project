@@ -2,14 +2,14 @@
 
 namespace Drupal\weather\Form;
 
-use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use GuzzleHttp\Client;
+use Drupal\Core\Form\ConfigFormBase;
 
 /**
  * Provides API key form.
  */
-class APIForm extends FormBase {
+class APIForm extends ConfigFormBase {
   /**
    * For GuzzleHttp object.
    *
@@ -38,20 +38,30 @@ class APIForm extends FormBase {
    *
    * {@inheritdoc}
    */
+  public function getEditableConfigNames() {
+    return [
+      'weather.admin_settings',
+    ];
+  }
+
+  /**
+   * Rewrite method from interface.
+   *
+   * {@inheritdoc}
+   */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $config = $this->config('weather.admin_settings');
     $form['name'] = [
       '#type' => 'textfield',
       '#title' => $this->t('City and country name'),
+      '#default_value' => $config->get('name'),
     ];
     $form['key'] = [
       '#type' => 'textfield',
       '#title' => $this->t('API key'),
+      '#default_value' => $config->get('key'),
     ];
-    $form['submit'] = [
-      '#type' => 'submit',
-      '#value' => $this->t('Submit'),
-    ];
-    return $form;
+    return parent::buildForm($form, $form_state);
   }
 
   /**
@@ -79,6 +89,11 @@ class APIForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $this->messenger()->addStatus($this->t('Your API key API key successfully added.'));
+    $this->config('weather.admin_settings')
+      ->set('name', $form_state->getValue('name'))
+      ->set('key', $form_state->getValue('key'))
+      ->save();
+    parent::submitForm($form, $form_state);
   }
 
   /**

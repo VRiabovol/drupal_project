@@ -4,4 +4,4 @@ weather.admin_settings:
     _form: 'Drupal\weather\Form\APIForm'
     _title: 'Weather API keys configuration'
   requirements:
-    _permission: 'administer menu'
+    _permission: 'administer site configuration'
