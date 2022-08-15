@@ -60,10 +60,10 @@ class APIForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    if (strlen($form_state->getValue('name')) < 1) {
+    if (empty($form_state->getValue('name'))) {
       $form_state->setErrorByName('name', $this->t('City and country should have any symbols.'));
     }
-    elseif (strlen($form_state->getValue('key')) < 1) {
+    elseif (empty($form_state->getValue('key'))) {
       $form_state->setErrorByName('key', $this->t('API key should be not empty.'));
     }
     elseif ($this->haveDigitValidation($form_state)) {
@@ -87,10 +87,8 @@ class APIForm extends FormBase {
   public function haveDigitValidation(FormStateInterface $form_state) {
     $name = $form_state->getValue('name');
     $result = FALSE;
-    for ($i = 0; strlen($name) >= $i; $i++) {
-      if (is_numeric($name[$i])) {
-        $result = TRUE;
-      }
+    if (preg_match('~[0-9]+~', $name)) {
+      return $result = TRUE;
     }
     return $result;
   }

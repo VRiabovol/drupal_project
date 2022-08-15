@@ -48,9 +48,9 @@ class WeatherBlock extends BlockBase {
     $weather = $this->getWeather();
     return [
       '#theme' => 'weather',
-      '#name' => $weather['name'],
-      '#temperature' => $weather['temperature'],
-      '#icon' => $weather['icon'],
+      '#name' => $weather["location"]["name"],
+      '#temperature' => $weather["current"]["temp_c"],
+      '#icon' => $weather["current"]["condition"]["icon"],
     ];
   }
 
@@ -62,21 +62,11 @@ class WeatherBlock extends BlockBase {
     $url = "http://api.weatherapi.com/v1/current.json?key=29af641fa57346f58ba132308221008&q={$this->getIP()}&aqi=no";
     $response = $this->client->request($this->method, $url);
     $code = $response->getStatusCode();
-    $result = [];
+    $data = json_decode($response->getBody()->getContents(), TRUE);
     if ($code == 200) {
-      $data = json_decode($response->getBody()->getContents(), TRUE);
-      foreach ($data as $key => $value) {
-        if ($key == "location") {
-          $result['name'] = $data["location"]["name"];
-        }
-        elseif ($key == "current") {
-          $result['temperature'] = $data["current"]["temp_c"];
-          $result['icon'] = $data["current"]["condition"]["icon"];
-        }
-      }
-
+      return $data;
     }
-    return $result;
+
   }
 
   /**
