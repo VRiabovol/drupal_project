@@ -1,0 +1,20 @@
+uuid: 95541b4f-0bad-4a8d-916d-e085498665ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - weather
+  theme:
+    - mytheme
+id: weather
+theme: mytheme
+region: header
+weight: 0
+provider: null
+plugin: weather
+settings:
+  id: weather
+  label: weather
+  label_display: '0'
+  provider: weather
+visibility: {  }

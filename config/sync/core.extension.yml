@@ -11,6 +11,8 @@ module:
   ckeditor: 0
   comment: 0
   config: 0
+  config_filter: 0
+  config_ignore: 0
   contact: 0
   contextual: 0
   datetime: 0
@@ -51,6 +53,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  weather: 0
   views: 10
   paragraphs: 11
   standard: 1000

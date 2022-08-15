@@ -1,0 +1,6 @@
+weather.admin_settings:
+  title: 'Weather API key settings'
+  description: 'Add API key and name'
+  route_name: weather.admin_settings
+  parent: system.admin_config_content
+  weight: 10

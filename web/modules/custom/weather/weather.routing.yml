@@ -1,0 +1,7 @@
+weather.admin_settings:
+  path: '/admin/config/content/weather'
+  defaults:
+    _form: 'Drupal\weather\Form\APIForm'
+    _title: 'Weather API keys configuration'
+  requirements:
+    _permission: 'administer site configuration'
