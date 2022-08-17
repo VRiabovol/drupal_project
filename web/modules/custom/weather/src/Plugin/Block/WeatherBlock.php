@@ -3,8 +3,10 @@
 namespace Drupal\weather\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use GuzzleHttp\Client;
 use Drupal\Core\Cache\CacheBackendInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides an example block.
@@ -15,7 +17,7 @@ use Drupal\Core\Cache\CacheBackendInterface;
  *   category = @Translation("weather")
  * )
  */
-class WeatherBlock extends BlockBase {
+class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface {
   /**
    * Current locaction.
    *
@@ -29,33 +31,50 @@ class WeatherBlock extends BlockBase {
    */
   public $method = "GET";
   /**
-   * For GuzzleHttp object.
+   * Guzzle\Client instance.
    *
-   * @var object
+   * @var \GuzzleHttp\ClientInterface
    */
   protected $client;
   /**
-   * For CacheBackendInterface object.
+   * CacheBackendInterface instance.
    *
    * @var object
    */
   protected $cacheBackend;
 
   /**
-   * Construct dependency injections objects.
-   *
-   * Create GuzzleHttp\Client, Drupal\Core\Cache\CacheBackendInterface objects.
+   * {@inheritdoc}
    */
-  public function __construct($client, $cacheBackend) {
-    $this->client = new Client();
-    $this->cacheBackend = \Drupal::cache();
+  public function __construct(
+    array $configuration,
+    $plugin_id,
+    $plugin_definition,
+    CacheBackendInterface $cache,
+    Client $http_client
+  ) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->client = $http_client;
+    $this->cacheBackend = $cache;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('cache.default'),
+      $container->get('http_client'),
+    );
   }
 
   /**
    * {@inheritdoc}
    */
   public function build() {
-    $weather = $this->getWeather();
     $cachedWeather = $this->getCachedWeather();
     return [
       '#theme' => 'weather',
@@ -105,7 +124,7 @@ class WeatherBlock extends BlockBase {
     }
     else {
       $data = $this->getWeather();
-      $expire = time() + 60;
+      $expire = time() + 10800;
       $this->cacheBackend->set($cid, $data, $expire);
     }
     return $data;
