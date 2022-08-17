@@ -4,6 +4,7 @@ namespace Drupal\weather\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use GuzzleHttp\Client;
+use Drupal\Core\Cache\CacheBackendInterface;
 
 /**
  * Provides an example block.
@@ -33,12 +34,21 @@ class WeatherBlock extends BlockBase {
    * @var object
    */
   protected $client;
+  /**
+   * For CacheBackendInterface object.
+   *
+   * @var object
+   */
+  protected $cacheBackend;
 
   /**
-   * Construct GuzzleHttp\Client object.
+   * Construct dependency injections objects.
+   *
+   * Create GuzzleHttp\Client, Drupal\Core\Cache\CacheBackendInterface objects.
    */
-  public function __construct($client) {
+  public function __construct($client, $cacheBackend) {
     $this->client = new Client();
+    $this->cacheBackend = \Drupal::cache();
   }
 
   /**
@@ -46,11 +56,12 @@ class WeatherBlock extends BlockBase {
    */
   public function build() {
     $weather = $this->getWeather();
+    $cachedWeather = $this->getCachedWeather();
     return [
       '#theme' => 'weather',
-      '#name' => $weather["location"]["name"],
-      '#temperature' => $weather["current"]["temp_c"],
-      '#icon' => $weather["current"]["condition"]["icon"],
+      '#name' => $cachedWeather["location"]["name"],
+      '#temperature' => $cachedWeather["current"]["temp_c"],
+      '#icon' => $cachedWeather["current"]["condition"]["icon"],
     ];
   }
 
@@ -78,6 +89,26 @@ class WeatherBlock extends BlockBase {
     // $client_ip = \Drupal::request()->getClientIp();
     // $current_ip = "176.241.140.177";
     return $this->location;
+  }
+
+  /**
+   * Caches data.
+   *
+   * If data is not already in cache, computed it and add to the cache.
+   * If data in cache, get it from the cache.
+   */
+  public function getCachedWeather() {
+    $cid = 'weather_cached';
+    $data = NULL;
+    if ($cache = $this->cacheBackend->get($cid)) {
+      $data = $cache->data;
+    }
+    else {
+      $data = $this->getWeather();
+      $expire = time() + 60;
+      $this->cacheBackend->set($cid, $data, $expire);
+    }
+    return $data;
   }
 
 }
