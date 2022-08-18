@@ -130,6 +130,9 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
         $expire = time() + 10800;
         $this->cacheBackend->set($cid, $data, $expire);
       }
+      else {
+        return FALSE;
+      }
     }
     return $data;
   }
