@@ -78,9 +78,9 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
     $cachedWeather = $this->getCachedWeather();
     return [
       '#theme' => 'weather',
-      '#name' => $cachedWeather["location"]["name"],
-      '#temperature' => $cachedWeather["current"]["temp_c"],
-      '#icon' => $cachedWeather["current"]["condition"]["icon"],
+      '#name' => $cachedWeather["location"]["name"] ?? '',
+      '#temperature' => $cachedWeather["current"]["temp_c"] ?? '',
+      '#icon' => $cachedWeather["current"]["condition"]["icon"] ?? '',
     ];
   }
 
@@ -95,6 +95,9 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
     $data = json_decode($response->getBody()->getContents(), TRUE);
     if ($code == 200) {
       return $data;
+    }
+    else {
+      return FALSE;
     }
 
   }
@@ -123,9 +126,10 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
       $data = $cache->data;
     }
     else {
-      $data = $this->getWeather();
-      $expire = time() + 10800;
-      $this->cacheBackend->set($cid, $data, $expire);
+      if ($data = $this->getWeather()) {
+        $expire = time() + 10800;
+        $this->cacheBackend->set($cid, $data, $expire);
+      }
     }
     return $data;
   }
