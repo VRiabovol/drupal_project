@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the weather module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function weather_schema() {
+  $schema['weather_statistics'] = [
+    'description' => 'Stores module data as key/value pairs per user.',
+    'fields' => [
+      'id' => [
+        'description' => 'Statistics item id.',
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'uid' => [
+        'description' => 'The users id.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'city' => [
+        'description' => 'Name of city.',
+        'type' => 'varchar_ascii',
+        'length' => 128,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+    ],
+    'primary key' => [
+      'id',
+    ],
+    'indexes' => [
+      'city' => [
+        'city',
+      ],
+    ],
+  ];
+  return $schema;
+
+}
