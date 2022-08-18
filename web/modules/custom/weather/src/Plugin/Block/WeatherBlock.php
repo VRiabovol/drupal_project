@@ -3,7 +3,10 @@
 namespace Drupal\weather\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use GuzzleHttp\Client;
+use Drupal\Core\Cache\CacheBackendInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Provides an example block.
@@ -14,7 +17,7 @@ use GuzzleHttp\Client;
  *   category = @Translation("weather")
  * )
  */
-class WeatherBlock extends BlockBase {
+class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface {
   /**
    * Current locaction.
    *
@@ -28,29 +31,56 @@ class WeatherBlock extends BlockBase {
    */
   public $method = "GET";
   /**
-   * For GuzzleHttp object.
+   * Guzzle\Client instance.
+   *
+   * @var \GuzzleHttp\ClientInterface
+   */
+  protected $client;
+  /**
+   * CacheBackendInterface instance.
    *
    * @var object
    */
-  protected $client;
+  protected $cacheBackend;
 
   /**
-   * Construct GuzzleHttp\Client object.
+   * {@inheritdoc}
    */
-  public function __construct($client) {
-    $this->client = new Client();
+  public function __construct(
+    array $configuration,
+    $plugin_id,
+    $plugin_definition,
+    CacheBackendInterface $cache,
+    Client $http_client
+  ) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->client = $http_client;
+    $this->cacheBackend = $cache;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('cache.default'),
+      $container->get('http_client'),
+    );
   }
 
   /**
    * {@inheritdoc}
    */
   public function build() {
-    $weather = $this->getWeather();
+    $cachedWeather = $this->getCachedWeather();
     return [
       '#theme' => 'weather',
-      '#name' => $weather["location"]["name"],
-      '#temperature' => $weather["current"]["temp_c"],
-      '#icon' => $weather["current"]["condition"]["icon"],
+      '#name' => $cachedWeather["location"]["name"] ?? '',
+      '#temperature' => $cachedWeather["current"]["temp_c"] ?? '',
+      '#icon' => $cachedWeather["current"]["condition"]["icon"] ?? '',
     ];
   }
 
@@ -66,6 +96,9 @@ class WeatherBlock extends BlockBase {
     if ($code == 200) {
       return $data;
     }
+    else {
+      return FALSE;
+    }
 
   }
 
@@ -78,6 +111,30 @@ class WeatherBlock extends BlockBase {
     // $client_ip = \Drupal::request()->getClientIp();
     // $current_ip = "176.241.140.177";
     return $this->location;
+  }
+
+  /**
+   * Caches data.
+   *
+   * If data is not already in cache, computed it and add to the cache.
+   * If data in cache, get it from the cache.
+   */
+  public function getCachedWeather() {
+    $cid = 'weather_cached';
+    $data = NULL;
+    if ($cache = $this->cacheBackend->get($cid)) {
+      $data = $cache->data;
+    }
+    else {
+      if ($data = $this->getWeather()) {
+        $expire = time() + 10800;
+        $this->cacheBackend->set($cid, $data, $expire);
+      }
+      else {
+        return FALSE;
+      }
+    }
+    return $data;
   }
 
 }
