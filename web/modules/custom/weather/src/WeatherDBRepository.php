@@ -65,6 +65,7 @@ class WeatherDBRepository {
     $select->join('users_field_data', 'u', 'e.uid = u.uid');
     $select->addField('e', 'city');
     $select->addField('u', 'name');
+    $select->addField('u', 'uid');
     $select->distinct('name');
     $entries = $select->execute()->fetchAll(\PDO::FETCH_ASSOC);
     return $entries;

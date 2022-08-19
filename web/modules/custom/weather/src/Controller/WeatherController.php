@@ -3,6 +3,7 @@
 namespace Drupal\weather\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Url;
 use Drupal\weather\WeatherDBRepository;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -41,16 +42,21 @@ class WeatherController extends ControllerBase {
    */
   public function statisticsList() {
     $entries = $this->repository->loadStatistics();
-
     $content = [];
     $rows = [];
     $headers = [
-      'city',
-      'user',
+      'City',
+      'User',
     ];
 
     foreach ($entries as $entry) {
-      $rows[] = $entry;
+      $row['city']['data'] = $entry['city'] ?? '';
+      $row['name']['data'] = [
+        '#type' => 'link',
+        '#title' => $entry['name'] ?? '',
+        '#url' => Url::fromRoute('entity.user.canonical', ['user' => $entry['uid'] ?? '']),
+      ];
+      $rows[] = $row;
     }
 
     $content['message'] = [
@@ -62,6 +68,17 @@ class WeatherController extends ControllerBase {
       '#header' => $headers,
       '#rows' => $rows,
       '#empty' => 'No entries available.',
+    ];
+
+    $headers_total = ['Total users'];
+    $users_counter = count($rows) ?? '';
+    $rows_total[] = ['Total users' => $users_counter];
+
+    $content['table_total'] = [
+      '#type' => 'table',
+      '#header' => $headers_total,
+      '#rows' => $rows_total,
+      '#empty' => 'No entries available',
     ];
     return $content;
   }

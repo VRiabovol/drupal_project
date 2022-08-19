@@ -6,9 +6,10 @@ weather.admin_settings:
   requirements:
     _permission: 'administer site configuration'
 
-weather.statistics:
-  path: '/weather/statistics'
+weather.statistics.admin:
+  path: '/admin/config/content/weather/statistics'
   defaults:
     _controller: '\Drupal\weather\Controller\WeatherController::statisticsList'
+    _title: 'Weather API statistics'
   requirements:
-    _permission: 'access content'
+    _permission: 'administer site configuration'
