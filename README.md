@@ -20,11 +20,11 @@ https://github.com/wodby/docker4drupal/blob/master/.env
 docker-compose up -d
 ```
 - From php container run:
-go to the php container:
+--go to the php container:
 ```
 docker-compose exec php bash
 ```
-run installation vendor dir:
+--run installation vendor dir:
 ```
 composer install
 ```
