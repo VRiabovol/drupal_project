@@ -21,5 +21,23 @@ docker-compose up -d
 ```
 - From php container run:
 ```
-composer install
+docker-compose exec php composer install
+```
+- Deploy the project
+```
+docker-compose exec php drush deploy
+```
+- Run in the root of project
+```
+npm i
+```
+- Run in the web/themes/custom/mytheme of project
+```
+npm i
+```
+```
+npm run build
+```
+```
+npm run start
 ```
