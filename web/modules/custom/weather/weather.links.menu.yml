@@ -4,3 +4,10 @@ weather.admin_settings:
   route_name: weather.admin_settings
   parent: system.admin_config_content
   weight: 10
+
+weather.statistics.admin:
+  title: 'Weather API statistics'
+  description: 'Counting users which using API and their location'
+  route_name: weather.statistics.admin
+  parent: system.admin_config_content
+  weight: 11

@@ -7,6 +7,8 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use GuzzleHttp\Client;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\weather\WeatherDBRepository;
+use Drupal\Core\Session\AccountProxyInterface;
 
 /**
  * Provides an example block.
@@ -44,6 +46,20 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
   protected $cacheBackend;
 
   /**
+   * The repository for specialized queries.
+   *
+   * @var \Drupal\weather\WeatherDBRepository
+   */
+  protected $repository;
+
+  /**
+   * Users id.
+   *
+   * @var \Drupal\user\Entity\User
+   */
+  protected $user;
+
+  /**
    * {@inheritdoc}
    */
   public function __construct(
@@ -51,11 +67,15 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
     $plugin_id,
     $plugin_definition,
     CacheBackendInterface $cache,
-    Client $http_client
+    Client $http_client,
+    WeatherDBRepository $repository,
+    AccountProxyInterface $user
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->client = $http_client;
     $this->cacheBackend = $cache;
+    $this->repository = $repository;
+    $this->user = $user;
   }
 
   /**
@@ -68,6 +88,8 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
       $plugin_definition,
       $container->get('cache.default'),
       $container->get('http_client'),
+      $container->get('weather.repository'),
+      $container->get('current_user')
     );
   }
 
@@ -114,7 +136,7 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
   }
 
   /**
-   * Caches data.
+   * Caches data, make entry to database.
    *
    * If data is not already in cache, computed it and add to the cache.
    * If data in cache, get it from the cache.
@@ -124,17 +146,35 @@ class WeatherBlock extends BlockBase implements ContainerFactoryPluginInterface 
     $data = NULL;
     if ($cache = $this->cacheBackend->get($cid)) {
       $data = $cache->data;
+      $this->entryToDatabase($data);
     }
     else {
       if ($data = $this->getWeather()) {
         $expire = time() + 10800;
         $this->cacheBackend->set($cid, $data, $expire);
+        $this->entryToDatabase($data);
       }
       else {
         return FALSE;
       }
     }
     return $data;
+  }
+
+  /**
+   * Get weather data, parse it and makes entry to the database.
+   */
+  public function entryToDatabase($data) {
+    if (!empty($data)) {
+      $entry = [
+        'city' => $data["location"]["name"] ?? NULL,
+        'uid' => $this->user->id(),
+      ];
+      return $this->repository->insert($entry);
+    }
+    else {
+      return FALSE;
+    }
   }
 
 }

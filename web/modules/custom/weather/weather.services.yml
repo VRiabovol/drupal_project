@@ -1,0 +1,4 @@
+services:
+  weather.repository:
+    class: Drupal\weather\WeatherDBRepository
+    arguments: ['@database', '@messenger']
