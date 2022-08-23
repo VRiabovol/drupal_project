@@ -2,3 +2,16 @@ services:
   weather.repository:
     class: Drupal\weather\WeatherDBRepository
     arguments: ['@database', '@messenger']
+
+  weather.get_data:
+    class: Drupal\weather\WeatherGetData
+    arguments: ['@http_client',
+                '@weather.repository',
+                '@cache.default',
+                '@current_user']
+
+  cache_context.weather_city_name:
+    class: Drupal\weather\WeatherCacheContext
+    arguments: ['@weather.get_data', '@request_stack']
+    tags:
+      - { name: cache.context}
