@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for validation_register_form module.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function validation_register_form_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'user_register_form':
+      // Set custom validation function.
+      $form['#validate'][] = 'validation_register_form_phone_validate';
+  }
+
+}
+
+/**
+ * Implements user_register_form_validate().
+ */
+function validation_register_form_phone_validate($form, &$form_state) {
+  $regexp = '/^\\+?\\d{1,4}?[-.\\s]?\\(?\\d{1,3}?\\)?[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,4}[-.\\s]?\\d{1,9}$/';
+  $phone = $form_state->getValue('field_telephone');
+  if (!empty($phone)) {
+    if (!preg_match($regexp, $phone[0]['value'] ?? '')) {
+      $form_state->setErrorByName('phone_field', t('Wrong telephone number. Example 099-390-24-36'));
+    }
+  }
+
+}
+
+/**
+ * Implements hook_user_presave().
+ *
+ * Add a role 'Reader' for each new user.
+ */
+function validation_register_form_user_presave(EntityInterface $entity) {
+  if ($entity->isNew()) {
+    $entity->addRole('reader');
+  }
+
+}

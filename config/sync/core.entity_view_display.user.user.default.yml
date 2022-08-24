@@ -3,10 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_address
+    - field.field.user.user.field_telephone
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.user_avatar
   module:
     - image
+    - telephone
     - user
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
@@ -15,7 +18,24 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_address:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_telephone:
+    type: telephone_link
+    label: above
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
   member_for:
+    settings: {  }
+    third_party_settings: {  }
     weight: 5
     region: content
   user_picture:
@@ -23,7 +43,7 @@ content:
     label: hidden
     settings:
       image_link: content
-      image_style: thumbnail
+      image_style: user_avatar
       image_loading:
         attribute: lazy
     third_party_settings: {  }

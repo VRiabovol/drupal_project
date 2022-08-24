@@ -95,7 +95,7 @@ class WeatherGetData {
    */
   public function getWeather() {
 
-    $url = "http://api.weatherapi.com/v1/current.json?key=29af641fa57346f58ba132308221008&q={$this->getIP()}&aqi=no";
+    $url = "http://api.weatherapi.com/v1/current.json?key=c542cfb3e008451cbc2141902222408&q={$this->getIP()}&aqi=no";
     $response = $this->client->request($this->method, $url);
     $code = $response->getStatusCode();
     $data = json_decode($response->getBody()->getContents(), TRUE);
