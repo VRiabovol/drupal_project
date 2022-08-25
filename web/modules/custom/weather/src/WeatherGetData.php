@@ -3,6 +3,7 @@
 namespace Drupal\weather;
 
 use Drupal\Core\Cache\CacheBackendInterface;
+use Drupal\Core\Config\ConfigFactory;
 use Drupal\Core\Session\AccountProxyInterface;
 use GuzzleHttp\Client;
 
@@ -51,6 +52,13 @@ class WeatherGetData {
   protected $user;
 
   /**
+   * Configuration weather API.
+   *
+   * @var \Drupal\Core\Config\ConfigFactory
+   */
+  protected $config;
+
+  /**
    * Construct services.
    *
    * @param \GuzzleHttp\Client $http_client
@@ -61,17 +69,21 @@ class WeatherGetData {
    *   Drupal\Core\Cache\CacheBackendInterface object.
    * @param \Drupal\Core\Session\AccountProxyInterface $user
    *   Drupal\Core\Session\AccountProxyInterface object.
+   * @param \Drupal\Core\Config\ConfigFactory $config
+   *   Drupal\Core\Config\ConfigFactory object.
    */
   public function __construct(
     Client $http_client,
     WeatherDBRepository $repository,
     CacheBackendInterface $cache,
-    AccountProxyInterface $user
+    AccountProxyInterface $user,
+    ConfigFactory $config
   ) {
     $this->client = $http_client;
     $this->repository = $repository;
     $this->cacheBackend = $cache;
     $this->user = $user;
+    $this->config = $config->get('weather.admin_settings');
   }
 
   /**
@@ -86,6 +98,10 @@ class WeatherGetData {
       return $current_ip;
     }
     else {
+      $config_location = $this->config->get('name');
+      if (!empty($config_location)) {
+        return $config_location;
+      }
       return $this->location;
     }
   }
@@ -94,8 +110,8 @@ class WeatherGetData {
    * Create request to API, decode from JSON to array.
    */
   public function getWeather() {
-
-    $url = "http://api.weatherapi.com/v1/current.json?key=c542cfb3e008451cbc2141902222408&q={$this->getIP()}&aqi=no";
+    $api_token = $this->config->get('key');
+    $url = "http://api.weatherapi.com/v1/current.json?key={$api_token}&q={$this->getIP()}&aqi=no";
     $response = $this->client->request($this->method, $url);
     $code = $response->getStatusCode();
     $data = json_decode($response->getBody()->getContents(), TRUE);
