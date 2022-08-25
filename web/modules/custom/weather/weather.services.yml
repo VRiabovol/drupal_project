@@ -8,7 +8,8 @@ services:
     arguments: ['@http_client',
                 '@weather.repository',
                 '@cache.default',
-                '@current_user']
+                '@current_user',
+                '@config.factory']
 
   cache_context.weather_city_name:
     class: Drupal\weather\WeatherCacheContext

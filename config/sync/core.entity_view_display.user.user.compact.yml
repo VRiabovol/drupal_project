@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_address
+    - field.field.user.user.field_telephone
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.user_avatar
   module:
     - image
     - user
@@ -21,11 +23,13 @@ content:
     label: hidden
     settings:
       image_link: content
-      image_style: thumbnail
+      image_style: user_avatar
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  field_address: true
+  field_telephone: true
   member_for: true

@@ -1,71 +1,54 @@
-uuid: 1ecfc3a3-8c14-4d5f-9647-aaa3461e5956
+uuid: b4901edd-94df-4a14-9ec4-c71220ed9345
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.user.register
     - field.field.user.user.field_address
     - field.field.user.user.field_telephone
     - field.field.user.user.user_picture
     - image.style.user_avatar
   module:
     - image
-    - path
     - telephone
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
-id: user.user.default
+id: user.user.register
 targetEntityType: user
 bundle: user
-mode: default
+mode: register
 content:
   account:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-  contact:
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_address:
     type: string_textarea
-    weight: 1
+    weight: 2
     region: content
     settings:
-      rows: 1
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
   field_telephone:
     type: telephone_default
-    weight: 2
+    weight: 3
     region: content
     settings:
-      placeholder: +38-099-390-24-36
-    third_party_settings: {  }
-  language:
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  path:
-    type: path
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  timezone:
-    weight: 6
-    region: content
-    settings: {  }
+      placeholder: ''
     third_party_settings: {  }
   user_picture:
     type: image_image
-    weight: 3
+    weight: 1
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: user_avatar
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  contact: true
+  language: true
+  path: true
+  timezone: true

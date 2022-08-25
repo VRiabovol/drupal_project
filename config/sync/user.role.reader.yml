@@ -1,0 +1,9 @@
+uuid: 54321633-f8d0-4c55-b2c7-0e1fbe04b8ee
+langcode: en
+status: true
+dependencies: {  }
+id: reader
+label: Reader
+weight: 4
+is_admin: null
+permissions: {  }

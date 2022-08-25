@@ -1,0 +1,5 @@
+name: validation_register_form
+type: module
+description: Validate registration form fields
+package: Custom
+core_version_requirement: ^9 || ^10
