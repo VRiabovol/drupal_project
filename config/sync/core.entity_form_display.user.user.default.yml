@@ -4,10 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_address
+    - field.field.user.user.field_date_of_birth
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_ip_address
+    - field.field.user.user.field_last_name
     - field.field.user.user.field_telephone
     - field.field.user.user.user_picture
     - image.style.user_avatar
   module:
+    - datetime
     - image
     - path
     - telephone
@@ -35,6 +40,36 @@ content:
     region: content
     settings:
       rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+  field_date_of_birth:
+    type: datetime_default
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_first_name:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ip_address:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_last_name:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_telephone:
