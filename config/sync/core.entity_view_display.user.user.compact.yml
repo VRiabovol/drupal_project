@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.field_address
+    - field.field.user.user.field_date_of_birth
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_ip_address
+    - field.field.user.user.field_last_name
     - field.field.user.user.field_telephone
     - field.field.user.user.user_picture
     - image.style.user_avatar
@@ -31,5 +35,9 @@ content:
     region: content
 hidden:
   field_address: true
+  field_date_of_birth: true
+  field_first_name: true
+  field_ip_address: true
+  field_last_name: true
   field_telephone: true
   member_for: true

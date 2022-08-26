@@ -1,0 +1,32 @@
+id: my_user_migrate
+label: Custom user migration
+source:
+  plugin: csv
+  path: modules/custom/custom_migration/assets/bootcamp-people.csv
+  ids: [email]
+  delimiter: ','
+  header_offset: 0
+  fields:
+    field_first_name:
+      name: first_name
+      label: 'first_name'
+    field_last_name:
+      name: last_name
+      label: 'last_name'
+    field_email:
+      name: email
+      label: 'email'
+    field_ip_address:
+      name: ip_address
+      label: 'ip_address'
+    field_date_of_birth:
+      name: date_of_birth
+      label: 'date_of_birth'
+process:
+  name: first_name
+  field_last_name: last_name
+  mail: email
+  field_ip_address: ip_address
+  field_date_of_birth: date_of_birth
+destination:
+  plugin: entity:user

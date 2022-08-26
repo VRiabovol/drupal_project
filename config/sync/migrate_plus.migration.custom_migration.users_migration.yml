@@ -1,0 +1,42 @@
+uuid: 7314293a-d49e-48d2-aa82-8b5751d35c47
+langcode: en
+status: true
+dependencies: {  }
+id: custom_migration.users_migration
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: null
+label: 'Custom user migration'
+source:
+  plugin: csv
+  path: modules/custom/custom_migration/assets/bootcamp-people.csv
+  delimiter: ','
+  fields:
+    -
+      name: first_name
+      label: first_name
+    -
+      name: last_name
+      label: last_name
+    -
+      name: email
+      label: email
+    -
+      name: ip_address
+      label: ip_address
+    -
+      name: date_of_birth
+      label: date_of_birth
+process:
+  first_name: first_name
+  last_name: last_name
+  email: email
+  ip_address: ip_address
+  date_of_birth: date_of_birth
+  type:
+    plugin: default_value
+destination:
+  plugin: 'entity:user'
+migration_dependencies: null
