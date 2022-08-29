@@ -6,17 +6,17 @@ use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\media\Plugin\Field\FieldFormatter\MediaThumbnailFormatter;
 
 /**
- * Plugin implementation of the 'media_field_formatter' formatter.
+ * Plugin reset number of field values to 1.
  *
  * @FieldFormatter(
- *   id = "field_features_media_field_formatter",
- *   label = @Translation("Media field formatter"),
+ *   id = "field_features_reset_number_of_values",
+ *   label = @Translation("Reset number of values"),
  *   field_types = {
  *     "entity_reference"
  *   }
  * )
  */
-class MediaFieldFormatter extends MediaThumbnailFormatter {
+class ResetNumberOfValuesFormatter extends MediaThumbnailFormatter {
 
   /**
    * {@inheritdoc}
