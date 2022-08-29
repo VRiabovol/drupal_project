@@ -22,10 +22,10 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_myltiple_media:
-    type: field_features_media_field_formatter
+    type: field_features_reset_number_of_values
     label: above
     settings:
       image_style: ''
@@ -33,7 +33,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   links:
     settings: {  }
