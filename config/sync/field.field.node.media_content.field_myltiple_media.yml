@@ -1,0 +1,29 @@
+uuid: 80a1421c-d3fd-40e1-bdd9-91d621f4ca98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_myltiple_media
+    - media.type.image
+    - node.type.media_content
+id: node.media_content.field_myltiple_media
+field_name: field_myltiple_media
+entity_type: node
+bundle: media_content
+label: myltiple_media
+description: 'multiple image content'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
