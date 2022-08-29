@@ -7,7 +7,7 @@ dependencies:
     - field.field.node.media_content.field_myltiple_media
     - node.type.media_content
   module:
-    - field_features
+    - media
     - text
     - user
 id: node.media_content.default
@@ -23,11 +23,11 @@ content:
     weight: 101
     region: content
   field_myltiple_media:
-    type: field_features_media_field_formatter
+    type: media_thumbnail
     label: above
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }
