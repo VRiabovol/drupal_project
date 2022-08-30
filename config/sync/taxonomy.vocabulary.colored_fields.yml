@@ -1,0 +1,8 @@
+uuid: 42bd37e8-0b8e-4ab3-8602-a26eb6de15ff
+langcode: en
+status: true
+dependencies: {  }
+name: 'Colored fields'
+vid: colored_fields
+description: 'Saves color in HEX format'
+weight: 0

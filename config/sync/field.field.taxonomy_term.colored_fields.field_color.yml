@@ -1,0 +1,21 @@
+uuid: 0da6543c-b09f-4e84-bb16-bde836168f39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_color
+    - taxonomy.vocabulary.colored_fields
+id: taxonomy_term.colored_fields.field_color
+field_name: field_color
+entity_type: taxonomy_term
+bundle: colored_fields
+label: 'Text color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '#ffffff'
+default_value_callback: ''
+settings: {  }
+field_type: string

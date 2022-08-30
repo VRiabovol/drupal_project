@@ -1,0 +1,59 @@
+uuid: af208895-c048-4ca5-8e5f-4078b7055667
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.colored_fields.field_background_color
+    - field.field.taxonomy_term.colored_fields.field_color
+    - taxonomy.vocabulary.colored_fields
+  module:
+    - field_features
+    - path
+    - text
+id: taxonomy_term.colored_fields.default
+targetEntityType: taxonomy_term
+bundle: colored_fields
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_background_color:
+    type: field_features_taxonomy_color_picker
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_color:
+    type: field_features_taxonomy_color_picker
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }

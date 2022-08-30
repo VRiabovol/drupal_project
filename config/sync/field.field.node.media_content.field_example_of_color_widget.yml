@@ -1,0 +1,33 @@
+uuid: 46f3e3d1-e42c-466c-a3d1-ecbd31cbbfd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_example_of_color_widget
+    - node.type.media_content
+    - taxonomy.vocabulary.colored_fields
+  content:
+    - 'taxonomy_term:colored_fields:a1aac280-0b7e-4db4-993d-02ebc214a55e'
+id: node.media_content.field_example_of_color_widget
+field_name: field_example_of_color_widget
+entity_type: node
+bundle: media_content
+label: 'Example of color widget'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: a1aac280-0b7e-4db4-993d-02ebc214a55e
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colored_fields: colored_fields
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

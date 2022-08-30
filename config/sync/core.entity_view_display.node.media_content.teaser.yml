@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.media_content.body
+    - field.field.node.media_content.field_example_of_color_widget
     - field.field.node.media_content.field_myltiple_media
     - node.type.media_content
   module:
@@ -24,6 +25,15 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  field_example_of_color_widget:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_myltiple_media:
     type: field_features_reset_number_of_values
     label: above
@@ -33,7 +43,7 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   links:
     settings: {  }

@@ -1,0 +1,8 @@
+uuid: b240d402-3585-44f6-8dad-80bf8a46c3fd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Test color'
+vid: test_color
+description: ''
+weight: 0

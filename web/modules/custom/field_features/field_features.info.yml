@@ -3,3 +3,5 @@ type: module
 description: Features for fields like formatters, widgets
 package: Custom
 core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:color
