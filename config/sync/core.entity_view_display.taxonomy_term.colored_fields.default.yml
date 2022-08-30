@@ -1,0 +1,39 @@
+uuid: 78bb788c-6a3b-4e45-b74a-17dc2f101c3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.colored_fields.field_background_color
+    - field.field.taxonomy_term.colored_fields.field_color
+    - taxonomy.vocabulary.colored_fields
+  module:
+    - text
+id: taxonomy_term.colored_fields.default
+targetEntityType: taxonomy_term
+bundle: colored_fields
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_background_color:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_color:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }
