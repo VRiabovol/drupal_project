@@ -11,3 +11,15 @@ weather.statistics.admin:
   route_name: weather.statistics.admin
   parent: system.admin_config_content
   weight: 11
+
+entity.weather_entity.settings:
+  title: 'Weather entity'
+  description: 'Configure an Weather entity type.'
+  route_name:  entity.weather_entity.settings
+  parent: system.admin_structure
+
+entity.weather_entity.collection:
+  title: 'Weather entity'
+  description: 'List of weather_entities.'
+  route_name: entity.weather_entity.collection
+  parent: system.admin_content
