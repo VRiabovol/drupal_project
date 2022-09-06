@@ -132,6 +132,51 @@ class WeatherEntity extends ContentEntityBase implements WeatherEntityInterface 
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the weather entity was last edited.'));
 
+    $fields['location'] = BaseFieldDefinition::create('string')
+      ->setLabel('Location')
+      ->setDescription('Name of city weather want to display.')
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'string',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['temperature'] = BaseFieldDefinition::create('string')
+      ->setLabel('Temperature')
+      ->setDescription('Weather in location, saved with cron, once in 3 hours.')
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'string',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['condition'] = BaseFieldDefinition::create('string')
+      ->setLabel('Condition')
+      ->setDescription('Condition of selected location, saved once in 3 hours by cron.')
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'string',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('view', TRUE);
+
     return $fields;
   }
 

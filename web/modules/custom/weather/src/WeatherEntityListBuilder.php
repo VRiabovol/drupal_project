@@ -69,6 +69,8 @@ class WeatherEntityListBuilder extends EntityListBuilder {
   public function buildHeader() {
     $header['id'] = $this->t('ID');
     $header['label'] = $this->t('Label');
+    $header['temperature'] = $this->t('Temperature');
+    $header['condition'] = $this->t('Condition');
     $header['uid'] = $this->t('Author');
     $header['created'] = $this->t('Created');
     $header['changed'] = $this->t('Updated');
@@ -82,6 +84,8 @@ class WeatherEntityListBuilder extends EntityListBuilder {
     /** @var \Drupal\weather\WeatherEntityInterface $entity */
     $row['id'] = $entity->id();
     $row['label'] = $entity->toLink();
+    $row['temperature'] = $entity->get('temperature')->value;
+    $row['condition'] = $entity->get('condition')->value;
     $row['uid']['data'] = [
       '#theme' => 'username',
       '#account' => $entity->getOwner(),

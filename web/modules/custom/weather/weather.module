@@ -29,3 +29,22 @@ function weather_preprocess_weather(&$variables) {
   $variables['preprocess_example'] = $variable_name;
 
 }
+
+/**
+ * Implements hook_cron().
+ */
+function weather_cron() {
+  $weather_entityes = \Drupal::entityTypeManager()
+    ->getStorage('weather_entity')
+    ->loadMultiple();
+  foreach ($weather_entityes as $item) {
+    $location = $item->get('location')->getValue();
+    $get_weather_for_item = \Drupal::service('weather.get_data')
+      ->getWeatherEntity($location);
+    if (!empty($get_weather_for_item)) {
+      $item->set('temperature', $get_weather_for_item['current']['temp_c']);
+      $item->set('condition', $get_weather_for_item['current']['condition']['text']);
+      $item->save();
+    }
+  }
+}
