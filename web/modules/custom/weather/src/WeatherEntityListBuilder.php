@@ -72,6 +72,7 @@ class WeatherEntityListBuilder extends EntityListBuilder {
     $header['temperature'] = $this->t('Temperature');
     $header['condition'] = $this->t('Condition');
     $header['uid'] = $this->t('Author');
+    $header['image'] = $this->t('Image');
     $header['created'] = $this->t('Created');
     $header['changed'] = $this->t('Updated');
     return $header + parent::buildHeader();
@@ -90,6 +91,7 @@ class WeatherEntityListBuilder extends EntityListBuilder {
       '#theme' => 'username',
       '#account' => $entity->getOwner(),
     ];
+    $row['image'] = $entity->get('image')->value;
     $row['created'] = $this->dateFormatter->format($entity->get('created')->value);
     $row['changed'] = $this->dateFormatter->format($entity->getChangedTime());
     return $row + parent::buildRow($entity);

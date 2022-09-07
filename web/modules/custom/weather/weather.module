@@ -5,6 +5,9 @@
  * Primary module hooks for weather module.
  */
 
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\weather\Entity\WeatherEntity;
+
 /**
  * Implements hook_theme().
  */
@@ -44,7 +47,36 @@ function weather_cron() {
     if (!empty($get_weather_for_item)) {
       $item->set('temperature', $get_weather_for_item['current']['temp_c']);
       $item->set('condition', $get_weather_for_item['current']['condition']['text']);
+      $item->set('image', $get_weather_for_item['current']['condition']['icon']);
       $item->save();
     }
   }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function weather_taxonomy_term_presave(EntityInterface $entity) {
+  // Get location from taxonomy field.
+  if (!empty($entity)) {
+    $get_location = $entity->get('name')->getValue();
+    $location = $get_location[0]['value'] ?? "";
+    // Get weather entity's and check has entity same label if not add it.
+    $weather_entityes = \Drupal::entityTypeManager()
+      ->getStorage('weather_entity')
+      ->loadMultiple();
+    foreach ($weather_entityes as $item) {
+      $location_weather_entity = $item->get('location')->getValue();
+      if ($location_weather_entity == $location) {
+        return FALSE;
+      }
+    }
+    // Create new entity type.
+    $new_entity = WeatherEntity::create([
+      'label' => $location,
+      'location' => $location,
+    ]);
+    $new_entity->save();
+  }
+
 }

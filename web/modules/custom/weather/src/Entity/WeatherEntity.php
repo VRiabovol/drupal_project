@@ -177,6 +177,21 @@ class WeatherEntity extends ContentEntityBase implements WeatherEntityInterface 
       ])
       ->setDisplayConfigurable('view', TRUE);
 
+    $fields['image'] = BaseFieldDefinition::create('string')
+      ->setLabel('Image')
+      ->setDescription('Image of condition selected location, saved once in 3 hours by cron.')
+      ->setDisplayOptions('form', [
+        'type' => 'string_textfield',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'string',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('view', TRUE);
+
     return $fields;
   }
 
