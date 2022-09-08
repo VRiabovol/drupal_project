@@ -13,3 +13,11 @@ weather.statistics.admin:
     _title: 'Weather API statistics'
   requirements:
     _permission: 'administer site configuration'
+
+entity.weather_entity.settings:
+  path: 'admin/structure/weather_entity'
+  defaults:
+    _form: '\Drupal\weather\Form\WeatherEntitySettingsForm'
+    _title: 'Weather entity'
+  requirements:
+    _permission: 'administer weather_entity'

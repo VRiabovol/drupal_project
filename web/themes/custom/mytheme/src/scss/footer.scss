@@ -191,5 +191,28 @@
         }
       }
     }
+    // Footer fourth.
+    // Block weather.
+    .view-display-id-weather_for_user {
+      .views-field-label {
+        font-family: $category_date;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+      .temperature {
+        font-family: $category_date;
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+      .weather-icon {
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
 }
+

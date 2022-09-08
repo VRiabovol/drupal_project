@@ -8,6 +8,7 @@ dependencies:
     - field.field.user.user.field_first_name
     - field.field.user.user.field_ip_address
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_location
     - field.field.user.user.field_telephone
     - field.field.user.user.user_picture
     - image.style.user_avatar
@@ -62,6 +63,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 11
+    region: content
+  field_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
     region: content
   field_telephone:
     type: telephone_link

@@ -1,0 +1,3 @@
+administer weather_entity:
+  title: 'Administer weather entity settings'
+  restrict access: true

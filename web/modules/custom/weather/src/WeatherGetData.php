@@ -126,6 +126,24 @@ class WeatherGetData {
   }
 
   /**
+   * Create request to API, decode from JSON to array.
+   */
+  public function getWeatherEntity($location) {
+    if (empty($location)) {
+      return FALSE;
+    }
+    else {
+      $api_token = $this->config->get('key');
+      $get_location = $location[0]['value'] ?? "";
+      $url = "http://api.weatherapi.com/v1/current.json?key={$api_token}&q={$get_location}&aqi=no";
+      $response = $this->client->request($this->method, $url);
+      $data = json_decode($response->getBody()->getContents(), TRUE);
+      return $data;
+    }
+
+  }
+
+  /**
    * Caches data, make entry to database.
    *
    * If data is not already in cache, computed it and add to the cache.
