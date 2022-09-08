@@ -9,6 +9,7 @@ dependencies:
     - field.field.user.user.field_first_name
     - field.field.user.user.field_ip_address
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_location
     - field.field.user.user.field_telephone
     - field.field.user.user.user_picture
     - image.style.user_avatar
@@ -39,5 +40,6 @@ hidden:
   field_first_name: true
   field_ip_address: true
   field_last_name: true
+  field_location: true
   field_telephone: true
   member_for: true

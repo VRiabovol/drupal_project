@@ -1,0 +1,8 @@
+uuid: 2fdce1f3-894b-49dd-8d0e-6b63a7ac54fd
+langcode: en
+status: true
+dependencies: {  }
+name: Location
+vid: location
+description: 'Reference to weather_entity '
+weight: 0

@@ -9,6 +9,7 @@ dependencies:
     - field.field.user.user.field_first_name
     - field.field.user.user.field_ip_address
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_location
     - field.field.user.user.field_telephone
     - field.field.user.user.user_picture
     - image.style.user_avatar
@@ -46,7 +47,7 @@ content:
     third_party_settings: {  }
   field_ip_address:
     type: string_textfield
-    weight: 7
+    weight: 6
     region: content
     settings:
       size: 60
@@ -57,6 +58,16 @@ content:
     weight: 2
     region: content
     settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_location:
+    type: entity_reference_autocomplete_tags
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }

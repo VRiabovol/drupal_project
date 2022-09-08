@@ -57,26 +57,37 @@ function weather_cron() {
  * Implements hook_entity_presave().
  */
 function weather_taxonomy_term_presave(EntityInterface $entity) {
+  $get_taxonomy_name = $entity->get('vid')->getValue();
   // Get location from taxonomy field.
-  if (!empty($entity)) {
+  if ($get_taxonomy_name[0]['target_id'] == 'location') {
     $get_location = $entity->get('name')->getValue();
     $location = $get_location[0]['value'] ?? "";
     // Get weather entity's and check has entity same label if not add it.
-    $weather_entityes = \Drupal::entityTypeManager()
-      ->getStorage('weather_entity')
-      ->loadMultiple();
-    foreach ($weather_entityes as $item) {
+    $get_weather_entitys = _get_all_entityes('weather_entity');
+    foreach ($get_weather_entitys as $item) {
       $location_weather_entity = $item->get('location')->getValue();
       if ($location_weather_entity == $location) {
         return FALSE;
       }
     }
-    // Create new entity type.
+    // Create new entity type and save it to term field.
     $new_entity = WeatherEntity::create([
       'label' => $location,
       'location' => $location,
     ]);
     $new_entity->save();
+    $entity->set('field_location', $new_entity);
+    return $entity;
   }
 
+}
+
+/**
+ * Get all created entity's.
+ */
+function _get_all_entityes($name) {
+  $entityes = \Drupal::entityTypeManager()
+    ->getStorage($name)
+    ->loadMultiple();
+  return $entityes;
 }

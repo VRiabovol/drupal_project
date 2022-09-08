@@ -11,7 +11,7 @@ dependencies:
 id: headerlogo_2
 theme: mytheme
 region: header
-weight: 0
+weight: -21
 provider: null
 plugin: 'block_content:af029381-ab6f-41f2-a592-d64f9af4a6c6'
 settings:
