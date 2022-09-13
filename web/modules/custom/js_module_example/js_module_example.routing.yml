@@ -1,0 +1,8 @@
+
+js_example.accordion:
+  path: '/accordion'
+  defaults:
+    _title: 'Js Example: Javascript Accordion'
+    _controller: '\Drupal\js_module_example\Controller\JsModuleExampleController::getJsAccordionImplementation'
+  requirements:
+    _permission: 'access content'

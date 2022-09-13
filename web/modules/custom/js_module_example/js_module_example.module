@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for js module example module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function js_module_example_theme() {
+  return [
+    'js_accordion' => [
+      'template' => 'accordion',
+      'variables' => ['title' => NULL],
+    ],
+  ];
+}

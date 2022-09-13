@@ -1,0 +1,5 @@
+js_module_example.link_example:
+  title: 'JS module example accordion'
+  route_name: js_example.accordion
+  parent: system.admin_config_content
+  weight: 12
