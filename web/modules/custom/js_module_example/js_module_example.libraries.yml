@@ -1,0 +1,7 @@
+# A Javascript accordion modified form
+js_example.accordion:
+  js:
+    js/accordion.js: {}
+  css:
+    component:
+      css/accordion.css: {}
